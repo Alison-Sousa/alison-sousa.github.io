@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alison Sousa</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/font.css">
+    <style>
+      .contact-section {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 30px;
+      }
+      
+      .contact-form {
+        width: 100%;
+        max-width: 400px; /* Ajusta a largura máxima do formulário */
+      }
+
+      .map-section {
+        text-align: left;
+        margin-left: 30px;
+      }
+
+      .mapBox iframe {
+        width: 100%; 
+        height: 200px; /* Ajusta a altura do mapa */
+      }
+
+      .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+
+      @media (max-width: 767px) {
+        .contact-section {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .map-section {
+          margin-left: 0;
+          margin-top: 20px;
+        }
+      }
+    </style>
+</head>
+<body>
+
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="../index.html">Alison Sousa</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../cv/cv.html">CV</a></li>
+          <li><a href="../projects/projects.html">Projects</a></li>
+          <li><a href="../research/research.html">Research</a></li>
+          <li class="active"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+      <div class="container contact-section">
+      
+
+        <div class="contact-form">
+            <h3>How may I assist you?</h3>
+            <p>Responses are generally provided within a few hours</p>
+            <form action="https://getform.io/f/navvzjda" method="POST">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="name" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="message" rows="3" placeholder="Your Message" required></textarea>
+                </div>
+                <input type="hidden" name="_subject" value="New Message from Your Website!"> <!-- Definição do assunto do e-mail -->
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="http://yourwebsite.com/thankyou.html"> <!-- URL de redirecionamento após o envio -->
+                <input type="text" name="_honey" style="display:none">
+            </form>
+        </div>
+        
+
+        
+        <div class="map-section">
+          <h3>Adress</h3>
+          <p>123 Dr. Álvaro Alvim St., Vila Mariana, São Paulo, Brazil</p>
+          <div class="mapBox">
+            <iframe
+              src="https://www.google.com/maps?q=-23.589737462476503,-46.63979797078884&hl=es;z=14&amp;output=embed"
+              style="border:0;"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+  
+      </div>
+  
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      
+
+  </body>
+  </html>

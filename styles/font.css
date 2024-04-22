@@ -1,0 +1,11 @@
+/* Estilos globais para o corpo e títulos */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    color: black; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte para o corpo do texto */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 20px; /* Tamanho da fonte para todos os títulos */
+    font-weight: bold; /* Deixa os títulos em negrito */
+}

@@ -1,0 +1,29 @@
+/* Isso vai resetar a margem e o padding de todos os elementos para garantir que não haja espaço extra inesperado */
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Isso vai estabelecer que o conteúdo da página ocupe, pelo menos, toda a altura da janela do navegador */
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Isso vai empurrar o rodapé para baixo */
+  .container-fluid {
+    flex: 1;
+  }
+  
+  /* Estilo para o rodapé */
+  .text-center {
+    text-align: center;
+    width: 100%;
+    background-color: #222;
+    color: white;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+  }
+  
