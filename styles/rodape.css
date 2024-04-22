@@ -1,22 +1,22 @@
-/* Isso vai resetar a margem e o padding de todos os elementos para garantir que não haja espaço extra inesperado */
+/* This resets the margin and padding of all elements to ensure there is no unexpected extra space */
 html, body {
     margin: 0;
     padding: 0;
   }
   
-  /* Isso vai estabelecer que o conteúdo da página ocupe, pelo menos, toda a altura da janela do navegador */
+  /* This ensures that the page content occupies at least the full height of the browser window */
   body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
   }
   
-  /* Isso vai empurrar o rodapé para baixo */
+  /* This pushes the footer to the bottom */
   .container-fluid {
     flex: 1;
   }
   
-  /* Estilo para o rodapé */
+  /* Style for the footer */
   .text-center {
     text-align: center;
     width: 100%;
