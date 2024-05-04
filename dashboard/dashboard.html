@@ -44,7 +44,7 @@
 </head>
 <body>
 
-
+<!-- Navegation -->
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -70,11 +70,18 @@
     </div>
   </nav>
 
-
- 
-  <iframe title="Dashboard" width="1330" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiNjg5ODIyZjUtYTZmOC00NmIzLWI5MjMtNTZmNGEyMThhMGIyIiwidCI6ImJiNzFkOTQzLTA4MGQtNDMwMi1iNDkxLTFmNWFkYWQ1NzA2YSJ9" frameborder="0" allowFullScreen="true"></iframe>
-
-      
+ <!-- Dashboard -->
+  <style>
+    .zoom-iframe {
+        transform: scale(0.85);
+        transform-origin: 0 0;
+        width: 2200px; 
+        height: 920px; 
+        border: 0;
+        overflow: hidden;
+    }
+</style>
+<iframe title="Dashboard" class="zoom-iframe" src="https://app.powerbi.com/view?r=eyJrIjoiOWFlNWIyNGYtMTNkNy00OGFmLTk0ZGQtNDQxMmM2NGQzNWZlIiwidCI6ImJiNzFkOTQzLTA4MGQtNDMwMi1iNDkxLTFmNWFkYWQ1NzA2YSJ9" allowFullScreen="true"></iframe>
 
   </body>
   </html>
