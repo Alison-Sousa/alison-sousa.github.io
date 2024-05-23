@@ -61,6 +61,27 @@
     margin-right: auto; /* Centers the div in the available space */
   }
 
+  .perfil-texto {
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.perfil-texto h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.perfil-texto p {
+  margin-bottom: 15px;
+}
+
+body {
+      font-family: "Cambria", Times, serif;
+      color: #000;
+      background-color: #fff;
+      line-height: 1.6;
+    }
+
     </style>
   </head>
   <body>
@@ -78,77 +99,80 @@
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
             <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="cv/cv.html">CV</a></li>
-            <li><a href="projects/projects.html">Projects</a></li>
             <li><a href="research/research.html">Research</a></li>
-            <li><a href="highlights/highlights.html">Highlights</a></li>
-            <li><a href="contact/contact.html">Contact</a></li>
+            <li><a href="teaching/teaching.html">Teaching</a></li>
           </ul>
         </div>
       </div>
     </nav>
     
-
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <div class="row">
-          <!-- Profile image and social icons -->
+          <!-- Profile image, name, position, and social icons -->
           <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+          
             <img class="img-thumbnail" style="width: 100%;" src="cv/perfil.jpg">
+              <!-- Profile name and position above the image -->
+              <div style="text-align: center; margin-bottom: 10px;">
+                <h2 style="font-size: 1.5em;">Alison Cordeiro Sousa</h2>
+                <p>Research Assistant, ESPM Department of International Affairs</p>
+              </div>
             <!-- Social icons aligned below the image -->
             <div style="margin-top: 10px; display: flex; justify-content: center;">
-
-              
               <a href="email:alison.sousa1997@hotmail.com" style="font-size: 3em; margin-right: 10px;">
                 <i class="fa fa-envelope"></i>
               </a>
-
-
-              <a href="https://orcid.org/0000-0002-6072-9886" target="_blank" style="font-size: 3em; margin-right: 10px;">
-                <i class="ai ai-orcid"></i>
-              </a>
-
-              <a href="https://scholar.google.com.br/citations?user=022aa6QAAAAJ&hl=pt-BR" target="_blank" style="font-size: 3em; margin-right: 10px;">
-                <i class="ai ai-google-scholar-square"></i>
-              </a>
-
               <a href="https://github.com/Alison-Sousa" target="_blank" style="font-size: 3em; margin-right: 10px;">
                 <i class="fa fa-github"></i>
               </a>
-
               <a href="https://www.linkedin.com/in/alison-cordeiro-sousa/" target="_blank" style="font-size: 3em; margin-right: 10px;">
                 <i class="fa fa-linkedin"></i>
               </a>
-
               <a href="https://twitter.com/Alison_CSousa" target="_blank" style="font-size: 3em; margin-right: 10px;">
                 <i class="fa fa-twitter"></i>
               </a>
-
             </div>
           </div>
 
-          
-          
-          <!-- Profile information -->
-          <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8 perfil-texto">
-        
-            <h2 style="font-size: 30px;">Alison Cordeiro Sousa</h2>
 
-            <p>Research Assistant, ESPM Department of International Affairs</p>
-            <!-- New Biographical Information section -->
-            <h3 style="font-size: 25px;">Biographical Information</h3>
+            <!-- Profile information -->
+          <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8 perfil-texto">
+            <h3 style="font-size: 25px; font-weight: normal; text-align: center;">Welcome to my academic website!</h3>
             <p>
               I am a student of International Relations at the 
-              <a href="https://www.espm.br/en/" target="_blank">ESPM University</a> in São Paulo, Brazil.
+              <a href="https://www.espm.br/en/" target="_blank">ESPM</a> in São Paulo, Brazil.
               Additionally, I have participated in an international program at 
               <a href="https://www.zuyd.nl/en" target="_blank">Zuyd Hogeschool</a> in Maastricht, Netherlands.
-            <p>
-              My professional background encompasses experience in investment, programming, and data science. 
+              My broad research interests lie in empirical Economy, Artificial Intelligence, Data Science.
             </p>
             <p>
-              My broad research interests lie in empirical Political Economy, Development, Artificial Intelligence,
-              Data Science, Political Science.
+              You can find my complete CV <a href="cv/CV_AlisonSousa_2024.pdf">here</a>, and take a 
+              look at my research <a href="./research/research.html">here</a>.
             </p>
+
+
+        <!-- Education section -->
+        <h3 style="font-size: 25px; margin-top: 20px;">Education</h3>
+        <ul style="list-style-type: none; padding: 0;">
+          <li style="display: flex; align-items: center; margin-bottom: 10px;">
+            <i class="fa fa-graduation-cap" style="font-size: 1.5em; margin-right: 10px;"></i>
+            <div>
+              <span style="font-size: 18px;">Bachelor of International Relations, 2024</span><br>
+              <span style="font-size: 17px; color: #535252; margin-left: 0.01em;">ESPM University</span>
+            </div>
+          </li>
+          <li style="display: flex; align-items: center; margin-bottom: 10px;">
+            <i class="fa fa-graduation-cap" style="font-size: 1.5em; margin-right: 10px;"></i>
+            <div>
+              <span style="font-size: 18px;">International Program, 2021</span><br>
+              <span style="font-size: 17px; color: #535252; margin-left: 0.01em;">Zuyd Hogeschool</span>
+            </div>
+          </li>
+        </ul>
+
+        
+        
           </div>
         </div>
       </div>
