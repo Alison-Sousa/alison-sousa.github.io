@@ -1,191 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Alison Sousa">
     <meta name="author" content="Alison Sousa">
 
     <link rel="stylesheet" type="text/css" href="styles/rodape.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/academicons.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons/css/academicons.min.css">
-  
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="/css/syntax.css" rel="stylesheet" />
-    <link href="/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" href="styles/font.css">
-
 
     <title>Alison Sousa</title>
 
     <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+            background-color: #27285C; /* Cor cinza escuro para a navbar */
+        }
+
+        .navbar-brand, .navbar-nav li a {
+            color: white !important; /* Cor branca para o texto da navbar */
+        }
+
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+        .row.content {
+            height: auto;
+        }
+
+        /* Set gray background color and 100% height for the whole page */
+        body {
+            background-color: #f1f1f1;
+            font-family: "Cambria", Times, serif;
+            color: #000;
+            line-height: 1.6;
+            scroll-behavior: smooth; /* Rolagem suave */
+        }
+
+        /* Títulos com fundo alternado */
+        .section-title {
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .white-background {
+            background-color: white;
+        }
+
+        .gray-background {
+            background-color: #dcdcdc;
+        }
+
+        .perfil-texto {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .perfil-texto h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .perfil-texto p {
+            margin-bottom: 15px;
+        }
+
+        .img-thumbnail {
+            border-radius: 50%; /* Torna a imagem circular */
+            width: 200px; /* Ajusta o tamanho da imagem */
+            height: 350px; /* Ajusta o tamanho para manter a proporção circular */
+            object-fit: cover; /* Garante que a imagem se ajuste ao círculo */
+        }
+
+        .fa {
+            color: #27285C; /* Aplica a cor solicitada aos ícones */
+            transition: color 0.3s ease; /* Adiciona uma transição suave */
+        }
+
+        .fa:hover {
+            color: #1a1c3d; /* Cor ligeiramente mais escura ao passar o mouse */
+        }
+
+        .social-icon {
+            transition: transform 0.3s ease, color 0.3s ease; /* Efeito de transição suave */
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2); /* Aumenta o tamanho do ícone */
+            color: #1a1c3d; /* Muda a cor do ícone ao passar o mouse */
+        }
+
+        /* Estilos para links de autor */
+        .author-link {
+            color: #27285C;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .author-link:hover {
+            color: #1a1c3d;
+            font-weight: bold; /* Destaque ao passar o mouse */
+        }
+
+        .paper-title {
+            font-weight: bold; /* Título em negrito */
+            font-size: 18px; /* Tamanho do título do paper */
+        }
+
+        .paper-authors {
+            font-size: 14px; /* Tamanho do texto dos autores */
+        }
+
+        .paper-subtitle {
+            font-size: 12px; /* Tamanho do texto do subtítulo */
+            color: #555; /* Cor do subtítulo */
+        }
+
+        
+    .nav-link {
+        color: #1a1c3d; /* Cor dos links */
+        transition: color 0.3s ease, transform 0.3s ease; /* Transição suave */
     }
-    
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
 
-    /* Set gray background color and 100% height for the whole page */
-  body {
-    background-color: #f1f1f1; /* Applies light gray color to the entire background of the page */
-  }
-    
-    /* Set gray background color and 100% height */
-    .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height:auto;} 
-    }
-    
-
-    .perfil-texto {
-    text-align: left; /* Aligns the text to the left */
-    max-width: 520px; /* Sets a maximum width for the text div */
-    margin-left: auto; /* Centers the div in the available space */
-    margin-right: auto; /* Centers the div in the available space */
-  }
-
-  .perfil-texto {
-  text-align: justify;
-  margin-bottom: 20px;
-}
-
-.perfil-texto h3 {
-  margin-top: 0;
-  margin-bottom: 15px;
-}
-
-.perfil-texto p {
-  margin-bottom: 15px;
-}
-
-body {
-      font-family: "Cambria", Times, serif;
-      color: #000;
-      background-color: #fff;
-      line-height: 1.6;
+    .nav-link:hover {
+        color: #27285C; /* Cor ao passar o mouse */
+        transform: scale(1.1); /* Aumenta o tamanho do texto ao passar o mouse */
     }
 
+    .nav-item.active > a {
+        color: #1a1c3d; /* Cor ao estar ativo */
+        font-weight: bold; /* Texto em negrito quando ativo */
+    }
     </style>
-  </head>
-  <body>
-    
+</head>
+
+<body>
+
     <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>                        
-          </button>
-          <a class="navbar-brand" href="index.html">Alison Sousa</a>
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <strong>Alison Cordeiro Sousa</strong> <!-- Nome em negrito -->
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a class="nav-link" id="research" href="cv/CV_AlisonSousa_2024.pdf">CV</a></li>
+                    <li class="nav-item"><a class="nav-link" id="research" href="#working-papers">Working Papers</a></li>
+                    <li class="nav-item"><a class="nav-link" id="research" href="#publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" id="research" href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="research/research.html">Research</a></li>
-            <li><a href="teaching/teaching.html">Teaching</a></li>
-          </ul>
-        </div>
-      </div>
     </nav>
-    
+
+
     <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <div class="row">
-          <!-- Profile image, name, position, and social icons -->
-          <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
-          
-            <img class="img-thumbnail" style="width: 100%;" src="cv/perfil.jpg">
-              <!-- Profile name and position above the image -->
-              <div style="text-align: center; margin-bottom: 10px;">
-                <h2 style="font-size: 1.5em;">Alison Cordeiro Sousa</h2>
-                <p>Research Assistant, ESPM Department of International Affairs</p>
-              </div>
-            <!-- Social icons aligned below the image -->
-            <div style="margin-top: 10px; display: flex; justify-content: center;">
-              <a href="email:alison.sousa1997@hotmail.com" style="font-size: 3em; margin-right: 10px;">
-                <i class="fa fa-envelope"></i>
-              </a>
-              <a href="https://github.com/Alison-Sousa" target="_blank" style="font-size: 3em; margin-right: 10px;">
-                <i class="fa fa-github"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/alison-cordeiro-sousa/" target="_blank" style="font-size: 3em; margin-right: 10px;">
-                <i class="fa fa-linkedin"></i>
-              </a>
-              <a href="https://twitter.com/Alison_CSousa" target="_blank" style="font-size: 3em; margin-right: 10px;">
-                <i class="fa fa-twitter"></i>
-              </a>
+        <div class="container">
+            <div class="row">
+                <!-- Profile image, name, position, and social icons -->
+                <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+                    <img class="img-thumbnail" style="width: 100%;" src="cv/perfil.png">
+                    <!-- Profile name and position above the image -->
+                    <div style="text-align: center; margin-bottom: 10px;">
+                        <h2 style="font-size: 1.5em;">Alison Cordeiro Sousa</h2>
+                    </div>
+                    
+                    <!-- Social icons aligned below the image -->
+                    <div style="margin-top: 10px; display: flex; justify-content: center; align-items: center;">
+                        <a href="alison97sousa@outlook.com" class="social-icon" style="font-size: 2em; margin-right: 10px; color: #27285C;">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                        <a href="https://github.com/Alison-Sousa" target="_blank" class="social-icon" style="font-size: 2em; margin-right: 10px; color: #27285C;">
+                            <i class="fa fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/alisonsousa/" target="_blank" class="social-icon" style="font-size: 2em; margin-right: 10px; color: #27285C;">
+                            <i class="fa fa-linkedin-square"></i>
+                        </a>
+                        <a href="cv/CV_AlisonSousa_2024.pdf" target="_blank" class="social-icon" style="font-size: 2em; margin-right: 10px; color: #27285C;">
+                            <i class="ai ai-cv big-icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile information -->
+                <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8 perfil-texto">
+                    <h3 style="font-size: 35px; font-weight: normal; text-align: left;">About</h3>
+                    <p>
+                        Hello! I hold a Bachelor's degree in International Relations at the Escola Superior de Propaganda e Marketing (ESPM) in São Paulo, with international programs at 
+                        Zuyd University of Applied Sciences - Maastricht, the Netherlands, and Meiji University - Japan.
+                    </p>  
+                    <p>
+                        You can find my full CV <a href="cv/CV_AlisonSousa_2024.pdf">here</a>.
+                    </p>
+                </div>
             </div>
-          </div>
-
-
-            <!-- Profile information -->
-          <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8 perfil-texto">
-            <h3 style="font-size: 25px; font-weight: normal; text-align: center;">Welcome to my academic website!</h3>
-            <p>
-              I am a student of International Relations at the 
-              <a href="https://www.espm.br/en/" target="_blank">ESPM</a> in São Paulo, Brazil.
-              Additionally, I have participated in an international program at 
-              <a href="https://www.zuyd.nl/en" target="_blank">Zuyd Hogeschool</a> in Maastricht, Netherlands.
-              My broad research interests lie in empirical Economy, Artificial Intelligence, Data Science.
-            </p>
-            <p>
-              You can find my complete CV <a href="cv/CV_AlisonSousa_2024.pdf">here</a>, and take a 
-              look at my research <a href="./research/research.html">here</a>.
-            </p>
-
-
-        <!-- Education section -->
-        <h3 style="font-size: 25px; margin-top: 20px;">Education</h3>
-        <ul style="list-style-type: none; padding: 0;">
-          <li style="display: flex; align-items: center; margin-bottom: 10px;">
-            <i class="fa fa-graduation-cap" style="font-size: 1.5em; margin-right: 10px;"></i>
-            <div>
-              <span style="font-size: 18px;">Bachelor of International Relations, 2024</span><br>
-              <span style="font-size: 17px; color: #535252; margin-left: 0.01em;">ESPM University</span>
-            </div>
-          </li>
-          <li style="display: flex; align-items: center; margin-bottom: 10px;">
-            <i class="fa fa-graduation-cap" style="font-size: 1.5em; margin-right: 10px;"></i>
-            <div>
-              <span style="font-size: 18px;">International Program, 2021</span><br>
-              <span style="font-size: 17px; color: #535252; margin-left: 0.01em;">Zuyd Hogeschool</span>
-            </div>
-          </li>
-        </ul>
-
-        
-        
-          </div>
         </div>
-      </div>
     </div>
-    
 
-    <footer class="container-fluid text-center">
-      <p>Copyright 2024 Alison Sousa</p>
-    </footer>
+<!-- Working Papers Section -->
+<div id="working-papers" class="white-background section">
+    <div class="container">
+        <div class="row">
+            <!-- Left: Title "Working Papers" -->
+            <div class="col-3">
+                <h3>Working Papers</h3>
+            </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            <!-- Right: List of Working Papers -->
+            <div class="col-9">
+                <ul class="paper-list">
+                    <li>
+                        <div class="paper-title">
+                            <strong>International Strategies and Marketing: An Analysis of Semiconductor Internationalization to Japan</strong>
+                        </div>
+                        <div class="paper-subtitle">with Rodrigo Cintra - 2024 - Escola Superior de Propaganda e Marketing</div>
+                        <div class="paper-icons">
+                            <a href="working papers/International Marketing.pdf"><i class="fa fa-file-pdf-o icon"></i> PDF</a>
+                            <a href="working papers/International Marketing - Slides.pdf"><i class="fa fa-file-powerpoint-o icon"></i> Slides</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="paper-title">
+                            <strong>The West, China, and Taiwan Relationship: An Econometric Approach to Evaluating Tensions</strong>
+                        </div>
+                        <div class="paper-subtitle">with Rodrigo Cintra - 2024 - Escola Superior de Propaganda e Marketing</div>
+                        <div class="paper-icons">
+                            <a href="working papers/Econometrics Trade_Eng.pdf"><i class="fa fa-file-pdf-o icon"></i> PDF</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="paper-title">
+                            <strong>International Diversification via ETFs from the Perspective of the Sharpe Index</strong>
+                        </div>
+                        <div class="paper-subtitle">with Igor Gondim - 2023 - ANGRAD Journal</div>
+                        <div class="paper-icons">
+                            <a href="working papers/ETFs_Eng.pdf"><i class="fa fa-file-pdf-o icon"></i> PDF</a>
+                            <a href="working papers/ETFs - Slides.pdf"><i class="fa fa-file-powerpoint-o icon"></i> Slides</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
-  </body>
+<!-- Technical Reports Section -->
+<div id="technical-reports" class="gray-background section">
+    <div class="container">
+        <div class="row">
+            <!-- Left: Title "Technical Reports" -->
+            <div class="col-3">
+                <h3>Technical Reports</h3>
+            </div>
+
+            <!-- Right: List of Technical Reports -->
+            <div class="col-9">
+                <ul class="paper-list">
+                    <li>
+                        <div class="paper-title">
+                            <strong>Analysis of the Semiconductor Sector</strong>
+                        </div>
+                        <div class="paper-subtitle">with Jose Pimenta - June 2024</div>
+                        <div class="paper-icons">
+                            <a href="technical reports/Semiconductor Sector.pdf"><i class="fa fa-file-pdf-o icon"></i> PDF</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="paper-title">
+                            <strong>Estudo sobre o PL N° 5.660/2016 - Regulamentação do estágio</strong>
+                        </div>
+                        <div class="paper-subtitle"> December 2022 - Sigalei</div>
+                        <div class="paper-icons">
+                            <a href="https://www.sigalei.com.br/blog/premio-espm-analise-do-processo-legislativo-pl-ndeg-5-660-2016-que-regula-o-estagio-no-brasil"><i class="fa fa-file-pdf-o icon"></i> PDF</a>
+                            <a href="technical reports/Legislative - Slides.pdf"><i class="fa fa-file-powerpoint-o icon"></i> Slides</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Publications Section -->
+<div id="publications" class="white-background section">
+    <div class="container">
+        <div class="row">
+            <!-- Left: Title "Publications" -->
+            <div class="col-3">
+                <h3>Others Publications</h3>
+            </div>
+
+            <!-- Right: List of Publications -->
+            <div class="col-9">
+                <ul class="paper-list">
+                
+                    <li>
+                        <div class="paper-title">
+                            <strong>Why invest your money in Japanese J-REITs?</strong>
+                        </div>
+                        <div class="paper-subtitle">April 2022, Economics Letters</div>
+                        <div class="paper-icons">
+                            <a href="publications/J-REITs.pdf"><i class="fa fa-file-pdf-o icon"></i> PDF</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="paper-title">
+                            <strong>Asian Financial Crisis of 1997</strong>
+                        </div>
+                        <div class="paper-subtitle">with Joohoon Kim, 2022, Economics Letters</div>
+                        <div class="paper-icons">
+                            <a href="publications/Asian Financial Crisis.pdf"><i class="fa fa-file-pdf-o icon"></i> PDF</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="paper-title">
+                            <strong>Economy of South Korea</strong>
+                        </div>
+                        <div class="paper-subtitle">with Joohoon Kim, 2022, Economics Letters</div>
+                        <div class="paper-icons">
+                            <a href="publications/Economy of South Korea.pdf"><i class="fa fa-file-pdf-o icon"></i> PDF</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="paper-title">
+                            <strong>South Korean Financial Market</strong>
+                        </div>
+                        <div class="paper-subtitle">with Joohoon Kim, 2022, Economics Letters</div>
+                        <div class="paper-icons">
+                            <a href="publications/South Korean Financial Market.pdf"><i class="fa fa-file-pdf-o icon"></i> PDF</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="paper-title">
+                            <strong>Asian Tigers</strong>
+                        </div>
+                        <div class="paper-subtitle">with Joohoon Kim, 2022, Economics Letters</div>
+                        <div class="paper-icons">
+                            <a href="publications/Asian Tigers.pdf"><i class="fa fa-file-pdf-o icon"></i> PDF</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="paper-title">
+                            <strong>Korean Won</strong>
+                        </div>
+                        <div class="paper-subtitle">with Joohoon Kim, 2022, Economics Letters</div>
+                        <div class="paper-icons">
+                            <a href="publications/Korean Won.pdf"><i class="fa fa-file-pdf-o icon"></i> PDF</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="paper-title">
+                            <strong>Miracle on the Han River</strong>
+                        </div>
+                        <div class="paper-subtitle">with Joohoon Kim, 2022, International Policy Letters</div>
+                        <div class="paper-icons">
+                            <a href="publications/Miracle on the Han River.pdf"><i class="fa fa-file-pdf-o icon"></i> PDF</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="paper-title">
+                            <strong>The Triangular Relationship Between the United States, Taiwan, and China at the Start of the Biden Administration</strong>
+                        </div>
+                        <div class="paper-subtitle">October 2022, International Security</div>
+                        <div class="paper-icons">
+                            <a href="publications/China - US - Taiwan.pdf"><i class="fa fa-file-pdf-o icon"></i> PDF</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="paper-title">
+                            <strong>Is it Worth for Brazilians to Invest in ETFs in South Korea?</strong>
+                        </div>
+                        <div class="paper-subtitle">December 2021, Finance Letters</div>
+                        <div class="paper-icons">
+                            <a href="publications/ETFs South Korea.pdf"><i class="fa fa-file-pdf-o icon"></i> PDF</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Contact Section -->
+<div id="contact" class="gray-background section">
+    <div class="container">
+        <div class="row align-items-center"> <!-- Alinhamento vertical -->
+            <!-- Left: Title "Contact" -->
+            <div class="col-3 d-flex align-items-center"> <!-- Flex para alinhamento do título -->
+                <h3 style="margin: 0;">Contact</h3> <!-- Remove margem do h3 -->
+            </div>
+
+            <!-- Right: Contact Email -->
+            <div class="col-9">
+                <div class="contact-info" style="display: flex; align-items: center; font-size: 1.2em;"> <!-- Flex para alinhamento -->
+                    <i class="fa fa-envelope" style="color: darkgray; font-size: 1.5em; margin-right: 8px;"></i>
+                    <span style="color: #007BFF; text-decoration: none;" class="email-text" onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">
+                        alison97sousa@outlook.com
+                    </span> <!-- Tamanho da fonte pode ser ajustado aqui -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- CSS Styles -->
+<style>
+   
+
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+    .row {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 20px 0;
+    }
+    .col-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .col-9 {
+        flex: 0 0 70%;
+        max-width: 70%;
+    }
+    .paper-list {
+        list-style-type: none;
+        padding: 0;
+    }
+    .paper-title {
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+    .paper-subtitle {
+        font-size: 0.9em;
+        margin-bottom: 5px;
+    }
+    .paper-icons {
+        margin-top: 5px;
+    }
+    .icon {
+        font-size: 1em; /* Tamanho ajustável */
+        margin-right: 5px;
+        vertical-align: middle; /* Alinha o ícone com o texto */
+    }
+    .contact-info {
+        display: flex;
+        align-items: center;
+    }
+    .white-background {
+        background-color: white;
+    }
+    .gray-background {
+        background-color: #f2f2f2;
+    }
+    .section {
+        padding: 40px 0;
+    }
+
+    h3 {
+    font-size: 2em; /* Ajuste o valor conforme necessário */
+    margin-bottom: 20px; /* Para dar um espaço abaixo do título */
+    font-weight: normal; /* Remove o negrito */
+}
+
+</style>
+
+</body>
 </html>
