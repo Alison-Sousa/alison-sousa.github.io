@@ -167,13 +167,49 @@
         color: black; /* Mantém a cor preta mesmo quando o mouse passa sobre o link */
     }
 
-    @media (max-width: 768px) {
-  /*tablets */
+    /* Reseta imagens e iframes para não extrapolarem o layout */
+img, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-    @media (max-width: 576px) {
-    /*Cell */
-    }
+/* Reorganiza elementos em telas pequenas */
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden; /* Evita rolagem horizontal */
+  }
+
+  .container, .row {
+    display: flex;
+    flex-direction: column; /* Empilha os elementos */
+    align-items: center; /* Centraliza no eixo horizontal */
+  }
+
+  .col {
+    width: 100%; /* Ocupa toda a largura no celular */
+    margin-bottom: 20px;
+  }
+
+  .titulo {
+    font-size: 1.5em; /* Ajusta tamanho de título */
+    text-align: center; /* Centraliza os títulos */
+  }
+
+  .botao, a {
+    font-size: 1em; /* Ajusta tamanhos de botões/links */
+    width: 90%; /* Botões se adaptam */
+    text-align: center;
+  }
+
+  /* Ajusta imagens grandes */
+  .imagem-grande {
+    width: 100%;
+    height: auto;
+  }
+}
 
 
 
