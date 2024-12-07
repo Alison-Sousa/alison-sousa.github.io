@@ -150,61 +150,60 @@
 }
 
     .paper-title a {
-        color: black; /* Define a cor preta para o link */
-        text-decoration: none; /* Remove o sublinhado */
+        color: black; 
+        text-decoration: none; 
     }
 
     .paper-title a:hover {
-        color: black; /* Mantém a cor preta mesmo quando o mouse passa sobre o link */
+        color: black; 
     }
 
     .paper-subtitle a {
-        color: black; /* Define a cor preta para o link dentro da legenda */
-        text-decoration: none; /* Remove o sublinhado */
+        color: black; 
+        text-decoration: none; 
     }
 
     .paper-subtitle a:hover {
-        color: black; /* Mantém a cor preta mesmo quando o mouse passa sobre o link */
+        color: black; 
     }
 
-    /* Reseta imagens e iframes para não extrapolarem o layout */
+    
 img, iframe {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* Reorganiza elementos em telas pequenas */
+
 @media (max-width: 768px) {
   body {
     padding: 0;
     margin: 0;
-    overflow-x: hidden; /* Evita rolagem horizontal */
+    overflow-x: hidden; 
   }
 
   .container, .row {
     display: flex;
-    flex-direction: column; /* Empilha os elementos */
-    align-items: center; /* Centraliza no eixo horizontal */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .col {
-    width: 100%; /* Ocupa toda a largura no celular */
+    width: 100%; 
     margin-bottom: 20px;
   }
 
   .titulo {
-    font-size: 1.5em; /* Ajusta tamanho de título */
-    text-align: center; /* Centraliza os títulos */
+    font-size: 1.5em; 
+    text-align: center; 
   }
 
   .botao, a {
-    font-size: 1em; /* Ajusta tamanhos de botões/links */
-    width: 90%; /* Botões se adaptam */
+    font-size: 1em; 
+    width: 90%; 
     text-align: center;
   }
 
-  /* Ajusta imagens grandes */
   .imagem-grande {
     width: 100%;
     height: auto;
@@ -227,7 +226,7 @@ img, iframe {
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="index.html">
-                    <strong>Alison Cordeiro Sousa</strong>
+                    <strong>Alison Sousa</strong>
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
