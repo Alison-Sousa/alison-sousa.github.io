@@ -1,0 +1,7 @@
+---
+title: "CV"
+---
+
+<a href="cv.pdf" class="download" title="Download CV as PDF">Download CV</a>			
+
+<embed src="cv.pdf#toolbar=0" type="application/pdf" width="1000" height="750">

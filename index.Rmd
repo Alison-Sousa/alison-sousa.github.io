@@ -1,0 +1,24 @@
+---
+title: "Alison Cordeiro Sousa"
+---
+
+
+
+
+<div style= "float:right;position: relative; left: 30px; top: 0px;">
+```{r echo=FALSE, out.width="300px", fig.align='right'}
+
+knitr::include_graphics("cv/perfil.jpg") 
+
+```
+</div>
+
+
+
+<div class=text-justify>
+
+Welcome to my website! I hold a [Bachelor's degree in International Relations](https://www.espm.br/) from the Escola Superior de Propaganda e Marketing (ESPM) in São Paulo. During my studies, I participated in international programs at [Zuyd Hogeschool](https://www.zuyd.nl/) in Maastricht and [Meiji University](https://www.meiji.ac.jp/cip/english/) in Japan. I also completed advanced courses in [Econometrics, Statistics, Mathematics, and Finance](https://www.caf.com/en/) through the Development Bank of Latin America.  
+
+My academic journey has been marked by several awards and recognitions, including achievements in the [CFA Research Challenge](awards/awards.html), the Quant Itaú Asset Challenge, and initiatives by Turim Investimentos and Sigalei. Prior to university, I earned a merit-based scholarship at Grupo CPV Educacional and a merit scholarship through ENEM at ESPM.  
+
+Born and raised in São Paulo, I enjoy traveling, and one of my most memorable trips involved volunteering in underserved communities through lessons and cultural activities. In my free time, I like to play tennis, follow Brazilian football, and explore hobbies like gardening and ebikes. I am also a fan of fall and enjoy immersing myself in nature.
