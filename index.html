@@ -132,6 +132,49 @@ pre code {
   margin-left: 10px;
   border-radius: 6px 0 6px 6px;
 }
+
+img, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden; 
+  }
+
+  .container, .row {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .col {
+    width: 100%; 
+    margin-bottom: 20px;
+  }
+
+  .titulo {
+    font-size: 1.5em; 
+    text-align: center; 
+  }
+
+  .botao, a {
+    font-size: 1em; 
+    width: 90%; 
+    text-align: center;
+  }
+
+  .imagem-grande {
+    width: 100%;
+    height: auto;
+  }
+}
+
 </style>
 
 <script type="text/javascript">
