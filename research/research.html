@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Research | Alison Sousa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Meta tags para SEO acadêmico -->
+  <meta name="description" content="Academic research publications, conferences and co-authors of Alison Sousa - Researcher in Economics and Statistics">
+  <meta name="keywords" content="economics research, statistics publications, academic papers, mathematical modeling, data science research">
+  
+  <!-- Webfonts premium com preload -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@300;400;600;700&display=swap"></noscript>
+  
+  <!-- CSS Libraries -->
+  <link href="../site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+  <link href="../site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+  
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  
+  <!-- JS Libraries com defer -->
+  <script src="../site_libs/jquery-3.6.0/jquery-3.6.0.min.js" defer></script>
+  <script src="../site_libs/bootstrap-3.3.5/js/bootstrap.min.js" defer></script>
+  
+  <!-- Particle.js para background interativo (carregado defer) -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+  
+  <!-- Math Formulas-->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  
+
+  <style>
+    :root {
+      --primary: #1a237e;
+      --primary-light: #534bae;
+      --primary-dark: #000051;
+      --accent: #ffab00;
+      --dark: #121212;
+      --light: #f8f9fa;
+      --transition: all 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+    
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Source Sans 3', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.8;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    
+    /* Efeito de partículas no background */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: linear-gradient(135deg, #f8fafc 0%, #eef2f6 100%);
+    }
+
+    /* NAVBAR STYLES - OTIMIZADO */
+    .navbar-inverse {
+      background-color: rgba(26, 35, 126, 0.98) !important;
+      border: none;
+      font-weight: 600;
+      font-size: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: var(--transition);
+      transform: translateZ(0);
+      will-change: transform;
+    }
+    
+    .navbar-inverse.scrolled {
+      background-color: rgba(26, 35, 126, 0.92) !important;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+      height: 70px;
+    }
+
+    .navbar-custom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 5%;
+      height: 90px;
+      transition: var(--transition);
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      margin-left: 30px;
+    }
+
+    .navbar-inverse .navbar-nav > li > a,
+    .navbar-inverse .navbar-brand,
+    .navbar-inverse .navbar-text {
+      color: #ffffff !important;
+      line-height: 50px;
+      transition: transform 0.2s ease-out;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      position: relative;
+      padding: 15px 20px !important;
+      will-change: transform;
+    }
+    
+    .navbar-inverse .navbar-nav > li > a:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 15px;
+      left: 20px;
+      background-color: var(--accent);
+      transition: width 0.3s ease-out;
+    }
+    
+    .navbar-inverse .navbar-nav > li > a:hover:after {
+      width: calc(100% - 40px);
+    }
+
+    .navbar-inverse .navbar-nav > li > a:hover {
+      transform: translateY(-2px);
+    }
+
+    .navbar-text {
+      margin: 0 5%;
+      font-size: 24px;
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 1px;
+      position: relative;
+      white-space: nowrap;
+    }
+
+    /* MAIN CONTENT STYLES - OTIMIZADO */
+    .main-container {
+      flex: 1 0 auto;
+      max-width: 1200px;
+      margin: 40px auto 80px;
+      padding: 40px 5%;
+      position: relative;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transform: translateY(0);
+      animation: float 6s ease-in-out infinite;
+      will-change: transform;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+    }
+    
+    .main-container:before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, var(--primary), var(--accent), var(--primary));
+      z-index: -1;
+      border-radius: 18px;
+      animation: gradientBG 15s ease infinite;
+      background-size: 400% 400%;
+    }
+    
+    @keyframes gradientBG {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    /* TÍTULO PRINCIPAL */
+    .page-title {
+      text-align: center;
+      margin: 40px 0 60px;
+      position: relative;
+    }
+    
+    .page-title h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 2.8em;
+      color: var(--primary);
+      display: inline-block;
+      position: relative;
+      padding-bottom: 15px;
+      margin-bottom: 0;
+    }
+    
+    .page-title h1:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background: var(--accent);
+      bottom: 0;
+      left: 0;
+    }
+
+    /* LINKS DE NAVEGAÇÃO DAS SEÇÕES */
+    .research-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin: 0 auto 50px;
+      max-width: 800px;
+      padding: 0 20px;
+    }
+    
+    .research-links a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      position: relative;
+      padding: 8px 0;
+      transition: color 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .research-links a:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
+    }
+    
+    .research-links a:hover {
+      color: var(--primary-light);
+    }
+    
+    .research-links a:hover:after {
+      width: 100%;
+    }
+
+    /* ESTILO DAS SEÇÕES */
+    .section {
+      margin-bottom: 80px;
+      position: relative;
+    }
+    
+    .section:after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(26, 35, 126, 0.3), transparent);
+    }
+    
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary);
+      font-size: 2em;
+      margin-bottom: 40px;
+      text-align: center;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .section h2:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+    }
+
+    /* ESTILO DAS PUBLICAÇÕES */
+    .publication-item {
+      margin-bottom: 50px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(26, 35, 126, 0.1);
+    }
+    
+    .publication-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
+    
+    .publication-item:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--primary), var(--accent));
+    }
+
+    .publication-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    .publication-title {
+      flex: 1;
+      min-width: 0;
+      font-weight: 700;
+      color: var(--primary-dark);
+      font-size: 1.4em;
+      line-height: 1.4;
+    }
+    
+    .publication-buttons {
+      display: flex;
+      gap: 15px;
+      flex-shrink: 0;
+    }
+
+    /* BOTÕES */
+    .btn-custom {
+      background-color: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      padding: 8px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      min-width: 120px;
+      white-space: nowrap;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    
+    .btn-custom:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: linear-gradient(45deg, var(--primary), var(--primary-light));
+      transition: width 0.3s ease;
+      z-index: -1;
+    }
+    
+    .btn-custom:hover {
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(26, 35, 126, 0.3);
+    }
+    
+    .btn-custom:hover:before {
+      width: 100%;
+    }
+    
+    .btn-custom i {
+      margin-right: 8px;
+    }
+
+    .publication-description {
+      margin-bottom: 20px;
+      color: #555;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    .abstract-content {
+      display: none;
+      margin-top: 25px;
+      padding: 25px;
+      background: rgba(245, 247, 255, 0.7);
+      border-radius: 8px;
+      border-left: 4px solid var(--accent);
+      animation: fadeIn 0.4s ease-out;
+      color: #444;
+      line-height: 1.8;
+      font-size: 15px;
+      backdrop-filter: blur(5px);
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ESTILO PARA CONFERÊNCIAS */
+    .conference-item {
+      margin-bottom: 25px;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: var(--transition);
+      border: 1px solid rgba(26, 35, 126, 0.1);
+      position: relative;
+    }
+    
+    .conference-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .conference-item:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--accent), var(--primary));
+    }
+
+    .conference-title {
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+    
+    .conference-title a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .conference-title a:hover {
+      color: var(--primary-light);
+    }
+    
+    .conference-details {
+      font-size: 15px;
+      color: #666;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .conference-details i {
+      color: var(--accent);
+      font-size: 14px;
+    }
+
+    .back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(45deg, #1a237e, #534bae);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(26, 35, 126, 0.3);
+  z-index: 99999; /* Valor extremamente alto */
+  border: none;
+  outline: none;
+  /* Garantir que não seja afetado por transforms de pais */
+  transform: translateZ(0);
+  /* Forçar aceleração por hardware */
+  will-change: transform, opacity;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Garantir que o particles.js não interfira */
+#particles-js {
+  z-index: -1 !important;
+  position: fixed;
+}
+
+/* Remover qualquer overflow que possa estar cortando */
+body, html {
+  overflow-x: initial !important;
+}
+
+
+    /* RESPONSIVIDADE */
+    @media (max-width: 992px) {
+      .page-title h1 {
+        font-size: 2.2em;
+      }
+      
+      .research-links {
+        gap: 20px;
+      }
+      
+      .publication-header {
+        flex-direction: column;
+      }
+      
+      .publication-buttons {
+        width: 100%;
+        justify-content: flex-start;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .navbar-custom {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+      }
+      
+      .nav-left, .nav-right {
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
+      }
+      
+      .navbar-text {
+        margin: 15px 0;
+        order: -1;
+      }
+      
+      .main-container {
+        margin: 20px auto;
+        padding: 25px;
+      }
+      
+      .page-title h1 {
+        font-size: 1.8em;
+      }
+      
+      .research-links {
+        gap: 15px;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .publication-item,
+      .conference-item {
+        padding: 20px;
+      }
+      
+      .back-to-top {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+        bottom: 20px;
+        right: 20px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .btn-custom {
+        width: 100%;
+      }
+      
+      .section h2 {
+        font-size: 1.5em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Background de partículas -->
+  <div id="particles-js"></div>
+
+  <!-- Navbar com efeito 3D -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid navbar-custom">
+      <ul class="nav navbar-nav nav-left">
+        <li><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="research.html"><i class="far fa-file-alt"></i> Research</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <span class="navbar-text"><strong>Alison Sousa</strong></span>
+        <ul class="nav navbar-nav dropdown-language">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-bars"></i> <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="../index.html">About</a></li>
+              <li><a href="research.html">Research Topics</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Conteúdo principal com efeito de flutuação -->
+  <div class="container-fluid main-container">
+    <div class="page-title">
+      <h1>ACADEMIC RESEARCH</h1>
+    </div>
+
+    <!-- LINKS DE NAVEGAÇÃO DAS SEÇÕES -->
+    <div class="research-links">
+      <a href="#publications">PUBLICATIONS</a>
+      <a href="#conferences">CONFERENCES</a>
+      <a href="#coauthors">CO-AUTHORS</a>
+    </div>
+
+    <!-- SEÇÃO: PUBLICATIONS -->
+    <div id="publications" class="section">
+      <h2>PUBLICATIONS</h2>
+      
+      <!-- PUBLICAÇÃO 1 -->
+    
+      <div class="publication-item">
+        <div class="publication-header">
+          <div class="publication-title">
+            Phase Transitions and Uniqueness of the Gibbs Measure in Ising Models with Variable Magnetic Field: Extension to Long-Range Interactions
+          </div>
+          <div class="publication-buttons">
+            <a href="Phase Transitions.pdf" class="btn-custom" target="_blank"><i class="fas fa-file-pdf"></i> Full Text</a>
+            <button class="btn-custom btn-abstract"><i class="fas fa-scroll"></i> Abstract</button>
+          </div>
+        </div>
+        
+        <div class="publication-description">
+          <p>Working Paper, <strong>Beijing International Center for Mathematical Research</strong> | April 2025</p>
+        </div>
+        
+        <div class="abstract-content">
+          <p>In this paper, we study the uniqueness of the Gibbs measure in Ising models with a spatially decaying magnetic field of the form  \( h(x) = \frac{h^*}{|x|^\alpha} \) (\( \alpha < 1 \)), extending classical arguments for long-range interactions with decay \( J_{xy} \sim |x-y|^{-(d+s)} \) (\( s > \alpha \)). We initially review the proof of uniqueness for local interactions, emphasizing the role of contours and energetic estimates. We then adapt these ideas to the non-local scenario, employing techniques such as coarse-graining, multiscale approximations, and disconnected contours—required due to the absence of locality.
+          
+          Through rigorous technical estimates from the fields of Mathematical Statistical Physics and Probability Theory, we demonstrate that, for  \( \alpha < 1 \) and \( s > \alpha \), the energetic cost of the field dominates the interactions, ensuring the uniqueness of the Gibbs measure even at low temperatures. The results pave the way for generalizations in models with variable fields and long-range interactions, with potential applications in disordered systems.</p>
+          
+          <p><strong>Keywords:</strong> Ising Model; Decaying Magnetic Field; Long-range Interactions; Uniqueness of the Gibbs Measure; Disconnected Contours</p>
+        </div>
+      </div>
+      
+      <!-- PUBLICAÇÃO 2 -->
+      <div class="publication-item">
+        <div class="publication-header">
+          <div class="publication-title">
+            Trade Tariffs and Regional Employment Frictions
+          </div>
+          <div class="publication-buttons">
+            <a href="path_to_pdf.pdf" class="btn-custom"><i class="fas fa-file-pdf"></i> Full Text</a>
+            <button class="btn-custom btn-abstract"><i class="fas fa-scroll"></i> Abstract</button>
+          </div>
+        </div>
+        
+        <div class="publication-description">
+          <p>Published in <strong>Economic Journal</strong> | Volume 131, Issue 638 | August 2022</p>
+        </div>
+        
+        <div class="abstract-content">
+          <p>This paper investigates the effects of trade tariffs on labor market frictions, particularly how tariffs can create significant employment disparities in different regions. Using a novel spatial econometric framework, we analyze data from 150 countries over a 20-year period. Our results show that tariff-induced employment effects are highly heterogeneous across regions, with manufacturing-intensive areas being particularly vulnerable. The study provides policy recommendations for mitigating these adverse effects while maintaining trade protections.</p>
+          <p><strong>Keywords:</strong> Trade tariffs, Labor markets, Regional economics, Spatial econometrics</p>
+        </div>
+      </div>
+      
+      <!-- PUBLICAÇÃO 3 -->
+      <div class="publication-item">
+        <div class="publication-header">
+          <div class="publication-title">
+            International Diversification via ETFs Under the Perspective of the Sharpe Ratio
+          </div>
+          <div class="publication-buttons">
+            <a href="ETFs.pdf" class="btn-custom" target="_blank"><i class="fas fa-file-pdf"></i> Full Text</a>
+            <button class="btn-custom btn-abstract"><i class="fas fa-scroll"></i> Abstract</button>
+          </div>
+        </div>
+        
+        <div class="publication-description">
+          <p>Published in <strong>33rd ENANGRAD</strong> | Issue 33 | November 2022</p>
+        </div>
+        
+        <div class="abstract-content">
+          <p>In this paper, we discuss the international diversification effects comparing with the return and risk relations of a management portfolio indicated by finance institutions confronting with two Exchange-Traded Funds – ETFs. We proposal is verify if a portfolio international diversified of ETFs (i.e., BOVA11 and IVVB11) has a superior performance via the Sharpe Index than a portfolio composed of more frequent shares recommended by 17 financial institutions, between them Bradesco, Rico e XP Investimentos etc. The results show that ETFs are an alternative of diversification. Additionally, the risk return ratio was higher than the portfolio composed of shares recommended by financial institutions. Thus, we conclude that the benefits of diversification via ETFs in the foreign and domestic markets generate a benefit to the investor in the allocation of the portfolio, from the risk and return perspective of the Sharpe Index.</p>
+          <p><strong>Keywords:</strong> Exchange Traded Fund (ETF), Sharpe Index, Diversification</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEÇÃO: CONFERÊNCIAS -->
+    <div id="conferences" class="section">
+      <h2>CONFERENCES AND TALKS</h2>
+      
+      <div class="conference-item">
+        <div class="conference-title">International Diversification via ETFs</div>
+        <div class="conference-details">
+          <i class="fas fa-map-marker-alt"></i> 33rd ENANGRAD – National Meeting of Undergraduate Programs in Business, Santa Catarina
+          <i class="far fa-calendar-alt"></i> December 2022
+        </div>
+      </div>
+      
+      <div class="conference-item">
+        <div class="conference-title">China–U.S.–Taiwan Dynamics Under Biden</div>
+        <div class="conference-details">
+          <i class="fas fa-map-marker-alt"></i> Asian Business Center, São Paulo
+          <i class="far fa-calendar-alt"></i> November 2022
+        </div>
+      </div>
+      
+   
+    </div>
+
+    <!-- SEÇÃO: CO-AUTHORS -->
+    <div id="coauthors" class="section">
+      <h2>LIST OF CO-AUTHORS</h2>
+      
+
+      <div class="conference-item">
+        <div class="conference-title">
+          <a href="https://www.ime.usp.br/~joaovitor/index.html" target="_blank">João Maia</a>
+        </div>
+        <div class="conference-details">
+          <i class="fas fa-university"></i> Postdoc, Peking University
+          <i class="fas fa-envelope"></i> joao.maia@pku.edu.cn
+        </div>
+      </div>
+
+      <div class="conference-item">
+        <div class="conference-title">
+          <a href="https://www.espm.br/professores/alexandre-ratsuo-uehara/">Alexandre Ratsuo Uehara</a>
+        </div>
+        <div class="conference-details">
+          <i class="fas fa-university"></i> University of São Paulo
+          <i class="fas fa-envelope"></i> aruehara@usp.br
+        </div>
+      </div>
+
+      <div class="conference-item">
+        <div class="conference-title">
+          <a href="https://eesp.fgv.br/integrante/vera-thorstensen">Vera Thorstensen</a>
+        </div>
+        <div class="conference-details">
+          <i class="fas fa-university"></i> Sao Paulo School of Economics
+          <i class="fas fa-envelope"></i> vera.thorstensen@fgv.br
+        </div>
+      </div>
+
+    </div>
+  </div> <!-- Fechamento do main-container -->
+
+  <!-- BOTÃO VOLTAR AO TOPO - CORRIGIDO -->
+  <button class="back-to-top" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts otimizados -->
+  <script>
+    // Configuração otimizada do particles.js
+    function initParticles() {
+      if (typeof particlesJS === 'function') {
+        particlesJS('particles-js', {
+          "particles": {
+            "number": { "value": 40 },
+            "color": { "value": "#1a237e" },
+            "shape": { "type": "circle" },
+            "opacity": {
+              "value": 0.3,
+              "random": true,
+              "anim": { "enable": true, "speed": 1, "opacity_min": 0.1 }
+            },
+            "size": {
+              "value": 3,
+              "random": true,
+              "anim": { "enable": true, "speed": 2, "size_min": 0.1 }
+            },
+            "line_linked": {
+              "enable": true,
+              "distance": 200,
+              "color": "#1a237e",
+              "opacity": 0.2,
+              "width": 1
+            },
+            "move": {
+              "enable": true,
+              "speed": 0.5,
+              "direction": "none",
+              "random": true,
+              "out_mode": "out"
+            }
+          },
+          "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+              "onhover": { "enable": true, "mode": "repulse" },
+              "onclick": { "enable": false },
+              "resize": true
+            },
+            "modes": {
+              "repulse": { "distance": 100, "duration": 0.4 }
+            }
+          },
+          "retina_detect": true
+        });
+      }
+    }
+
+    // Aguarda o carregamento completo da página
+    document.addEventListener('DOMContentLoaded', function() {
+      // Scroll otimizado para navbar
+      let lastScroll = 0;
+      const navbar = document.querySelector('.navbar-inverse');
+      
+      function handleScroll() {
+        const currentScroll = window.scrollY;
+        if (Math.abs(currentScroll - lastScroll) > 5) {
+          navbar.classList.toggle('scrolled', currentScroll > 50);
+          lastScroll = currentScroll;
+        }
+        
+        // Controle do botão "voltar ao topo"
+        const backToTop = document.querySelector('.back-to-top');
+        if (window.scrollY > 300) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      }
+
+      
+      
+      window.addEventListener('scroll', handleScroll, { passive: true });
+
+      // Carrega particles.js apenas quando visível
+      const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          initParticles();
+          observer.disconnect();
+        }
+      }, { threshold: 0.1 });
+      
+      const particlesEl = document.getElementById('particles-js');
+      if (particlesEl) observer.observe(particlesEl);
+
+      // Botão de abstract
+      document.querySelectorAll('.btn-abstract').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const abstract = this.closest('.publication-item').querySelector('.abstract-content');
+          const isHidden = abstract.style.display === 'none' || !abstract.style.display;
+          
+          abstract.style.display = isHidden ? 'block' : 'none';
+          this.innerHTML = isHidden ? '<i class="fas fa-scroll"></i> Hide Abstract' : '<i class="fas fa-scroll"></i> Abstract';
+          
+          // Rolagem suave para o abstract
+          if (isHidden) {
+            abstract.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        });
+      });
+
+      
+
+      // Botão voltar ao topo - CORRIGIDO
+      const backToTopButton = document.querySelector('.back-to-top');
+      if (backToTopButton) {
+        backToTopButton.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
+    });
+
+
+  </script>
+</body>
+</html>

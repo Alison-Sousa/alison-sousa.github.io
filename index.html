@@ -1,424 +1,705 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <title>Welcome | Alison Sousa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Meta tags para SEO acadêmico -->
+  <meta name="description" content="Researcher in Economics and Statistics | Mathematical Modeling | Data Science">
+  <meta name="keywords" content="economics, statistics, research, mathematics, data science">
+  
+  <!-- Webfonts premium com preload -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@300;400;600;700&display=swap"></noscript>
+  
+  <!-- CSS Libraries -->
+  <link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+  <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+  
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  
+  <!-- JS Libraries com defer -->
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js" defer></script>
+  <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js" defer></script>
+  
+  <!-- Particle.js para background interativo (carregado defer) -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
 
-<meta charset="utf-8" />
-<meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+  <style>
+    :root {
+      --primary: #1a237e;
+      --primary-light: #534bae;
+      --primary-dark: #000051;
+      --accent: #ffab00;
+      --dark: #121212;
+      --light: #f8f9fa;
+      --transition: all 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+    
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Source Sans 3', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
 
+    body {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    
+    /* Efeito de partículas no background */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: linear-gradient(135deg, #f8fafc 0%, #eef2f6 100%);
+    }
 
+    /* NAVBAR STYLES - OTIMIZADO */
+    .navbar-inverse {
+      background-color: rgba(26, 35, 126, 0.98) !important;
+      border: none;
+      font-weight: 600;
+      font-size: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: var(--transition);
+      transform: translateZ(0);
+      will-change: transform;
+    }
+    
+    .navbar-inverse.scrolled {
+      background-color: rgba(26, 35, 126, 0.92) !important;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+      height: 70px;
+    }
 
+    .navbar-custom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 5%;
+      height: 90px;
+      transition: var(--transition);
+    }
 
-<title>Alison Sousa's Academic Website</title>
+    .nav-left {
+      display: flex;
+      align-items: center;
+    }
 
-<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<style>h1 {font-size: 34px;}
-       h1.title {font-size: 38px;}
-       h2 {font-size: 30px;}
-       h3 {font-size: 24px;}
-       h4 {font-size: 18px;}
-       h5 {font-size: 16px;}
-       h6 {font-size: 12px;}
-       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-       pre:not([class]) { background-color: white }</style>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    .nav-right {
+      display: flex;
+      align-items: center;
+      margin-left: 120px; /* Ajuste solicitado para mover dropdown para direita */
+    }
 
-<style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
+    .navbar-inverse .navbar-nav > li > a,
+    .navbar-inverse .navbar-brand,
+    .navbar-inverse .navbar-text {
+      color: #ffffff !important;
+      line-height: 50px;
+      transition: transform 0.2s ease-out;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      position: relative;
+      padding: 15px 20px !important;
+      will-change: transform;
+    }
+    
+    .navbar-inverse .navbar-nav > li > a:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 15px;
+      left: 20px;
+      background-color: var(--accent);
+      transition: width 0.3s ease-out;
+    }
+    
+    .navbar-inverse .navbar-nav > li > a:hover:after {
+      width: calc(100% - 40px);
+    }
 
-<style type="text/css">code{white-space: pre;}</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
+    .navbar-inverse .navbar-nav > li > a:hover {
+      transform: translateY(-2px);
+    }
 
+    .navbar-text {
+      margin: 0 5%;
+      font-size: 24px;
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 1px;
+      position: relative;
+      white-space: nowrap;
+    }
 
+    /* MAIN CONTENT STYLES - OTIMIZADO */
+    .main-container {
+      flex: 1 0 auto;
+      max-width: 1200px;
+      margin: 40px auto 80px;
+      padding: 40px 5%;
+      position: relative;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transform: translateY(0);
+      animation: float 6s ease-in-out infinite;
+      will-change: transform;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+    }
+    
+    .main-container:before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, var(--primary), var(--accent), var(--primary));
+      z-index: -1;
+      border-radius: 18px;
+      animation: gradientBG 15s ease infinite;
+      background-size: 400% 400%;
+    }
+    
+    @keyframes gradientBG {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
 
+    .profile-section {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      padding: 40px 0;
+      position: relative;
+    }
+    
+    .profile-section:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(26, 35, 126, 0.3), transparent);
+    }
 
+    .profile-section img {
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: 80% 35%;
+      border: 8px solid rgba(26, 35, 126, 0.1);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      filter: grayscale(20%);
+      will-change: transform, filter;
+    }
+    
+    .profile-section img:hover {
+      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+      filter: grayscale(0%);
+      transform: scale(1.02) rotate(2deg);
+    }
 
+    .profile-text {
+      flex: 1;
+      position: relative;
+    }
+    
+    .profile-text:before {
+      content: '"';
+      position: absolute;
+      font-family: 'Playfair Display', serif;
+      font-size: 120px;
+      color: rgba(26, 35, 126, 0.1);
+      top: -60px;
+      left: -40px;
+      line-height: 1;
+      z-index: 0;
+    }
 
+    .profile-text p {
+      font-size: 17px;
+      color: var(--dark);
+      position: relative;
+      z-index: 1;
+    }
 
+    .profile-text p:first-child {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 2.8em;
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 40px;
+      padding-bottom: 15px;
+      border-bottom: 3px solid var(--primary);
+      display: inline-block;
+      width: 100%;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      position: relative;
+    }
+    
+    .profile-text p:first-child:after {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 4px;
+      background: var(--accent);
+      bottom: -3px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
+    .profile-text p:nth-child(2) {
+      text-align: justify;
+      margin-bottom: 30px;
+      font-size: 18px;
+      line-height: 1.9;
+    }
 
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-img {
-  max-width:100%;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-summary {
-  display: list-item;
-}
-details > summary > p:only-child {
-  display: inline;
-}
-pre code {
-  padding: 0;
-}
-</style>
+    .profile-text a {
+      color: var(--primary);
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    
+    .profile-text a:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
+    }
+    
+    .profile-text a:hover {
+      color: var(--primary-light);
+    }
+    
+    .profile-text a:hover:after {
+      width: 100%;
+    }
 
+    /* DOWNLOAD CV SECTION - OTIMIZADO */
+    .download-cv {
+      margin-top: 50px;
+      text-align: center;
+      position: relative;
+    }
 
-<style type="text/css">
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #adb5bd;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
-}
+    .download-cv p {
+      font-weight: 700;
+      font-size: 1.3em;
+      color: var(--primary);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
 
+    .download-cv a {
+      display: inline-block;
+      padding: 12px 30px;
+      background: var(--primary);
+      color: white !important;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid var(--primary);
+      box-shadow: 0 5px 15px rgba(26, 35, 126, 0.4);
+      will-change: transform;
+    }
+    
+    .download-cv a:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(26, 35, 126, 0.6);
+    }
 
-@media (max-width: 768px) {
-  body {
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden; 
-  }
+    /* CONTACT FOOTER - OTIMIZADO */
+    .contact-footer {
+      text-align: center;
+      font-size: 18px;
+      margin: 60px 0 40px;
+      padding: 0 20px;
+      position: relative;
+    }
+    
+    .contact-footer:before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%231a237e' fill-opacity='0.05' d='M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
 
-  .container, .row {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-  }
+    .contact-footer p {
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--primary);
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .contact-footer p:after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background: var(--accent);
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
-  .col {
-    width: 100%; 
-    margin-bottom: 20px;
-  }
+    .contact-footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s ease, background 0.3s ease;
+      display: inline-block;
+      padding: 8px 20px;
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border: 1px solid rgba(26, 35, 126, 0.1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      will-change: transform;
+    }
+    
+    .contact-footer a:hover {
+      transform: translateY(-3px);
+      background: var(--primary);
+      color: white;
+    }
 
-  .titulo {
-    font-size: 1.5em; 
-    text-align: center; 
-  }
+    .contact-footer i {
+      margin-right: 10px;
+      color: var(--primary);
+      transition: transform 0.3s ease;
+    }
+    
+    .contact-footer a:hover i {
+      transform: scale(1.2);
+      color: white;
+    }
 
-  .botao, a {
-    font-size: 1em; 
-    width: 90%; 
-    text-align: center;
-  }
+    /* RESPONSIVE STYLES */
+    @media (max-width: 1200px) {
+      .profile-section {
+        gap: 40px;
+      }
+      
+      .profile-section img {
+        width: 320px;
+        height: 320px;
+      }
+    }
+    
+    @media (max-width: 992px) {
+      .navbar-text {
+        font-size: 20px;
+      }
+      
+      .profile-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+      }
+      
+      .profile-text p:first-child {
+        font-size: 2.2em;
+      }
+      
+      .profile-text:before {
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 80px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .navbar-custom {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+      }
+      
+      .nav-left, .nav-right {
+        width: 100%;
+        justify-content: center;
+        margin-left: 0; /* Reset para mobile */
+      }
+      
+      .navbar-text {
+        margin: 15px 0;
+        order: -1;
+      }
+      
+      .profile-section img {
+        width: 280px;
+        height: 280px;
+      }
+      
+      .main-container {
+        margin: 20px auto;
+        padding: 30px 20px;
+      }
+      
+      .profile-text p:first-child {
+        font-size: 1.8em;
+      }
+      
+      .profile-text p:nth-child(2) {
+        font-size: 16px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .profile-section img {
+        width: 220px;
+        height: 220px;
+      }
+      
+      .download-cv a {
+        padding: 10px 25px;
+        font-size: 14px;
+      }
+      
+      .contact-footer p {
+        font-size: 18px;
+      }
+    }
 
-  .imagem-grande {
-    width: 100%;
-    height: auto;
-  }
-}
-
-</style>
-
-<script type="text/javascript">
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
-
-  // Navbar adjustments
-  var navHeight = $(".navbar").first().height() + 15;
-  var style = document.createElement('style');
-  var pt = "padding-top: " + navHeight + "px; ";
-  var mt = "margin-top: -" + navHeight + "px; ";
-  var css = "";
-  // offset scroll position for anchor links (for fixed navbar)
-  for (var i = 1; i <= 6; i++) {
-    css += ".section h" + i + "{ " + pt + mt + "}\n";
-  }
-  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
-  document.head.appendChild(style);
-});
-</script>
-
-<!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "\e259";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "\e258";
-  font-family: 'Glyphicons Halflings';
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
-  display: none;
-}
-
-.navbar-nav {
-  margin-left: 100px;
-  /
-}
-
-</style>
-
-
-<!-- code folding -->
-
-
+    /* EFEITOS ESPECIAIS OTIMIZADOS */
+    .hover-3d {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      will-change: transform;
+    }
+    
+    .hover-3d:hover {
+      transform: perspective(500px) rotateX(5deg) rotateY(5deg) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
+    }
+    
+    /* Animação de digitação otimizada */
+    .typing-effect {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid var(--primary);
+      animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+    
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: var(--primary) }
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Background de partículas -->
+  <div id="particles-js"></div>
 
+  <!-- Navbar com efeito 3D -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid navbar-custom">
+      <ul class="nav navbar-nav nav-left">
+        <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="research/research.html"><i class="far fa-file-alt"></i> Research</a></li>
+      </ul>
 
-<div class="container-fluid main-container">
-
-
-
-
-<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html"></a>
+      <div class="nav-right">
+        <span class="navbar-text"><strong>Alison Sousa</strong></span>
+        <ul class="nav navbar-nav dropdown-language">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-bars"></i> <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html">About</a></li>
+              <li><a href="research/research.html">Research Topics</a></li>
+         
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li>
-  <a href="index.html">
-    <span class="fa fa-home"></span>
-     
-    Home
-  </a>
-</li>
+  </nav>
 
-<li>
-  <a href="cv/cv.html">
-    <span class="fa fa-file-pdf-o"></span>
-     
-    CV
-  </a>
-</li>
-<li>
-  <a href="research/about.html">
-    <span class="far fa-file-alt"></span>
-     
-    Research
-  </a>
-</li>
+  <!-- Conteúdo principal com efeito de flutuação -->
+  <div class="container-fluid main-container hover-3d">
+    <div id="header">
+      <div class="profile-section">
+        <img src="profile/profile.jpg" alt="Alison Sousa" class="hover-3d" loading="lazy">
+        <div class="profile-text">
+          <p class="typing-effect">ACADEMIC PROFILE</p>
+          <p>
+            Hi there! I am Alison Sousa, currently a research assistant at the 
+            <a href="https://bicmr.pku.edu.cn/" target="_blank">Beijing International Center for Mathematical Research (BICMR)</a>, 
+            under the supervision of 
+            <a href="https://www.ime.usp.br/~joaovitor/index.html" target="_blank">João Maia, Ph.D</a>. 
+            I hold a Bachelor's degree in International Relations from 
+            <a href="https://www.espm.br/" target="_blank">Escola Superior de Propaganda e Marketing (ESPM)</a>, 
+            with international academic programs completed at 
+            <a href="https://www.zuyd.nl/en" target="_blank">Zuyd Hogeschool (ZH)</a> and 
+            <a href="https://www.meiji.ac.jp/cip/english/" target="_blank">Meiji University (MU)</a>. 
+            I have experience in the financial market, the public sector, and as a researcher.
+          </p>
 
-<li>
-  <a href="awards/awards.html">
-    <span class="fa fa-solid fa-trophy"></span>
-     
-    Awards
-  </a>
-</li>
-      
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
-
-<div id="header">
-  <h1 class="title toc-ignore" style="font-weight: bold; margin-bottom: 20px;">Alison Sousa</h1>
-
-  <div style="display: flex; 
-             background-color: rgb(255, 255, 255); 
-             border-radius: 20px; 
-             padding: 20px; 
-             width: auto; 
-             max-width: 1000px; 
-             box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3); 
-             transition: all 0.3s ease;">
-
-
-    <div style="width: 50%; max-width: 500px;">
-      <img src="cv/perfil.jpg" 
-           style="width: 100%; height: 100%; max-width: 500px; max-height: 500px; border-radius: 15px; 
-                  object-fit: cover; 
-                  object-position: 80% 40%;" />
-    </div>
-
- 
-    <div style="width: 50%; padding-left: 20px;">
-     
-      <p style="font-weight: bold; font-size: 1.5em;">Alison Sousa</p>
-
-      
-      <p>Welcome to my website! I hold a <a href="https://www.espm.br/" target="_blank">Bachelor's degree in International Relations</a> from ESPM, 
-        with international programs at <a href="https://www.zuyd.nl/" target="_blank">Zuyd Hogeschool</a> and 
-        <a href="https://www.meiji.ac.jp/cip/english/" target="_blank">Meiji University</a>. I have experience in the financial market, public sector, and as a researcher.</p>
-
-        <p>
-          <a href="mailto:alisoncsousa97@gmail.com" style="text-decoration: none;">
-            <i class="fa fa-envelope-o" style="font-size: 30px; margin-right: 10px;"></i>
-          </a>
-          <a href="https://orcid.org/0000-0002-6072-9886" style="text-decoration: none;">
-            <i class="fab fa-orcid" style="font-size: 30px; margin-right: 10px;"></i>
-          </a>
-          <a href="https://github.com/Alison-Sousa" style="text-decoration: none;">
-            <i class="fab fa-github" style="font-size: 30px;"></i>
-          </a>
-        </p>
-        
+          <div class="download-cv">
+            <a href="profile/CV Alison Sousa.pdf" target="_blank">
+              <i class="fas fa-id-card"></i> DOWNLOAD CV
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
+  <!-- Footer com efeito de onda -->
+  <div class="contact-footer">
+    <p>Get in touch with me</p>
+    <a href="mailto:alisoncsousa97@gmail.com">
+      <i class="fas fa-paper-plane"></i> csousa.alison@gmail.com
+    </a>
+  </div>
 
+  <!-- Scripts otimizados -->
+  <script>
+    // Configuração otimizada do particles.js
+    function initParticles() {
+      if (typeof particlesJS === 'function') {
+        particlesJS('particles-js', {
+          "particles": {
+            "number": { "value": 40 },
+            "color": { "value": "#1a237e" },
+            "shape": { "type": "circle" },
+            "opacity": {
+              "value": 0.3,
+              "random": true,
+              "anim": { "enable": true, "speed": 1, "opacity_min": 0.1 }
+            },
+            "size": {
+              "value": 3,
+              "random": true,
+              "anim": { "enable": true, "speed": 2, "size_min": 0.1 }
+            },
+            "line_linked": {
+              "enable": true,
+              "distance": 200,
+              "color": "#1a237e",
+              "opacity": 0.2,
+              "width": 1
+            },
+            "move": {
+              "enable": true,
+              "speed": 0.5,
+              "direction": "none",
+              "random": true,
+              "out_mode": "out"
+            }
+          },
+          "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+              "onhover": { "enable": true, "mode": "repulse" },
+              "onclick": { "enable": false },
+              "resize": true
+            },
+            "modes": {
+              "repulse": { "distance": 100, "duration": 0.4 }
+            }
+          },
+          "retina_detect": true
+        });
+      }
+    }
 
+    // Aguarda o carregamento completo da página
+    document.addEventListener('DOMContentLoaded', function() {
+      // Scroll otimizado para navbar
+      let lastScroll = 0;
+      const navbar = document.querySelector('.navbar-inverse');
+      
+      function handleScroll() {
+        const currentScroll = window.scrollY;
+        if (Math.abs(currentScroll - lastScroll) > 5) {
+          navbar.classList.toggle('scrolled', currentScroll > 50);
+          lastScroll = currentScroll;
+        }
+      }
+      
+      window.addEventListener('scroll', handleScroll, { passive: true });
 
+      // Carrega particles.js apenas quando visível
+      const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          initParticles();
+          observer.disconnect();
+        }
+      }, { threshold: 0.1 });
+      
+      const particlesEl = document.getElementById('particles-js');
+      if (particlesEl) observer.observe(particlesEl);
 
+      // Remove animação de digitação após completar
+      setTimeout(() => {
+        const typingElement = document.querySelector('.typing-effect');
+        if (typingElement) {
+          typingElement.style.animation = 'none';
+          typingElement.style.borderRight = 'none';
+        }
+      }, 3500);
+    });
 
-
-
-
-
-
-
-
-<script>
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-</script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open');
-  });
-});
-</script>
-
-<!-- code folding -->
-
-
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
-
+  </script>
 </body>
 </html>

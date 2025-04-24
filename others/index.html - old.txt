@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Welcome | Alison Sousa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+  <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      background-color: #f8fafc;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* NAVBAR STYLES */
+    .navbar-inverse {
+      background-color: #1a237e;
+      border: none;
+      font-weight: 500;
+      font-size: 16px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .navbar-custom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+      height: 80px;
+    }
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      align-items: center;
+      transform: translateX(-5%);
+    }
+
+    .navbar-inverse .navbar-nav > li > a,
+    .navbar-inverse .navbar-brand,
+    .navbar-inverse .navbar-text {
+      color: #ffffff !important;
+      line-height: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-inverse .navbar-nav > li > a:hover,
+    .navbar-inverse .navbar-text:hover {
+      color: #ffffff;
+      text-decoration: none;
+      opacity: 0.9;
+    }
+
+    .navbar-text {
+      margin-right: 120px;
+      font-size: 20px;
+      flex: 1;
+      align-items: center;
+    }
+
+    /* MAIN CONTENT STYLES */
+    .main-container {
+      flex: 1 0 auto;
+      max-width: 940px;
+      margin: auto;
+      padding: 60px 20px 40px;
+    }
+
+    .profile-section {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      padding: 40px 0;
+    }
+
+    .profile-section img {
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: 80% 35%;
+      border: 5px solid rgba(26, 35, 126, 0.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transform: translateX(-27px);
+      transition: all 0.3s ease;
+    }
+
+    .profile-section img:hover {
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .profile-text {
+      flex: 1;
+    }
+
+    .profile-text p {
+      font-size: 16px;
+      color: #444;
+    }
+
+    .profile-text p:first-child {
+      font-weight: 600;
+      font-size: 2em;
+      text-align: center;
+      color: #1a237e;
+      margin-bottom: 25px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #1a237e;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .profile-text p:nth-child(2) {
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+
+    .profile-text a {
+      color: #1a237e;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .profile-text a:hover {
+      color: #3949ab;
+      text-decoration: underline;
+    }
+
+    /* DOWNLOAD CV SECTION */
+    .download-cv {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .download-cv p {
+      font-weight: 600;
+      font-size: 1.1em;
+      color: #1a237e;
+      margin-bottom: 10px;
+    }
+
+    .download-cv p {
+  border-bottom: none !important; /* Remove a linha azul */
+  padding-bottom: 0 !important;  /* Remove espaçamento extra */
+}
+
+    .download-cv a {
+      display: inline-block;
+      padding: 4px 10px;
+      background-color: #1a237e;
+      color: white !important;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 0.7em;
+    }
+
+    .download-cv a:hover {
+      background-color: #3949ab;
+      text-decoration: none;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(26, 35, 126, 0.3);
+    }
+
+    
+
+    /* CONTACT FOOTER */
+    .contact-footer {
+      text-align: center;
+      font-size: 16px;
+      margin: 40px 0;
+      padding: 0 20px;
+    }
+
+    .contact-footer p {
+      font-weight: 600;
+      font-size: 18px;
+      color: #1a237e;
+      margin-bottom: 15px;
+    }
+
+    .contact-footer a {
+      color: #1a237e;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .contact-footer a:hover {
+      color: #3949ab;
+      text-decoration: underline;
+    }
+
+    .contact-footer i {
+      margin-right: 8px;
+      color: #1a237e;
+    }
+
+    /* RESPONSIVE STYLES */
+    @media (max-width: 768px) {
+      .navbar-custom {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 10px 20px;
+      }
+
+      .nav-left,
+      .nav-right {
+        flex-direction: column;
+        text-align: center;
+        margin: 10px 0;
+        transform: none;
+      }
+
+      .navbar-text {
+        margin: 10px 0;
+      }
+
+      .profile-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+      }
+
+      .profile-section img {
+        width: 250px;
+        height: 250px;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid navbar-custom">
+      <ul class="nav navbar-nav nav-left">
+        <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="research/research.html"><i class="far fa-file-alt"></i> Research</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <span class="navbar-text"><strong>Alison Sousa</strong></span>
+        <ul class="nav navbar-nav dropdown-language">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-user"></i>  <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html">About</a></li>
+              <li><a href="index_pt.html">Research Topics</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid main-container">
+    <div id="header">
+      <div class="profile-section">
+        <img src="profile/profile.jpg" alt="Alison Sousa">
+        <div class="profile-text">
+          <p>ACADEMIC PROFILE</p>
+          <p>
+            Hi there! I am Alison Sousa, currently a research assistant at the 
+            <a href="https://www.math.pku.edu.cn/english/bicmr/" target="_blank">Beijing International Center for Mathematical Research (BICMR)</a>, 
+            under the supervision of 
+            <a href="https://www.ime.usp.br/~joaovitor/index.html" target="_blank">Postdoctoral Researcher João Maia</a>. 
+            I hold a Bachelor's degree in International Relations from 
+            <a href="https://www.espm.br/" target="_blank">Escola Superior de Propaganda e Marketing (ESPM)</a>, 
+            with international academic programs completed at 
+            <a href="https://www.zuyd.nl/en/" target="_blank">Zuyd Hogeschool (ZH)</a> and 
+            <a href="https://www.meiji.ac.jp/cip/english/" target="_blank">Meiji University (MU)</a>. 
+            I have experience in the financial market, the public sector, and as a researcher.
+          </p>
+
+          <div class="download-cv">
+            <p><a href="link-to-cv.pdf" target="_blank">DOWNLOAD MY CV</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-footer">
+    <p>Get in touch with me</p>
+    <a href="mailto:alisoncsousa97@gmail.com">
+      <i class="fa fa-envelope"></i> alisoncsousa97@gmail.com
+    </a>
+  </div>
+
+  
+
+</body>
+</html>

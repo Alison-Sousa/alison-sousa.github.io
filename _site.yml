@@ -9,13 +9,7 @@ navbar:
       href: index.html
     - text: "Research"
       icon: far fa-file-alt
-      href: about.html
-    - text: "CV"
-      icon: fa-file-pdf-o
-      href: cv.html
-    - text: "Awards"
-      icon: fa fa-solid fa-trophy
-      href: awards.html
+      href: research.html
 #    - text: partyvoter
 #      icon: far fa-chart-bar
 #      href: https://marekjozsef.shinyapps.io/partyvoter/

@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Research | Alison Sousa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="../site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+  <script src="../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="../site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+  <link href="../site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    /* RESET E CONFIGURAÇÕES GERAIS */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      background-color: #f8fafc;
+      min-height: 100vh;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* CONTAINER PRINCIPAL */
+    .main-container {
+      flex: 1;
+      padding-bottom: 60px;
+    }
+
+    /* NAVBAR */
+    .navbar-inverse {
+      background-color: #1a237e;
+      border: none;
+      font-weight: 500;
+      font-size: 16px;
+      min-height: 80px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .navbar-custom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+      height: 80px;
+    }
+
+    .navbar-text {
+      margin-right: 120px;
+      font-size: 20px;
+      flex: 1;
+      align-items: center;
+    }
+
+    .navbar-inverse .navbar-nav > li > a,
+    .navbar-inverse .navbar-brand,
+    .navbar-inverse .navbar-text {
+      color: #ffffff !important;
+      line-height: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-inverse .navbar-nav > li > a:hover,
+    .navbar-inverse .navbar-text:hover {
+      color: #ffffff;
+      text-decoration: none;
+      opacity: 0.9;
+    }
+
+    /* LINKS DE NAVEGAÇÃO DAS SEÇÕES */
+    .research-links {
+      text-align: center;
+      margin: 50px 0 30px 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .research-links a {
+      font-weight: 600;
+      color: #1a237e;
+      text-decoration: none;
+      position: relative;
+      padding: 5px 0;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .research-links a:hover {
+      color: #3949ab;
+    }
+
+    .research-links a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #1a237e;
+      transform: scaleX(1);
+    }
+
+    /* ESTILO DAS SEÇÕES */
+    .section h2 {
+      color: #1a237e;
+      font-size: 28px;
+      font-weight: 600;
+      padding-bottom: 10px;
+      margin-top: 50px;
+      text-align: center;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section h2::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(90deg, #1a237e, #3949ab);
+    }
+
+    .section {
+      max-width: 900px;
+      margin: 0 auto 60px auto;
+      padding: 0 25px;
+    }
+
+    .section > h2 {
+      display: block;
+      width: 100%;
+    }
+
+    /* ESTILO DAS PUBLICAÇÕES */
+    .publication-item {
+      margin-bottom: 35px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .publication-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 15px;
+    }
+    
+    .publication-title {
+      flex: 1;
+      font-weight: 600;
+      color: #1a237e;
+      margin-right: 20px;
+      font-size: 18px;
+      min-width: 0; /* Permite que o texto quebre */
+    }
+    
+    .publication-buttons {
+      display: flex;
+      gap: 12px;
+      flex-shrink: 0; /* Impede que os botões encolham */
+      margin-left: 20px;
+    }
+
+    /* BOTÕES */
+    .btn-custom {
+      background-color: transparent;
+      border: 2px solid #1a237e;
+      color: #1a237e;
+      padding: 6px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 25px;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      min-width: 100px;
+      white-space: nowrap;
+    }
+
+    .btn-custom:hover {
+      background-color: #1a237e;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(26, 35, 126, 0.2);
+    }
+
+    .publication-description {
+      margin-bottom: 20px;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .abstract-content {
+      display: none;
+      margin: 25px 0 15px 0;
+      padding: 20px;
+      background-color: #f5f7ff;
+      border-radius: 8px;
+      border-left: 4px solid #1a237e;
+      animation: fadeIn 0.3s ease-in-out;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ESTILO PARA CONFERÊNCIAS */
+    .conference-item {
+      margin-bottom: 25px;
+      padding: 15px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .conference-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .conference-title {
+      font-weight: 600;
+      color: #1a237e;
+      margin-bottom: 8px;
+      font-size: 17px;
+    }
+    
+    .conference-details {
+      font-size: 14px;
+      color: #666;
+      margin-left: 5px;
+    }
+
+    /* BOTÃO VOLTAR AO TOPO */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background-color: #1a237e;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(26, 35, 126, 0.3);
+      z-index: 99;
+    }
+
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background-color: #3949ab;
+      transform: translateY(-3px);
+    }
+
+        /* Centralizando o ícone perfeitamente */
+    .back-to-top i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+
+    /* RESPONSIVIDADE */
+    @media (max-width: 768px) {
+      .navbar-custom {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 10px 20px;
+      }
+
+      .nav-left,
+      .nav-right {
+        flex-direction: column;
+        text-align: center;
+        margin: 10px 0;
+      }
+
+      .navbar-text {
+        margin: 10px 0;
+      }
+      
+      .publication-header {
+        flex-direction: column;
+      }
+      
+      .publication-buttons {
+        margin-top: 15px;
+        margin-left: 0;
+        width: 100%;
+        justify-content: flex-start;
+      }
+      
+      .research-links {
+        gap: 15px;
+      }
+
+      .btn-custom {
+        width: auto;
+      }
+    }
+
+    /* Rolagem suave */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid navbar-custom">
+      <ul class="nav navbar-nav nav-left">
+        <li><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="research.html"><i class="far fa-file-alt"></i> Research</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <span class="navbar-text"><strong>Alison Sousa</strong></span>
+        <ul class="nav navbar-nav dropdown-language">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-user"></i>  <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="../index.html">About</a></li>
+              <li><a href="research.html">Research Topics</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div style="text-align: center; margin-top: 40px;">
+    <h2 style="font-size: 28px; font-weight: 600; color: #1a237e; display: inline-block; position: relative;">
+      ACADEMIC RESEARCH
+      <span style="position: absolute; width: 100%; height: 3px; bottom: -10px; left: 0; background: linear-gradient(90deg, #1a237e, #3949ab);"></span>
+    </h2>
+  </div>
+
+  <!-- LINKS DE NAVEGAÇÃO DAS SEÇÕES -->
+  <div class="research-links">
+    <a href="#publications">PUBLICATIONS</a>
+    <a href="#conferences">CONFERENCES</a>
+    <a href="#coauthors">CO-AUTHORS</a>
+  </div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div class="container-fluid main-container">
+    <!-- SEÇÃO: PUBLICATIONS -->
+    <div id="publications" class="section">
+      <h2>PUBLICATIONS</h2>
+      
+      <!-- PUBLICAÇÃO 1 -->
+      <div class="publication-item">
+        <div class="publication-header">
+          <div class="publication-title">
+            Phase Transitions in Ising models: the Semi-infinite with decaying field and the Random Field Longrange
+          </div>
+          <div class="publication-buttons">
+            <a href="path_to_pdf.pdf" class="btn-custom btn-text">Text</a>
+            <button class="btn-custom btn-abstract">Abstract</button>
+          </div>
+        </div>
+        
+        <div class="publication-description">
+          In this thesis, we present results on phase transition for two models: the semi-infinite Ising model with a decaying field, and the long-range Ising model with a random field. We study the semi-infinite Ising model with an external field, is the wall influence, and this external field decays as it gets further away from the wall...
+        </div>
+        
+        <div class="abstract-content">
+          <p>This thesis explores the concept of phase transitions in Ising models under specific boundary conditions. The models focus on the interaction between semi-infinite spaces and long-range fields...</p>
+        </div>
+      </div>
+      
+      <!-- PUBLICAÇÃO 2 -->
+      <div class="publication-item">
+        <div class="publication-header">
+          <div class="publication-title">
+            Trade Tariffs and Regional Employment Frictions
+          </div>
+          <div class="publication-buttons">
+            <a href="path_to_pdf.pdf" class="btn-custom btn-text">Text</a>
+            <button class="btn-custom btn-abstract">Abstract</button>
+          </div>
+        </div>
+        
+        <div class="publication-description">
+          This paper examines the impact of trade tariffs on regional employment frictions, focusing on the economic implications for labor markets and regional disparities. We show how changes in tariff policies can exacerbate local labor market frictions and worsen inequality...
+        </div>
+        
+        <div class="abstract-content">
+          <p>This paper investigates the effects of trade tariffs on labor market frictions, particularly how tariffs can create significant employment disparities in different regions...</p>
+        </div>
+      </div>
+      
+      <!-- PUBLICAÇÃO 3 -->
+      <div class="publication-item">
+        <div class="publication-header">
+          <div class="publication-title">
+            Modeling Spatial Dependencies in Climate Diplomacy
+          </div>
+          <div class="publication-buttons">
+            <a href="path_to_pdf.pdf" class="btn-custom btn-text">Text</a>
+            <button class="btn-custom btn-abstract">Abstract</button>
+          </div>
+        </div>
+        
+        <div class="publication-description">
+          This study models the spatial dependencies in climate diplomacy and analyzes how global interactions influence regional negotiations. We propose a framework for understanding the spatial relationships in international climate agreements...
+        </div>
+        
+        <div class="abstract-content">
+          <p>This research explores how spatial dependencies shape global climate negotiations and examines the role of regional actors in international agreements...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEÇÃO: CONFERÊNCIAS -->
+    <div id="conferences" class="section">
+      <h2>CONFERENCES AND TALKS</h2>
+      
+      <div class="conference-item">
+        <div class="conference-title">Interfaces Between Quantum and Classical Statistical Mechanic</div>
+        <div class="conference-details">Institute of Mathematics and Statistics - USP, Brazil | 2023</div>
+      </div>
+      
+      <div class="conference-item">
+        <div class="conference-title">Probability Seminar Series</div>
+        <div class="conference-details">Peking University, Peking, China | 2023</div>
+      </div>
+      
+      <div class="conference-item">
+        <div class="conference-title">Spring Probability Seminar Series</div>
+        <div class="conference-details">NYU Shanghai, Shanghai, China | 2023</div>
+      </div>
+    </div>
+
+    <!-- SEÇÃO: CO-AUTHORS -->
+    <div id="coauthors" class="section">
+      <h2>LIST OF CO-AUTHORS</h2>
+      <div class="conference-item">
+        <div class="conference-title">
+          <a href="https://example.com/lucas-afon" style="color: #1a237e; font-weight: 600;">Lucas Afon, PhD</a>
+        </div>
+        <div class="conference-details">
+          Institute of Mathematics and Statistics – University of São Paulo
+        </div>
+      </div>
+
+      <div class="conference-item">
+        <div class="conference-title">
+          <a href="https://example.com/joao-maia" style="color: #1a237e; font-weight: 600;">Dr. João Maia</a>
+        </div>
+        <div class="conference-details">
+          Peking University
+        </div>
+      </div>
+
+      <div class="conference-item">
+        <div class="conference-title">
+          <a href="https://example.com/xinyu-lin" style="color: #1a237e; font-weight: 600;">Prof. Xinyu Lin</a>
+        </div>
+        <div class="conference-details">
+          Shanghai University of Finance and Economics
+        </div>
+      </div>
+
+      <div class="conference-item">
+        <div class="conference-title">
+          <a href="https://example.com/maria-torres" style="color: #1a237e; font-weight: 600;">Dr. Maria A. Torres</a>
+        </div>
+        <div class="conference-details">
+          University of São Paulo
+        </div>
+      </div>
+
+      <div class="conference-item">
+        <div class="conference-title">
+          <a href="https://example.com/felipe-nakamura" style="color: #1a237e; font-weight: 600;">Felipe Nakamura</a>
+        </div>
+        <div class="conference-details">
+          MIT
+        </div>
+      </div>
+
+      <div class="conference-item">
+        <div class="conference-title">
+          <a href="https://example.com/sofia-delgado" style="color: #1a237e; font-weight: 600;">Sofia Delgado</a>
+        </div>
+        <div class="conference-details">
+          Institute for Global Environmental Studies, Japan
+        </div>
+      </div>
+    </div>
+  </div> <!-- Fechamento do main-container -->
+
+  <!-- BOTÃO VOLTAR AO TOPO -->
+  <div class="back-to-top" title="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      // Função para mostrar/ocultar o resumo quando clicar no botão "Abstract"
+      $(".btn-abstract").click(function() {
+        const abstractContent = $(this).closest('.publication-item').find('.abstract-content');
+        const isHidden = abstractContent.is(':hidden');
+        
+        // Alterna a visibilidade com animação
+        abstractContent.slideToggle(300);
+        
+        // Muda o texto do botão
+        $(this).html(isHidden ? 'Hide Abstract' : 'Abstract');
+      });
+
+      // Botão voltar ao topo
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 300) {
+          $('.back-to-top').addClass('show');
+        } else {
+          $('.back-to-top').removeClass('show');
+        }
+      });
+
+      $('.back-to-top').click(function() {
+        $('html, body').animate({scrollTop: 0}, 300);
+        return false;
+      });
+    });
+  </script>
+
+</body>
+</html>
