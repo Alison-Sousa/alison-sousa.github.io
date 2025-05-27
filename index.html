@@ -24,8 +24,6 @@
   <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js" defer></script>
   <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js" defer></script>
   
-  <!-- Particle.js para background interativo (carregado defer) -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
 
   <style>
     :root {
@@ -49,19 +47,12 @@
     }
 
     body {
+      background: #f8f9fa;
       display: flex;
       flex-direction: column;
       position: relative;
     }
-    
-    /* Efeito de partículas no background */
-    #particles-js {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: linear-gradient(135deg, #f8fafc 0%, #eef2f6 100%);
-    }
+  
 
     /* NAVBAR STYLES - OTIMIZADO */
     .navbar-inverse {
@@ -159,17 +150,12 @@
       -webkit-backdrop-filter: blur(8px);
       border: 1px solid rgba(255, 255, 255, 0.3);
       transform: translateY(0);
-      animation: float 6s ease-in-out infinite;
       will-change: transform;
     }
     
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-15px); }
-    }
     
     .main-container:before {
-      content: '';
+      content: none;
       position: absolute;
       top: -2px;
       left: -2px;
@@ -178,14 +164,9 @@
       background: linear-gradient(45deg, var(--primary), var(--accent), var(--primary));
       z-index: -1;
       border-radius: 18px;
-      animation: gradientBG 15s ease infinite;
       background-size: 400% 400%;
     }
     
-    @keyframes gradientBG {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-    }
 
     .profile-section {
       display: flex;
@@ -222,7 +203,7 @@
     .profile-section img:hover {
       box-shadow: 0 25px 50px rgba(0,0,0,0.3);
       filter: grayscale(0%);
-      transform: scale(1.02) rotate(2deg);
+      transform: scale(1.02);
     }
 
     .profile-text {
@@ -252,7 +233,7 @@
     .profile-text p:first-child {
       font-family: 'Playfair Display', serif;
       font-weight: 700;
-      font-size: 2.8em;
+      font-size: 5.5em;
       text-align: center;
       color: var(--primary);
       margin-bottom: 40px;
@@ -291,16 +272,7 @@
       position: relative;
     }
     
-    .profile-text a:after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -2px;
-      left: 0;
-      background-color: var(--accent);
-      transition: width 0.3s ease;
-    }
+
     
     .profile-text a:hover {
       color: var(--primary-light);
@@ -518,17 +490,6 @@
         font-size: 18px;
       }
     }
-
-    /* EFEITOS ESPECIAIS OTIMIZADOS */
-    .hover-3d {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      will-change: transform;
-    }
-    
-    .hover-3d:hover {
-      transform: perspective(500px) rotateX(5deg) rotateY(5deg) scale(1.02);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
-    }
     
     /* Animação de digitação otimizada */
     .typing-effect {
@@ -551,8 +512,7 @@
 </head>
 
 <body>
-  <!-- Background de partículas -->
-  <div id="particles-js"></div>
+
 
   <!-- Navbar com efeito 3D -->
   <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -581,17 +541,17 @@
   </nav>
 
   <!-- Conteúdo principal com efeito de flutuação -->
-  <div class="container-fluid main-container hover-3d">
+  <div class="container-fluid main-container">
     <div id="header">
       <div class="profile-section">
-        <img src="profile/profile.jpg" alt="Alison Sousa" class="hover-3d" loading="lazy" oncontextmenu="return false;" draggable="false">
+        <img src="profile/profile.jpeg" alt="Alison Sousa" class="hover-3d" loading="lazy" oncontextmenu="return false;" draggable="false">
         <div class="profile-text">
-          <p class="typing-effect">ACADEMIC PROFILE</p>
+          <p class="typing-effect">ABOUT ME</p>
           <p>
             Hi there! I’m  Alison Sousa. I recently co-developed a discussion paper on Gibbs measure and phase transitions in Ising models with
             <a href="https://www.ime.usp.br/~joaovitor/index.html" target="_blank">João Maia, Ph.D</a>.
             My academic background includes a B.A. in International Relations from 
-            <a href="https://www.espm.br/" target="_blank">Escola Superior de Propaganda e Marketing (ESPM)</a>, with academic programs at 
+            <a href="https://www.espm.br/" target="_blank">Escola Superior de Propaganda e Marketing (ESPM-SP)</a>, with academic programs at 
             <a href="https://www.zuyd.nl/en" target="_blank">Zuyd University of Applied Sciences</a> and 
             <a href="https://www.meiji.ac.jp/cip/english/" target="_blank">Meiji University</a>. 
             My professional experience spans finance, the public sector, and research.
@@ -620,54 +580,7 @@
   <!-- Scripts otimizados -->
   <script>
     // Configuração otimizada do particles.js
-    function initParticles() {
-      if (typeof particlesJS === 'function') {
-        particlesJS('particles-js', {
-          "particles": {
-            "number": { "value": 40 },
-            "color": { "value": "#1a237e" },
-            "shape": { "type": "circle" },
-            "opacity": {
-              "value": 0.3,
-              "random": true,
-              "anim": { "enable": true, "speed": 1, "opacity_min": 0.1 }
-            },
-            "size": {
-              "value": 3,
-              "random": true,
-              "anim": { "enable": true, "speed": 2, "size_min": 0.1 }
-            },
-            "line_linked": {
-              "enable": true,
-              "distance": 200,
-              "color": "#1a237e",
-              "opacity": 0.2,
-              "width": 1
-            },
-            "move": {
-              "enable": true,
-              "speed": 0.5,
-              "direction": "none",
-              "random": true,
-              "out_mode": "out"
-            }
-          },
-          "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-              "onhover": { "enable": true, "mode": "repulse" },
-              "onclick": { "enable": false },
-              "resize": true
-            },
-            "modes": {
-              "repulse": { "distance": 100, "duration": 0.4 }
-            }
-          },
-          "retina_detect": true
-        });
-      }
-    }
-
+   
     // Aguarda o carregamento completo da página
     document.addEventListener('DOMContentLoaded', function() {
       // Scroll otimizado para navbar
