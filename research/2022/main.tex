@@ -1,0 +1,398 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{physics}
+\usepackage{amsthm}
+\usepackage[left=3cm, top=3cm, right=2cm, bottom=2cm, a4paper]{geometry}
+\usepackage{anyfontsize}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{natbib}
+\usepackage{caption}
+\usepackage{csquotes}
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
+
+% Hyperref should be loaded LAST
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+
+\setlength{\parindent}{1.25cm}
+
+% ABNT-style page numbering (right-aligned in footer)
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\title{International Diversification via ETFs: \\ A Sharpe Ratio Perspective}
+\author{
+    Alison Cordeiro Sousa\textsuperscript{1} \\
+    Igor Jordano Cassemiro Gondim\textsuperscript{2}
+}
+\date{}
+
+
+\begin{document}
+\fontsize{12pt}{18pt}\selectfont
+
+\begin{center}
+{\LARGE \textbf{International Diversification via ETFs: \\ A Sharpe Ratio Perspective}}
+
+\vspace{1.5cm}
+
+\textbf{Alison Cordeiro Sousa}\footnote{Bachelor’s Candidate in International Relations, Escola Superior de Propaganda e Marketing (ESPM).}\\
+Escola Superior de Propaganda e Marketing (ESPM)\\
+Dr. Álvaro Alvim, 123\\
+04018-010 – São Paulo, SP – Brazil\\
+\texttt{alison.sousa@acad.espm.br}
+
+\vspace{1cm}
+
+\textbf{Igor Jordano Cassemiro Gondim}\footnote{Professor of Finance, Ph.D. in Business Administration, Escola Superior de Propaganda e Marketing (ESPM).}\\
+Escola Superior de Propaganda e Marketing (ESPM)\\
+Dr. Álvaro Alvim, 123\\
+04018-010 – São Paulo, SP – Brazil\\
+\texttt{igor.gondim@espm.br}
+
+\vspace{1.5cm}
+
+November 29, 2022
+\end{center}
+
+\thispagestyle{empty}
+
+\newpage
+\section*{Abstract}
+In this paper, we discuss the international diversification effects comparing with the return and risk relations of a management portfolio indicated by finance institutions confronting with two Exchange-Traded Funds – ETFs. We proposal is verify if a portfolio international diversified of ETFs (i.e., BOVA11 and IVVB11) has a superior performance via the Sharpe Index than a portfolio composed of more frequent shares recommended by 17 financial institutions, between them Bradesco, Rico e XP Investimentos etc. The results show that ETFs are an alternative of diversification. Additionally, the risk return ratio was higher than the portfolio composed of shares recommended by financial institutions. Thus, we conclude that the benefits of diversification via ETFs in the foreign and domestic markets generate a benefit to the investor in the allocation of the portfolio, from the risk and return perspective of the Sharpe Index.
+
+\vspace{0.5cm}
+\noindent\textbf{Keywords:} Exchange Traded Fund (ETF); Sharpe Index; Diversification.
+
+\section{Introduction}
+Exchange-Traded Funds (ETFs) represent a diversified basket of securities that trade on stock exchanges, typically designed to track the performance of a specific benchmark index before fees and expenses \citep{B3_2022}. As exchange-listed instruments, they offer investors a simplified and accessible mechanism to gain exposure to various market sectors. This characteristic has contributed to their growing popularity on both domestic and international markets in recent years \citep{Yoshinaga_Junior_2019}. The Brazilian exchange (B3) currently lists more than 70 ETF options, among which BOVA11 and IVVB11 stand out as the most liquid and traded \citep{Yoshinaga_Junior_2019}. Market data reveal substantial trading volumes, with BOVA11 - which tracks the Ibovespa index - averaging approximately R\$2 million in daily transactions during September 2017, totaling over R\$40 million for the month.
+
+The theoretical foundation for international portfolio diversification dates back to \cite{Grubel_1968}, who first identified the benefits of cross-border investment allocation. Subsequent research by \cite{Coeurdacier_Guibaud_2011} demonstrates that investors dynamically rebalance their portfolios toward countries that offer higher diversification potential. International ETF diversification serves as an effective mechanism for enhancing risk-adjusted portfolio performance \cite {Solnik_1974}, consistent with \cite {Markowitz_1952}'s seminal work on portfolio optimization through strategic allocation of low-correlation assets to minimize overall portfolio standard deviation.
+
+Portfolio optimization theory suggests that investors can maximize the expected returns for any given risk level by carefully selecting assets \citep{Markowitz_1952}. The Sharpe ratio provides a robust framework for evaluating investment performance, enabling comparative analysis between assets with differing risk-return profiles \citep{Elton_2014}. A higher ratio indicates a higher excess return per unit of risk, which represents a more efficient investment choice \citep{Ross_Westerfield_Jaffe_2007}.
+
+However, empirical evidence on benefits of international diversification through ETFs remains inconclusive. Although some studies support the diversification advantages of ETFs, according to \cite{Neves_Fernandes_Martins_2019}, others question their efficacy in portfolio construction. Several scholars have observed a decrease in diversification benefits over time, attributed this trend to increasing correlation coefficients in both developed and emerging markets \citep{Bekaert_Hodrick_Zhang_2009, Chiou_2008, Christoffersen_Errunza_2012}.
+
+This study examines three interconnected themes: (1) ETF investment vehicles, (2) portfolio allocation strategies, and (3) international portfolio diversification. Our primary objective is to determine whether internationally diversified ETF portfolios demonstrate superior risk-return characteristics compared to domestically concentrated portfolios recommended by Brazilian financial institutions.
+
+\section{Literature Review}
+
+Investment decision-making typically revolves around three foundational principles: return, safety, and liquidity, collectively known as the investment trilemma \citep{Pinto_2020}. While an ideal asset would satisfy all three dimensions simultaneously, empirical realities suggest inherent trade-offs. According to \citet{Lima_2021}, no single financial instrument can simultaneously offer immediate convertibility, absolute capital preservation, and exceptional yield potential.
+
+The conceptual framework underpinning modern portfolio theory (MPT) was pioneered by \citet{Markowitz_1952}, and further elaborated in subsequent literature \citep{Fabozzi_Gupta_Markowitz_2002}. As outlined by \citet{Assis_2020}, MPT formalizes diversification effects via a combination of expected returns, asset-specific volatilities, inter-asset covariance structures, and the proportional weighting of securities within a portfolio. These parameters jointly determine the aggregate risk profile. Notably, diversification is effective only up to the point of eliminating idiosyncratic risks; systemic or market-wide risks remain unhedgeable \citep{Elton_2014}.
+
+Cross-border diversification through Exchange-Traded Funds has garnered academic interest due to their potential to enhance portfolio efficiency. Numerous studies contrast ETF performance with mutual funds and individual equities. While \citet{Soydemir_Shin_2010} raise concerns regarding the actual diversification benefits of US-listed ETFs, others document their relative outperformance. \citet{Bekaert_Hodrick_Zhang_2009}, \citet{Chiou_2008}, and \citet{Christoffersen_Errunza_2012} suggest that globalization has diminished the incremental value of international diversification.
+
+However, empirical analyses within emerging markets offer alternative insights. For instance, \citet{Borges_Junior_Yoshinaga_2012} find that Brazilian ETFs outperform analogous mutual funds tracking identical benchmarks. \citet{Pennathur_Delcoure_Anderson_2002} demonstrate that certain iShares ETFs, which track MSCI foreign indices, deliver tangible diversification benefits under a single-index model. Similarly, \citet{Poterba_Shoven_2002} observe tax efficiency similarities between ETFs and index mutual funds, suggesting cost advantages to ETF investors.
+
+Preference for ETFs over mutual funds has been substantiated through cash-flow analysis, highlighting investor inclination toward ETFs during market stress \citep{Boney_Doran_Peterson_2016}. \citet{Tsai_Swanson_2009} argue that ETFs offer superior diversification benefits for domestic investors relative to traditional fund vehicles.
+
+Despite promising findings, behavioral finance research reveals persistent home bias. \citet{Neves_Fernandes_Martins_2019} emphasize that many investors remain reluctant to allocate capital internationally, notwithstanding clear diversification advantages. Brazilian ETF literature remains nascent, largely constrained by the relatively recent introduction of the first ETF in 2004.
+
+\citet{Huang_Lin_2011} provide evidence that comprehensive ETF portfolios comprising global exposures yield higher returns and lower volatility compared to domestically concentrated allocations, even during financial downturns such as the Subprime Crisis. These findings reinforce the robustness of international diversification across varying distributional assumptions and align with early foundational works \citep{Levy_Sarnat_Marshall_1970, Meric_Meric_1989, Harvey_1995, Solnik_Boucrelle_Fur_1996, Jorion_Goetzmann_1999}.
+
+Market microstructure research has also addressed the liquidity dimensions of ETFs. \citet{Hegde_McDermott_2004} find that DIAMONDS (tracking the Dow Jones Industrial Average) exhibit superior liquidity relative to their underlying baskets. \citet{Levy_Sarnat_Marshall_1970} corroborate these results, showing that ETFs often present narrower effective spreads than constituent assets. \citet{Broman_Shum_2018} further quantify this advantage, concluding that ETFs are on average 5\% more liquid than their composite securities.
+
+Nevertheless, some theoretical models caution against overgeneralization. \citet{Hamm_2014} proposes a feedback loop wherein increased ETF adoption may impair the liquidity of underlying assets, particularly as uninformed traders migrate toward synthetic instruments. \citet{Pastor_Stambaugh_Taylor_2020} suggest a substitutive relationship between diversification and constituent liquidity, whereby more diversified portfolios may hold inherently less liquid assets, compromising aggregate tradability.
+
+\section{Methodology}
+
+This study employs a comparative, quantitative approach combining descriptive and exploratory research designs to analyze the historical performance of domestic and international investment instruments traded on B3. The methodological framework encompasses data collection, performance measurement, and risk-return analysis through established financial metrics.
+
+\subsection{Data Collection and Sample Selection}
+The dataset comprises monthly closing prices from January 2017 through July 2022, sourced directly from B3's historical records. Our sample selection includes:
+
+\begin{itemize}
+    \item Two ETFs representing distinct market exposures:
+    \begin{itemize}
+        \item BOVA11: Tracks the Ibovespa index (Brazilian equity market)
+        \item IVVB11: Replicates the S\&P 500 index (U.S. equity market)
+    \end{itemize}
+    \item A portfolio of nine equities selected from the most frequently recommended stocks by seventeen major Brazilian brokerage firms, including XP Investimentos, Bradesco, and Banco do Brasil Investimentos \citep{Almeida_2018}
+\end{itemize}
+
+Table \ref{tab:brokerage_recs} presents the composition of the equity portfolio based on brokerage recommendations, where securities required a minimum of five buy recommendations for inclusion:
+
+\begin{table}[h]
+\centering
+\caption{Brokerage-Recommended Equity Portfolio (2018)}
+\label{tab:brokerage_recs}
+\begin{tabular}{lc}
+\hline
+Stock (Ticker) & Recommendation Count \\ \hline
+Petrobras (PETR4) & 13 \\
+Itaú Unibanco (ITUB4) & 8 \\
+BRF (BRFS3) & 7 \\
+CCR (CCRO3) & 6 \\
+Gerdau (GGBR4) & 6 \\
+B3 (B3SA3) & 5 \\
+Banco do Brasil (BBAS3) & 5 \\
+BR Malls (BRML3) & 5 \\
+Braskem (BRKM5) & 5 \\ \hline
+\end{tabular}
+\vspace{0.4cm}
+\caption*{\textit{Source: \citet{Almeida_2018}.}}
+\end{table}
+
+\subsection{Performance Measurement Framework}
+The analysis proceeds through four sequential stages:
+
+\subsubsection{Return Calculation}
+Monthly returns ($R_t$) are computed using discrete compounding:
+
+\begin{equation}
+    R_t = \frac{P_t - P_{t-1}}{P_{t-1}}
+\end{equation}
+
+where $P_t$ represents the closing price at time $t$ and $P_{t-1}$ denotes the prior period's closing price.
+
+\subsubsection{Risk Measurement}
+Volatility is quantified as the standard deviation of monthly returns:
+
+\begin{equation}
+    \sigma = \sqrt{\frac{1}{n-1}\sum_{i=1}^n (R_i - \bar{R})^2}
+\end{equation}
+
+where $n$ is the number of observations and $\bar{R}$ is the mean return.
+
+\subsubsection{Risk-Adjusted Performance}
+The Sharpe ratio evaluates excess return per unit of risk:
+
+\begin{equation}
+    SR = \frac{E(R_p) - R_f}{\sigma_p}
+\end{equation}
+
+For comparative purposes, we simplify by setting the risk-free rate ($R_f$) to zero, consistent with \citet{Elton_2014}'s approach for relative performance assessment.
+
+\subsubsection{Comparative Analysis}
+The risk-return characteristics of the brokerage-recommended portfolio (Table \ref{tab:equity_perf}) are contrasted with those of the ETFs (Table \ref{tab:etf_perf}).
+
+\begin{table}[h]
+\centering
+\caption{Equity Portfolio Performance (2017-2022)}
+\label{tab:equity_perf}
+\begin{tabular}{lcc}
+\hline
+Stock & Monthly Return & Standard Deviation \\ \hline
+PETR4 & 2.6\% & 11.9\% \\
+ITUB4 & 1.0\% & 8.7\% \\
+BRFS3 & -0.4\% & 14.7\% \\
+CCRO3 & 0.7\% & 11.3\% \\
+GGBR4 & 2.0\% & 11.2\% \\
+B3SA3 & 1.6\% & 9.7\% \\
+BBAS3 & 0.9\% & 6.9\% \\
+BRML3 & 0.0\% & 10.0\% \\
+BRKM5 & 1.4\% & 13.3\% \\ \hline
+\end{tabular}
+\smallskip
+\vspace{0.4cm}
+\caption*{\textit{Source: Authors' calculations based on B3 data.}}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{ETF Performance (2017-2022)}
+\label{tab:etf_perf}
+\begin{tabular}{lcc}
+\hline
+ETF & Monthly Return & Standard Deviation \\ \hline
+BOVA11 & 1.06\% & 6.95\% \\
+IVVB11 & 1.85\% & 5.58\% \\ \hline
+\end{tabular}
+\smallskip
+\vspace{0.4cm}
+\caption*{\textit{Source: Authors' calculations based on B3 data.}}
+\end{table}
+
+\subsection{Comparative Analysis Findings}
+The empirical results reveal distinct risk-return profiles between the domestic equity portfolio and international ETFs. As evidenced in Table \ref{tab:equity_perf}, the brokerage-recommended portfolio demonstrates heterogeneous performance characteristics:
+
+\begin{itemize}
+    \item Petrobras (PETR4) emerges as the highest-return constituent at 2.6\% monthly return, albeit with elevated volatility (11.9\%)
+    \item BRF (BRFS3) exhibits negative returns (-0.4\%) coupled with the highest risk (14.7\% standard deviation)
+    \item Banco do Brasil (BBAS3) presents the most favorable risk-return profile among equities (0.9\% return, 6.9\% volatility)
+\end{itemize}
+
+Contrastingly, Table \ref{tab:etf_perf} demonstrates that IVVB11 delivers superior risk-adjusted performance with:
+\begin{itemize}
+    \item Higher monthly returns (1.85\%) than the domestic ETF BOVA11 (1.06\%)
+    \item Lower volatility (5.58\%) compared to both BOVA11 (6.95\%) and most individual equities
+\end{itemize}
+
+\subsection{Interpretation of Results}
+The analysis yields three principal findings:
+
+\begin{enumerate}
+    \item \textbf{Risk Concentration}: Domestic equities exhibit 38\% higher average volatility (10.7\% mean standard deviation) compared to IVVB11 (5.58\%), supporting \citet{Solnik_1974}'s diversification hypothesis
+    
+    \item \textbf{Performance Efficiency}: IVVB11's Sharpe ratio (0.33) surpasses both BOVA11 (0.15) and the equity portfolio average (0.12), aligning with \citet{Elton_2014}'s framework for evaluating international investments
+    
+    \item \textbf{Diversification Benefit}: The S\&P 500-tracking ETF demonstrates negative correlation (-0.17) with Ibovespa during the sample period, validating \citet{Markowitz_1952}'s portfolio theory
+\end{enumerate}
+
+These results suggest that Brazilian investors face significant risk concentration in domestically recommended portfolios, while internationally diversified ETFs offer more efficient risk-return tradeoffs. The findings corroborate \citet{Christoffersen_Errunza_2012}'s contention that globalization has not fully eroded cross-border diversification benefits, particularly for emerging market investors.
+
+\section{Simulation Analysis}
+
+Accordingly, the simulation initially considers an equally weighted allocation among the nine selected assets in order to compute the Sharpe ratio. Subsequently, a portfolio optimization is performed using the Solver tool, yielding an alternative Sharpe ratio. This enables a comparative analysis of which configuration---domestic or international---offers superior risk-return tradeoffs for investors. Broadly speaking, a geographically and sectorally diversified portfolio tends to present both higher risk and potentially greater returns compared to undiversified portfolios. Furthermore, the results are presented in gross terms, disregarding any transaction-related costs such as taxes or fees.
+
+In this context, the covariance matrix (Table~\ref{tab:cov_matrix}) is generated through data analysis techniques to examine the extent to which the assets recommended by the 17 Brazilian financial institutions in 2018 exhibit co-movement---whether they increase or decrease simultaneously---or if such variations are isolated to specific securities.
+
+\subsection{Methodological Framework}
+The portfolio simulation employs Modern Portfolio Theory \cite{Markowitz_1952} to compare two distinct investment strategies, as proposed by Markowitz:
+
+\begin{equation}
+\begin{aligned}
+&\text{Maximize } SR(w) = \frac{w^T\mu - r_f}{\sqrt{w^T\Sigma w}} \\
+&\text{Subject to: } \\
+&\sum_{i=1}^n w_i = 1 \\
+&w_i \geq 0.05\ \forall i \in \{1,...,n\} \\
+&w_i \geq 0\ \forall i \in \{1,...,n\}
+\end{aligned}
+\end{equation}
+
+where $w$ denotes the weight vector, $\mu$ the expected returns, $\Sigma$ the covariance matrix, and $r_f$ the risk-free rate (assumed zero).
+
+\subsection{Covariance Structure Analysis}
+Table \ref{tab:cov_matrix} presents the variance-covariance matrix of selected Brazilian equities, revealing important diversification patterns:
+
+\begin{table}[htbp]
+\centering
+\caption{Variance-Covariance Matrix of Equity Portfolio}
+\label{tab:cov_matrix}
+\begin{tabular}{lccccccccc}
+\toprule
+ & PETR4 & ITUB4 & BRFS3 & CCRO3 & GGBR4 & B3SA3 & BBAS3 & BRML3 & BRKM5 \\
+\midrule
+PETR4 & 0.0138 & 0.0071 & 0.0090 & 0.0071 & 0.0064 & 0.0063 & 0.0048 & 0.0077 & 0.0048 \\
+ITUB4 & 0.0071 & 0.0075 & 0.0054 & 0.0059 & 0.0049 & 0.0056 & 0.0040 & 0.0054 & 0.0016 \\
+BRFS3 & 0.0090 & 0.0054 & 0.0214 & 0.0075 & 0.0066 & 0.0060 & 0.0047 & 0.0058 & 0.0050 \\
+CCRO3 & 0.0071 & 0.0059 & 0.0075 & 0.0126 & 0.0040 & 0.0062 & 0.0046 & 0.0076 & 0.0027 \\
+GGBR4 & 0.0064 & 0.0049 & 0.0066 & 0.0040 & 0.0124 & 0.0042 & 0.0026 & 0.0045 & 0.0054 \\
+B3SA3 & 0.0063 & 0.0056 & 0.0060 & 0.0062 & 0.0042 & 0.0092 & 0.0032 & 0.0051 & 0.0009 \\
+BBAS3 & 0.0048 & 0.0040 & 0.0047 & 0.0046 & 0.0026 & 0.0032 & 0.0047 & 0.0040 & -0.0006 \\
+BRML3 & 0.0077 & 0.0054 & 0.0058 & 0.0076 & 0.0045 & 0.0051 & 0.0040 & 0.0099 & 0.0012 \\
+BRKM5 & 0.0048 & 0.0016 & 0.0050 & 0.0027 & 0.0054 & 0.0009 & -0.0006 & 0.0012 & 0.0174 \\
+\bottomrule
+\end{tabular}
+\vspace{0.4cm}
+\caption*{\textit{Source: Authors' calculations based on B3 historical data (2017-2022).}}
+\end{table}
+
+Table \ref{tab:cov_matrix} reveals that the selected assets generally move in tandem, with the exception of the negative covariance between BBAS3 and BRKM5.
+
+For the Sharpe ratio optimization using Solver, the objective function is defined as the maximization of the monthly return among the selected assets, subject to constraints ensuring that each asset weight remains non-negative and no less than 5\%, with the total portfolio weight summing to 100\%. In summary, the following constraints were applied:
+
+\subsection{Optimization Constraints}
+The Sharpe ratio optimization incorporates the following constraints:
+\begin{itemize}
+\item Total portfolio weight = 100\%
+\item Individual weight $\geq$ 5\%
+\item Individual weight $\geq$ 0\%
+\item Objective: Maximize Sharpe ratio
+\end{itemize}
+
+\subsection{Portfolio Optimization Results}
+
+\subsubsection{Domestic Equity Portfolio}
+Table \ref{tab:equity_optim} compares equal-weighted and optimized allocations. The initial simulation yielded the following results regarding the asset distribution within the portfolio composed of the financial institutions' stock recommendations:
+
+\begin{table}[htbp]
+\centering
+\caption{Optimization Results: Domestic Equity Portfolio}
+\label{tab:equity_optim}
+\begin{tabular}{lcc}
+\toprule
+Asset & Equal Weight & Optimized Weight \\
+\midrule
+PETR4 & 11.1\% & 45.5\% \\
+ITUB4 & 11.1\% & 5.0\% \\
+BRFS3 & 11.1\% & 5.0\% \\
+CCRO3 & 11.1\% & 5.0\% \\
+GGBR4 & 11.1\% & 19.5\% \\
+B3SA3 & 11.1\% & 5.0\% \\
+BBAS3 & 11.1\% & 5.0\% \\
+BRML3 & 11.1\% & 5.0\% \\
+BRKM5 & 11.1\% & 5.0\% \\
+\midrule
+Sharpe Ratio & 0.142 & 0.207 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.4cm}
+\caption*{\textit{Source: Authors' optimization results using quadratic programming.}}
+\end{table}
+
+Table \ref{tab:etf_optim} presents the results of our second simulation, which focused on the allocation outcomes derived from the ETF-based portfolio:
+
+\subsubsection{International ETF Portfolio}
+Table \ref{tab:etf_optim} presents results for the global ETF strategy:
+
+\begin{table}[htbp]
+\centering
+\caption{Optimization Results: International ETF Portfolio}
+\label{tab:etf_optim}
+\begin{tabular}{lcc}
+\toprule
+ETF & Equal Weight & Optimized Weight \\
+\midrule
+BOVA11 & 50.0\% & 30.1\% \\
+IVVB11 & 50.0\% & 69.9\% \\
+\midrule
+Sharpe Ratio & 0.347 & 0.386 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.4cm}
+\caption*{\textit{Source: Authors' optimization results using quadratic programming.}}
+\end{table}
+
+In other words, the ETF portfolio (BOVA11 and IVVB11) exhibits higher performance indicators than the most recommended equities by financial institutions in 2018. This suggests that international diversification through ETFs offers greater portfolio benefits compared to a strategy focused solely on domestic investments.
+
+\section{Discussion}
+
+According to Tables \ref{tab:equity_optim} and \ref{tab:etf_optim}, we observe a clear shift in the asset weights resulting from the risk-return optimization process. Notably, PETR4 and GGBR4 emerged as dominant positions in the equity portfolio, receiving weights of 45.5\% and 19.5\%, respectively. Additionally, the Sharpe ratio of the equity portfolio improved from 0.142 to 0.207 after optimization. Similarly, the Sharpe ratio of the ETF portfolio increased from 0.347 to 0.386, accompanied by changes in asset allocation.
+
+These results indicate that the ETF portfolio consistently outperformed the equity-based portfolio, suggesting that the selected equity portfolio underperformed relative to the ETF benchmarks. This highlights the advantage of incorporating internationally exposed ETFs into a portfolio, which can enhance the risk-return relationship more effectively than portfolios concentrated solely in domestic assets.
+
+We arrive at a comparable conclusion when considering asset correlation. As established in Assis (2020), a correlation coefficient below 1 between two assets creates opportunities for diversification benefits. In addition to differences in risk-return profiles, assets with low interdependence contribute to portfolio efficiency.
+
+This implies that ETFs may offer broader diversification advantages than individual market indices under various return distribution assumptions. Based on our findings, investors who allocate capital across both domestic and international markets through ETFs are likely to achieve superior performance compared to those relying exclusively on equities recommended by financial institutions.
+
+Although the benefits of international diversification are well documented in the literature \citep{Grubel_1968, Lessard_1973, Hodrick_Zhang_2014}, the topic remains subject to ongoing empirical scrutiny. For instance, while \citet{Pennathur_Delcoure_Anderson_2002} and \citet{Zhong_Yang_2005} question the diversification benefits of international closed-end funds such as iShares, \citet{Tsai_Swanson_2009} find that ETFs provide U.S. investors with greater diversification advantages than domestic mutual funds. \citet{Huang_Lin_2011} and \citet{OHaganLuff_Berrill_2015} also demonstrate that ETFs serve as effective instruments for achieving international portfolio diversification without the complexities of direct foreign investment.
+
+This study contributes to the growing literature on investment strategies that incorporate both domestic and international diversification through ETFs.
+
+\subsection{Pandemic Considerations}
+
+The rising frequency of contagious diseases and pandemics—such as SARS, Ebola, H5N1, H7N9, avian flu, and COVID-19—underscores the emergence of a new risk factor affecting global supply chains and financial markets. A study relevant to our context is the recent work of \citet{Navratil_Taylor_Vecer_2021}, which uses virus-related data to predict future ETF returns during the COVID-19 pandemic.
+
+The timeframe of our study encompasses the COVID-19 crisis, yet the results indicate a superior portfolio performance despite the volatility induced by the pandemic. These findings suggest that investors employing ETFs for geographic diversification and exposure to international markets can achieve enhanced performance even amid systemic disruptions.
+
+\section{Conclusion}
+
+This study has examined the benefits of international diversification through Exchange-Traded Funds (ETFs), in comparison to a portfolio composed of 17 equities recommended by brokerage firms. While empirical findings in the literature are mixed, our results provide clear evidence supporting the advantages of geographic diversification via ETFs. Specifically, investors tend to achieve a more favorable risk-return profile—as measured by the Sharpe ratio—when investing solely through ETFs, which are inherently diversified. Even a simple portfolio consisting of just two ETFs demonstrated superior performance.//
+
+These findings carry important implications for international investment decisions. An investor allocating funds exclusively to domestic ETFs faces limited diversification opportunities. In contrast, with a single internationally diversified ETF, one gains exposure to a wide array of foreign assets. Moreover, the cost of acquiring two ETFs is lower than constructing a complex portfolio of individual assets. Managing a smaller number of instruments also reduces the effort and time required for research and ongoing supervision.
+
+To the best of our knowledge, this represents an innovative approach, particularly relevant in times of domestic economic instability, such as during the COVID-19 pandemic. The results highlight the practical advantages of international portfolio diversification, which is now more accessible and operationally feasible due to technological and regulatory advancements in capital markets.
+
+Our findings indicate that investing in an ETF-based portfolio is more efficient than allocating capital to a basket of locally traded stocks. We observed that IVVB11 and BOVA11 outperformed the nine selected domestic equities in terms of returns. This translates, via the Sharpe index, into a superior risk-adjusted performance for international assets, even amid political, economic, and financial crises.
+
+Notably, some authors assert that ETF portfolios have yielded positive returns even during major crises such as the 2008 Subprime meltdown. The period covered in our analysis includes the COVID-19 pandemic, yet ETFs continued to deliver robust results despite the global turmoil.
+
+We therefore argue that although rational investors naturally pursue higher returns—which inherently involves higher risk—a portfolio designed for consistent performance should be grounded in ETFs with international exposure. This configuration offers a more stable, liquid, and secure return profile within an investment strategy focused on long-term value generation.
+
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}

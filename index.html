@@ -1,623 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Welcome | Alison Sousa</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-  <!-- Meta tags para SEO acadêmico -->
-  <meta name="description" content="Researcher in Economics and Statistics | Mathematical Modeling | Data Science">
-  <meta name="keywords" content="economics, statistics, research, mathematics, data science">
-  
-  <!-- Webfonts premium com preload -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@300;400;600;700&display=swap"></noscript>
-  
-  <!-- CSS Libraries -->
-  <link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
-  <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
-  
-  <!-- Animate.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  
-  <!-- JS Libraries com defer -->
-  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js" defer></script>
-  <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js" defer></script>
-  
-
-  <style>
-    :root {
-      --primary: #1a237e;
-      --primary-light: #534bae;
-      --primary-dark: #000051;
-      --accent: #ffab00;
-      --dark: #121212;
-      --light: #f8f9fa;
-      --transition: all 0.5s cubic-bezier(0.65, 0, 0.35, 1);
-    }
-    
-    html, body {
-      height: 100%;
-      margin: 0;
-      font-family: 'Source Sans 3', sans-serif;
-      background-color: var(--light);
-      color: var(--dark);
-      line-height: 1.8;
-      overflow-x: hidden;
-    }
-
-    body {
-      background: #f8f9fa;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-    }
-  
-
-    /* NAVBAR STYLES - OTIMIZADO */
-    .navbar-inverse {
-      background-color: rgba(26, 35, 126, 0.98) !important;
-      border: none;
-      font-weight: 600;
-      font-size: 16px;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      transition: var(--transition);
-      transform: translateZ(0);
-      will-change: transform;
-    }
-    
-    .navbar-inverse.scrolled {
-      background-color: rgba(26, 35, 126, 0.92) !important;
-      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
-      height: 70px;
-    }
-
-    .navbar-custom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 5%;
-      height: 90px;
-      transition: var(--transition);
-    }
-
-    .nav-left {
-      display: flex;
-      align-items: center;
-    }
-
-    .nav-right {
-      display: flex;
-      align-items: center;
-      margin-left: 120px; /* Ajuste solicitado para mover dropdown para direita */
-    }
-
-    .navbar-inverse .navbar-nav > li > a,
-    .navbar-inverse .navbar-brand,
-    .navbar-inverse .navbar-text {
-      color: #ffffff !important;
-      line-height: 50px;
-      transition: transform 0.2s ease-out;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      position: relative;
-      padding: 15px 20px !important;
-      will-change: transform;
-    }
-    
-    .navbar-inverse .navbar-nav > li > a:after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: 15px;
-      left: 20px;
-      background-color: var(--accent);
-      transition: width 0.3s ease-out;
-    }
-    
-    .navbar-inverse .navbar-nav > li > a:hover:after {
-      width: calc(100% - 40px);
-    }
-
-    .navbar-inverse .navbar-nav > li > a:hover {
-      transform: translateY(-2px);
-    }
-
-    .navbar-text {
-      margin: 0 5%;
-      font-size: 24px;
-      font-family: 'Playfair Display', serif;
-      letter-spacing: 1px;
-      position: relative;
-      white-space: nowrap;
-    }
-
-    /* MAIN CONTENT STYLES - OTIMIZADO */
-    .main-container {
-      flex: 1 0 auto;
-      max-width: 1200px;
-      margin: 40px auto 80px;
-      padding: 40px 5%;
-      position: relative;
-      background: rgba(255, 255, 255, 0.85);
-      border-radius: 16px;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      transform: translateY(0);
-      will-change: transform;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alison Sousa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="profile/perfil.jpeg">
     
     
-    .main-container:before {
-      content: none;
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      right: -2px;
-      bottom: -2px;
-      background: linear-gradient(45deg, var(--primary), var(--accent), var(--primary));
-      z-index: -1;
-      border-radius: 18px;
-      background-size: 400% 400%;
-    }
-    
-
-    .profile-section {
-      display: flex;
-      align-items: center;
-      gap: 60px;
-      padding: 40px 0;
-      position: relative;
-    }
-    
-    .profile-section:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80%;
-      height: 1px;
-      background: linear-gradient(to right, transparent, rgba(26, 35, 126, 0.3), transparent);
-    }
-
-    .profile-section img {
-      width: 380px;
-      height: 380px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: 80% 35%;
-      border: 8px solid rgba(26, 35, 126, 0.1);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      filter: grayscale(20%);
-      will-change: transform, filter;
-    }
-    
-    .profile-section img:hover {
-      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-      filter: grayscale(0%);
-      transform: scale(1.02);
-    }
-
-    .profile-text {
-      flex: 1;
-      position: relative;
-    }
-    
-    .profile-text:before {
-      content: '"';
-      position: absolute;
-      font-family: 'Playfair Display', serif;
-      font-size: 120px;
-      color: rgba(26, 35, 126, 0.1);
-      top: -60px;
-      left: -40px;
-      line-height: 1;
-      z-index: 0;
-    }
-
-    .profile-text p {
-      font-size: 17px;
-      color: var(--dark);
-      position: relative;
-      z-index: 1;
-    }
-
-    .profile-text p:first-child {
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      font-size: 5.5em;
-      text-align: center;
-      color: var(--primary);
-      margin-bottom: 40px;
-      padding-bottom: 15px;
-      border-bottom: 3px solid var(--primary);
-      display: inline-block;
-      width: 100%;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      position: relative;
-    }
-    
-    .profile-text p:first-child:after {
-      content: '';
-      position: absolute;
-      width: 100px;
-      height: 4px;
-      background: var(--accent);
-      bottom: -3px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .profile-text p:nth-child(2) {
-      text-align: justify;
-      margin-bottom: 30px;
-      font-size: 18px;
-      line-height: 1.9;
-    }
-
-    .profile-text a {
-      color: var(--primary);
-      font-weight: 700;
-      text-decoration: none;
-      transition: color 0.3s ease;
-      position: relative;
-    }
-    
-
-    
-    .profile-text a:hover {
-      color: var(--primary-light);
-    }
-    
-    .profile-text a:hover:after {
-      width: 100%;
-    }
-
-    /* DOWNLOAD CV SECTION - OTIMIZADO */
-    .download-cv {
-      margin-top: 50px;
-      text-align: center;
-      position: relative;
-    }
-
-    .download-cv p {
-      font-weight: 700;
-      font-size: 1.3em;
-      color: var(--primary);
-      margin-bottom: 20px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    .download-cv a {
-      display: inline-block;
-      padding: 12px 30px;
-      background: var(--primary);
-      color: white !important;
-      border-radius: 50px;
-      text-decoration: none;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      font-size: 16px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      position: relative;
-      overflow: hidden;
-      border: 2px solid var(--primary);
-      box-shadow: 0 5px 15px rgba(26, 35, 126, 0.4);
-      will-change: transform;
-    }
-    
-    .download-cv a:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(26, 35, 126, 0.6);
-    }
-
-    /* CONTACT FOOTER - OTIMIZADO */
-    .contact-footer {
-      text-align: center;
-      font-size: 18px;
-      margin: 60px 0 40px;
-      padding: 0 20px;
-      position: relative;
-    }
-    
-    .contact-footer:before {
-      content: '';
-      position: absolute;
-      top: -60px;
-      left: 0;
-      width: 100%;
-      height: 60px;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%231a237e' fill-opacity='0.05' d='M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    .contact-footer p {
-      font-weight: 700;
-      font-size: 22px;
-      color: var(--primary);
-      margin-bottom: 25px;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      position: relative;
-      display: inline-block;
-    }
-    
-    .contact-footer p:after {
-      content: '';
-      position: absolute;
-      width: 50px;
-      height: 3px;
-      background: var(--accent);
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .contact-footer a {
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 600;
-      transition: transform 0.3s ease, background 0.3s ease;
-      display: inline-block;
-      padding: 8px 20px;
-      border-radius: 50px;
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
-      border: 1px solid rgba(26, 35, 126, 0.1);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      will-change: transform;
-    }
-    
-    .contact-footer a:hover {
-      transform: translateY(-3px);
-      background: var(--primary);
-      color: white;
-    }
-
-    .contact-footer i {
-      margin-right: 10px;
-      color: var(--primary);
-      transition: transform 0.3s ease;
-    }
-    
-    .contact-footer a:hover i {
-      transform: scale(1.2);
-      color: white;
-    }
-
-    /* RESPONSIVE STYLES */
-    @media (max-width: 1200px) {
-      .profile-section {
-        gap: 40px;
-      }
-      
-      .profile-section img {
-        width: 320px;
-        height: 320px;
-      }
-    }
-    
-    @media (max-width: 992px) {
-      .navbar-text {
-        font-size: 20px;
-      }
-      
-      .profile-section {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
-      }
-      
-      .profile-text p:first-child {
-        font-size: 2.2em;
-      }
-      
-      .profile-text:before {
-        top: -40px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 80px;
-      }
-    }
-    
-    @media (max-width: 768px) {
-      .navbar-custom {
-        flex-direction: column;
-        height: auto;
-        max-height: 80px;
-        padding: 10px;
-        overflow: hidden;
-
-      }
-      
-      .nav-left, .nav-right {
-        width: 100%;
-        justify-content: center;
-        margin-left: 0; /* Reset para mobile */
-      }
-      
-      .navbar-text {
-        font-size: 16px;
-        margin: 10px 0;
-        text-align: center;
-        word-break: break-word;
-
-      }
-      
-      .profile-section img {
-        width: 280px;
-        height: 280px;
-      }
-      
-      .main-container {
-        margin: 20px auto;
-        padding: 30px 20px;
-      }
-      
-      .profile-text p:first-child {
-        font-size: 1.8em;
-      }
-      
-      .profile-text p:nth-child(2) {
-        font-size: 16px;
-      }
-    }
-    
-    @media (max-width: 576px) {
-      .profile-section img {
-        width: 220px;
-        height: 220px;
-      }
-      
-      .download-cv a {
-        padding: 10px 25px;
-        font-size: 14px;
-      }
-      
-      .contact-footer p {
-        font-size: 18px;
-      }
-    }
-    
-    /* Animação de digitação otimizada */
-    .typing-effect {
-      overflow: hidden;
-      white-space: nowrap;
-      border-right: 3px solid var(--primary);
-      animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-    }
-    
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-    
-    @keyframes blink-caret {
-      from, to { border-color: transparent }
-      50% { border-color: var(--primary) }
-    }
-  </style>
 </head>
-
 <body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header-container">
+                <h1><span class="highlight">Ali</span>son Sousa</h1>
+                <p class="subtitle">University of São Paulo / Department of Computer Science</p>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#research">Research</a></li>
+                        <li><a href="#teaching">Teaching</a></li>
+                        <li><a href="profile/cv.pdf">CV</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- About Me Section -->
+            <section id="about">
+                <div class="about-container">
+                    <h2>About Me</h2>
+                    <div class="about-content">
+                       
+                        <img src="profile/perfil.jpeg" alt="Alison Sousa Profile Picture" class="profile-pic" oncontextmenu="return false;" draggable="false" style="user-select: none;">
+                        
+                        <div class="about-text"> 
+                            <p>
+                                I am a Master’s student in Computer Science at the University of São Paulo. 
+                                My research focuses on large-scale data science applied to sectoral and economic analysis, 
+                                particularly in the context of policy evaluation and learning.
+                            </p>
+                            <p>
+                                Before joining USP, I earned a degree from the Escola Superior de Propaganda e Marketing (ESPM-SP) (BA in International Relations), 
+                                with international extension programs at Zuyd University of Applied Sciences and Meiji University. 
+                                I also worked in quantitative analysis at 
+                                <a href="https://www.ccb.com/en/home/index.html" target="_blank">China Construction Bank</a>, 
+                                the largest state-owned bank in Beijing. 
+                                In addition, I am the founder of SmTech, a technology startup specializing in artificial intelligence and data science.
+                            </p>
+                        </div>
 
 
-  <!-- Navbar com efeito 3D -->
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid navbar-custom">
-      <ul class="nav navbar-nav nav-left">
-        <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-        <li><a href="research/research.html"><i class="far fa-file-alt"></i> Research</a></li>
-      </ul>
+                        
+                    </div>
+                </div>
+            </section>
 
-      <div class="nav-right">
-        <span class="navbar-text"><strong>Alison Sousa</strong></span>
-        <ul class="nav navbar-nav dropdown-language">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-bars"></i> <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a href="index.html">About</a></li>
-              <li><a href="research/research.html">Research Topics</a></li>
-         
-            </ul>
-          </li>
-        </ul>
-      </div>
+            <!-- Research Section -->
+            <section id="research">
+                <div class="section-container">
+                    <h2>Research</h2>
+
+                    <!-- Publications Section -->
+                    <div class="research-section">
+                        <h3>Publications</h3>
+                        <ul class="research-list">
+                            <li>
+                                 <a href="research/2024/paper.pdf" target="_blank">
+                                    <strong>Western Relationship, China and Taiwan: An Econometric Approach to Assess Tensions</strong>
+                                </a> (2024).<br>
+                                <span class="research-authors"><strong>Alison Sousa</strong>, and Rodrigo Cintra.</span>
+
+                                 <a href="research/2022/paper.pdf" target="_blank">
+                                    <strong>International Diversification via ETFs: A Sharpe Ratio Perspective</strong>
+                                </a> (2022).<br>
+                                <span class="research-authors"><strong>Alison Sousa</strong>, and Igor Gondim.</span>
+
+                            
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Teaching Section -->
+            <section id="teaching">
+                <div class="section-container">
+                    <h2>Teaching</h2>
+                    <div class="teaching-list">
+                        <h3>ESPM University</h3>
+                        <ul>
+                            <li>Economics (Fall 2021)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact">
+                <div class="section-container">
+                    <h2>Contact</h2>
+                    <div class="contact-content">
+                        <p>E-mail: <a href="mailto:csousa.alison@gmail.com">csousa.alison@gmail.com</a></p>
+                        <div class="social-links">
+                            <a href="mailto:csousa.alison@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="profile/cv.pdf" target="_blank" aria-label="CV">
+                            <i class="fas fa-id-card"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/sousaca/" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/Alison-Sousa" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
-  </nav>
 
-  <!-- Conteúdo principal com efeito de flutuação -->
-  <div class="container-fluid main-container">
-    <div id="header">
-      <div class="profile-section">
-        <img src="profile/profile.jpeg" alt="Alison Sousa" class="hover-3d" loading="lazy" oncontextmenu="return false;" draggable="false">
-        <div class="profile-text">
-          <p class="typing-effect">ABOUT ME</p>
-          <p>
-            Hi there! I’m  Alison Sousa. I recently co-developed a discussion paper on Gibbs measure and phase transitions in Ising models with
-            <a href="https://www.ime.usp.br/~joaovitor/index.html" target="_blank">João Maia, Ph.D</a>.
-            My academic background includes a B.A. in International Relations from 
-            <a href="https://www.espm.br/" target="_blank">Escola Superior de Propaganda e Marketing (ESPM-SP)</a>, with academic programs at 
-            <a href="https://www.zuyd.nl/en" target="_blank">Zuyd University of Applied Sciences</a> and 
-            <a href="https://www.meiji.ac.jp/cip/english/" target="_blank">Meiji University</a>. 
-            My professional experience spans finance, the public sector, and research.
-          </p>
-          
-          
-        
-          <div class="download-cv">
-            <a href="profile/cv.pdf" target="_blank">
-              <i class="fas fa-id-card"></i> DOWNLOAD CV
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-  <!-- Footer com efeito de onda -->
-  <div class="contact-footer">
-    <p>Get in touch with me</p>
-    <a href="mailto:alisoncsousa97@gmail.com">
-      <i class="fas fa-paper-plane"></i> csousa.alison@gmail.com
-    </a>
-  </div>
-
-  <!-- Scripts otimizados -->
-  <script>
-    // Configuração otimizada do particles.js
-   
-    // Aguarda o carregamento completo da página
-    document.addEventListener('DOMContentLoaded', function() {
-      // Scroll otimizado para navbar
-      let lastScroll = 0;
-      const navbar = document.querySelector('.navbar-inverse');
-      
-      function handleScroll() {
-        const currentScroll = window.scrollY;
-        if (Math.abs(currentScroll - lastScroll) > 5) {
-          navbar.classList.toggle('scrolled', currentScroll > 50);
-          lastScroll = currentScroll;
-        }
-      }
-      
-      window.addEventListener('scroll', handleScroll, { passive: true });
-
-      // Carrega particles.js apenas quando visível
-      const observer = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) {
-          initParticles();
-          observer.disconnect();
-        }
-      }, { threshold: 0.1 });
-      
-      const particlesEl = document.getElementById('particles-js');
-      if (particlesEl) observer.observe(particlesEl);
-
-      // Remove animação de digitação após completar
-      setTimeout(() => {
-        const typingElement = document.querySelector('.typing-effect');
-        if (typingElement) {
-          typingElement.style.animation = 'none';
-          typingElement.style.borderRight = 'none';
-        }
-      }, 3500);
-    });
-
-  </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
