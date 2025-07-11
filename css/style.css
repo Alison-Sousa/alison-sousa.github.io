@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 2000px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -30,9 +30,12 @@ header {
 }
 
 .header-container {
-    display: inline-block;
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: 1500px; /* largura máxima do conteúdo */
+    margin: 0 auto;     /* centraliza horizontalmente */
+    padding: 0 0.5rem;    /* espaçamento interno */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header-container h1 {
@@ -303,7 +306,7 @@ main {
 
 .teaching-list ul li::before {
     content: '•';
-    color: #007acc;
+    color: #555;
     position: absolute;
     left: 0;
 }
@@ -350,19 +353,20 @@ main {
 
 .social-links {
     display: flex;
-    justify-content: center;
+    text-align: left;
+    justify-content: flex-start;
     gap: 1.5rem;
     margin-top: 1.5rem;
 }
 
 .social-links a {
     font-size: 1.5rem;
-    color: #555;
+    color: #007acc;
     transition: all 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #007acc;
+    color: #555; 
     transform: translateY(-3px);
 }
 
