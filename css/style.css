@@ -438,6 +438,11 @@ section h2::after {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .subtitle {
+        white-space: nowrap;
+        overflow-x: auto;
+        font-size: 0.95rem;
+    }
     .header-container {
         padding: 1rem;
     }
@@ -470,12 +475,34 @@ section h2::after {
     }
     
     .profile-pic {
-        width: 180px;
-        height: 180px;
+        width: 210px;
+        height: 210px;
     }
     
     .about-text {
         text-align: left;
+    }
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .profile-pic {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .about-text {
+        text-align: center;
+        max-width: 100%;
+        font-size: 0.98rem;
+    }
+    .nav-links {
+        flex-wrap: nowrap !important;
+        white-space: nowrap;
+        overflow-x: auto;
     }
     
     section h2 {
@@ -517,16 +544,30 @@ section h2::after {
     }
     
     .profile-pic {
-        width: 120px;
-        height: 120px;
+        width: 150px;
+        height: 150px;
+    }
+    .profile-pic {
+        margin: 0 auto;
+        display: block;
     }
     
     section h2 {
         font-size: 1.625rem;
     }
     
+    .subtitle {
+        white-space: nowrap;
+        overflow-x: auto;
+        font-size: 0.85rem;
+    }
     .about-text {
-        font-size: 1rem;
+        font-size: 0.85rem;
+    }
+    .nav-links {
+        flex-wrap: nowrap !important;
+        white-space: nowrap;
+        overflow-x: auto;
     }
     
     .research-item {
