@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-t="doc_title">Alison Sousa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <script>
+      (function() {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark-mode');
+        } else {
+          document.documentElement.classList.remove('dark-mode');
+        }
+      })();
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                Alison Sousa
+            </a>
+        </div>
+
+        <div class="nav-wrapper">
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html" data-t="nav_home">Home</a></li>
+                    <li><a href="research.html" data-t="nav_research">Publications</a></li>
+                    <li><a href="teaching.html" data-t="nav_teaching">Teaching</a></li>
+                    <li><a href="vitae.html" data-t="nav_vitae">Experience</a></li>
+                    <li><a href="about.html" data-t="nav_about">About Me</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-controls">
+                <div class="search-box">
+                    <input type="text" id="search-input" data-t-placeholder="search_placeholder" placeholder="Search..." autocomplete="off">
+                    <i class="fas fa-search"></i>
+                    <div id="search-results"></div>
+                </div>
+                <div class="language-switcher">
+                    <button id="lang-en" data-lang="en">EN</button>
+                    <button id="lang-pt" data-lang="pt-br">PT</button>
+                </div>
+                <button id="theme-toggle" data-t-title="theme_toggle_title" title="Alternar modo">
+                    <i class="fas fa-moon icon-moon"></i>
+                    <i class="fas fa-sun icon-sun"></i>
+                </button>
+                <button id="mobile-menu-toggle" data-t-aria="menu_toggle_aria" aria-label="Menu">
+                    <i class="fas fa-bars icon-hamburger"></i>
+                    <i class="fas fa-times icon-close"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="content-page">
+        <h1 data-t="about_title"></h1>
+        
+        <p data-t="about_p1"></p>
+        
+        <div class="photo-gallery">
+            <div class="gallery-item">
+                <img src="images/gallery-go.jpg" alt="Jogando Go" data-t-img-desc="gallery_go_desc" width="400" height="300">
+                <div class="gallery-item-caption" data-t="gallery_go_caption"></div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/gallery-team.jpg" alt="Equipe reunida" data-t-img-desc="gallery_team_desc" width="400" height="300">
+                <div class="gallery-item-caption" data-t="gallery_team_caption"></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/gallery-boxing.jpg" alt="Luvas de boxe" data-t-img-desc="gallery_boxing_desc" width="300" height="400">
+                <div class="gallery-item-caption" data-t="gallery_boxing_caption"></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/gallery-drawing.jpg" alt="Retrato desenhado" data-t-img-desc="gallery_drawing_desc" width="400" height="500">
+                <div class="gallery-item-caption" data-t="gallery_drawing_caption"></div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/gallery-espm.jpg" alt="Grupo ESPM" data-t-img-desc="gallery_espm_desc" width="400" height="300">
+                <div class="gallery-item-caption" data-t="gallery_espm_caption"></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/gallery-formal.jpg" alt="Grupo formal" data-t-img-desc="gallery_formal_desc" width="300" height="400">
+                <div class="gallery-item-caption" data-t="gallery_formal_caption"></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/gallery-campnou.jpg" alt="Estádio Camp Nou" data-t-img-desc="gallery_campnou_desc" width="1600" height="900">
+                <div class="gallery-item-caption" data-t="gallery_campnou_caption"></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/gallery-playstation.jpg" alt="Evento PlayStation" data-t-img-desc="gallery_playstation_desc" width="1600" height="900">
+                <div class="gallery-item-caption" data-t="gallery_playstation_caption"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="mailto:alison.sousa@usp.br" aria-label="Email"><i class="fa-solid fa-square-envelope"></i></a>
+            <a href="https://github.com/Alison-Sousa" aria-label="GitHub"><i class="fa-brands fa-square-github"></i></a>
+            <a href="https://www.linkedin.com/in/alisoncs/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <p data-t="footer_copyright"></p>
+    </footer>
+
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <button class="lightbox-prev" title="Anterior"><i class="fas fa-chevron-left"></i></button>
+        <button class="lightbox-next" title="Próxima"><i class="fas fa-chevron-right"></i></button>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+
+    <button id="back-to-top" data-t-title="back_to_top_title" title="Voltar ao Topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

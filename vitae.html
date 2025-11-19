@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-t="doc_title">Alison Sousa</title>
-
+    
     <script>
       (function() {
         const theme = localStorage.getItem('theme');
@@ -15,13 +15,13 @@
         }
       })();
     </script>
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-
     <header>
         <div class="logo">
             <a href="index.html">
@@ -62,35 +62,21 @@
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1 data-t="hero_title"></h1>
-            <div class="subtitle" data-t="hero_subtitle"></div>
-            <hr class="divider">
-        </section>
-
-        <section class="profile-section" id="about">
-            <div class="profile-container">
-                <div class="profile-column-left">
-                    <div class="profile-image-wrapper">
-                        <img src="images/profile.jpg" alt="Foto do perfil" class="profile-photo">
-                        
-                        <div class="status-bubble"></div>
-                        <div class="collab-bubble" data-t="profile_collab_bubble">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="profile-column-right">
-                    <p data-t="profile_p1"></p>
-                    <p data-t="profile_p2"></p>
-                    <p data-t="profile_p3"></p>
-
-                    <h3 id="contact" data-t="profile_contact_title"></h3>
-                    <p data-t="profile_contact_p"></p>
-                </div>
-            </div>
-        </section>
+    <main class="content-page">
+        <h1 data-t="vitae_title">Vitae</h1>
+        
+        <p id="cv-download" data-t="vitae_p1">Please download my full Curriculum Vitae (CV) for a detailed overview of my academic background, professional experience, and publications.</p>
+        
+        <div class="cv-preview-wrapper">
+            <a href="#" class="cv-preview-image-link" target="_blank" data-t-href="vitae_cv_link">
+                <img src="images/cv-preview-en.png" alt="CV Preview" class="cv-preview-image" data-t-src="vitae_cv_image_src">
+            </a>
+            
+            <a href="#" class="btn-download-full-width" target="_blank" data-t="vitae_btn_download" data-t-href="vitae_cv_link">
+                Download CV (PDF)
+            </a>
+        </div>
+        
     </main>
 
     <footer>
