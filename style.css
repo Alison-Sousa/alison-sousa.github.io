@@ -818,7 +818,7 @@ body.gallery-loaded .photo-gallery {
     }
 }
 
-/* NOVOS ESTILOS PARA O PREVIEW DO CV */
+
 .cv-preview-wrapper {
     width: 280px; 
     margin: 30px auto; 
@@ -849,16 +849,16 @@ body.gallery-loaded .photo-gallery {
 
 .btn-download-full-width { 
     display: block; 
-    width: 100%; /* AGORA REALMENTE 100% DA LARGURA DO PAI */
+    width: 100%;
     background-color: var(--accent-color);
     color: #111;
-    padding: 12px 15px; /* Adicionei um padding lateral para o texto ter um respiro */
-    border-radius: 0 0 8px 8px; /* Cantos arredondados só embaixo para se juntar à imagem */
+    padding: 12px 15px; 
+    border-radius: 0 0 8px 8px;
     text-decoration: none;
     font-weight: bold;
-    margin: 0; /* Removido todas as margens para encostar na imagem e nas laterais */
+    margin: 0; 
     transition: background-color 0.3s, color 0.3s;
-    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+    box-sizing: border-box;
 }
 .btn-download-full-width:hover {
     background-color: #ffda6a; 

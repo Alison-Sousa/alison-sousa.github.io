@@ -324,8 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
     translatePage(initialLang);
 });
 
-// --- CORREÇÃO DO "PULO" DA GALERIA ---
-// (Movido para fora do DOMContentLoaded, pois 'load' é um evento do 'window')
+
 window.addEventListener('load', () => {
     document.body.classList.add('gallery-loaded');
 });

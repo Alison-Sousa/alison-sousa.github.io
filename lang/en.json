@@ -4,8 +4,6 @@
   "search_placeholder": "Search...",
   "nav_home": "Home",
   "nav_research": "Publications",
-  "nav_projects": "Projects",
-  "nav_teaching": "Teaching",
   "nav_vitae": "Experience",
   "nav_about": "About Me",
   "theme_toggle_title": "Toggle theme",
@@ -14,26 +12,10 @@
   "hero_title": "Hello, I'm Alison",
   "hero_subtitle": "Master's Student in Computer Science at USP",
 
-  "projects_title": "Projects",
-
-  "project1_title": "Weaving Integral Health Care in the Brazilian Amazon",
-  "project1_role": "Research Assistant | 2025 - Present",
-  "project1_desc": "I develop apps, APIs, and AI solutions for residents in the Lower Amazon and Tapajós regions. The project aims to strengthen Primary Health Care (PHC) using digital and social technologies to reduce inequalities. It is coordinated by Prof. Aylene Bousquat (USP) and funded by ",
-  "project1_link_text": "BNDES",
-
-  "project2_title": "Machine Learning for Political Risk Analysis",
-  "project2_role": "Master's Research | 2025 - Present",
-  "project2_desc": "Research developing a machine learning methodology to evaluate how political instability affects subnational FDI decisions. It integrates economic, institutional, and georeferenced event data to identify local determinants and map priority risk areas. Supported by ",
-  "project2_link_text": "BNDES",
-
-  "project3_title": "Undergraduate Research Program",
-  "project3_role": "PIC | 2022 - 2023",
-  "project3_desc": "Applied econometrics project analyzing trade and geopolitical tensions between China, the United States, and Taiwan (2012–2022). It examines how rising conflicts affect the risk of Chinese offensive action and how China–U.S. economic relations influence cross-strait dynamics. Supported by ",
-  "project3_link_text": "ESPM",
-
   "profile_collab_bubble": "Do you want to collaborate?<br>Send me an email!",
   "profile_p1": "I am a Master's student at the <a href='https://www5.usp.br/english/institutional/' target='_blank'>University of São Paulo (USP)</a>, funded by BNDES and advised by Prof. <a href='https://sites.icmc.usp.br/jbatista/' target='_blank'>João Neto</a>. My <a href='research.html'>research</a> focuses on AI, with an emphasis on policy evaluation and machine learning.",
-  "profile_p2": "I was a research assistant at FEA-USP, supervised by <a href='https://www.fea.usp.br/usuarios/docente/gilmarmasiero' target='_blank'>Gilmar Masiero</a>. I hold degrees in International Relations from ESPM-SP and Chemical Engineering from USP. I am currently an AI Engineer at <a href='https://www.asibras.com/br/aempresa' target='_blank'>Asibras</a>, and previously worked as CEO of SMTech and as a Data Engineer at <a href='https://en.ccb.com/eng/home/index.shtml' target='_blank'>China Construction Bank</a> in Beijing.",
+  "profile_p2": "I previously served as a Research Assistant at FEA-USP under the supervision of <a href='https://www.fea.usp.br/usuarios/docente/gilmarmasiero' target='_blank'>Gilmar Masiero</a>. I hold degrees in International Relations from ESPM-SP and Chemical Engineering from USP. I am currently an AI Engineer at <a href='https://www.asibras.com/br/aempresa' target='_blank'>Asibras</a> and have previously worked as CEO of SMTech and as a Data Engineer at <a href='https://en.ccb.com/eng/home/index.shtml' target='_blank'>China Construction Bank</a> in Beijing.",
+  "profile_p3": "Outside academia, I am an avid reader and enjoy sports such as boxing and chess.",
   "profile_contact_title": "Get in Touch",
   "profile_contact_p": "Feel free to email me for any questions or collaboration opportunities: <strong><a href='mailto:alison.sousa@usp.br'>alison.sousa@usp.br</a></strong>.",
 
@@ -53,14 +35,6 @@
   "research_paper3_authors": "<strong>Alison Sousa</strong>, Igor Gondim",
   "research_paper3_venue": "33rd National Meeting of Administration Graduation Courses, 2022",
 
-  "teaching_title": "Teaching",
-  "teaching_course2_title": "Supervised Undergraduate Theses",
-  "teaching_course2_details": "USP, Spring 2025",
-  "teaching_course2_p": "Support to the course coordinator in supervising and evaluating undergraduate theses in Computer Science.",
-  "teaching_course3_title": "Economic Development",
-  "teaching_course3_details": "ESPM, Winter 2021",
-  "teaching_course3_p": "Contributed to grading, developing data analysis, and creating development indicators to support studies in Economics.",
-  
   "vitae_title": "Vitae",
   "vitae_p1": "Please download my full Curriculum Vitae (CV) for a detailed overview of my academic background, professional experience, and publications.",
   "vitae_btn_download": "Download CV (PDF)",
@@ -103,12 +77,6 @@
     { "term": "asibras", "page": "Home", "url": "index.html", "hash": "#about" },
     { "term": "smtech", "page": "Home", "url": "index.html", "hash": "#about" },
 
-    { "term": "amazon", "page": "Projects", "url": "projects.html" },
-    { "term": "health", "page": "Projects", "url": "projects.html" },
-    { "term": "bndes", "page": "Projects", "url": "projects.html" },
-    { "term": "political risk", "page": "Projects", "url": "projects.html" },
-    { "term": "scientific initiation", "page": "Projects", "url": "projects.html" },
-
     { "term": "research", "page": "Publications", "url": "research.html" },
     { "term": "china", "page": "Publications", "url": "research.html", "hash": "#paper-gen-ai" },
     { "term": "oli", "page": "Publications", "url": "research.html", "hash": "#paper-gen-ai" },
@@ -118,12 +86,6 @@
     { "term": "epidemiological", "page": "Publications", "url": "research.html", "hash": "#paper-marketplace" },
     { "term": "etf", "page": "Publications", "url": "research.html", "hash": "#paper-dengue" },
     { "term": "sharpe", "page": "Publications", "url": "research.html", "hash": "#paper-dengue" },
-
-    { "term": "teaching", "page": "Teaching", "url": "teaching.html" },
-    { "term": "ta", "page": "Teaching", "url": "teaching.html" },
-    { "term": "nlp", "page": "Teaching", "url": "teaching.html", "hash": "#course-ci-dados" },
-    { "term": "natural language processing", "page": "Teaching", "url": "teaching.html", "hash": "#course-ci-dados" },
-    { "term": "economic development", "page": "Teaching", "url": "teaching.html", "hash": "#course-algoritmos" },
 
     { "term": "cv", "page": "Experience", "url": "vitae.html", "hash": "#cv-download" },
     { "term": "curriculum", "page": "Experience", "url": "vitae.html", "hash": "#cv-download" },
