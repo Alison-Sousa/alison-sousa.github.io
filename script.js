@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const langPtBtn = document.getElementById('lang-pt');
-    const langEnBtn = document.getElementById('lang-en');
+    const langToggleBtn = document.getElementById('lang-toggle');
+    const langFlagImg = document.getElementById('lang-flag');
     
     function applyTranslations(jsonData) {
         currentTranslations = jsonData;
@@ -110,6 +110,22 @@ document.addEventListener('DOMContentLoaded', () => {
         body.classList.add('js-loaded');
     }
 
+    function updateLangToggle(lang) {
+        if (!langToggleBtn || !langFlagImg) return;
+
+        if (lang === 'pt-br') {
+            langToggleBtn.setAttribute('data-lang', 'pt-br');
+            langToggleBtn.title = 'Português';
+            langFlagImg.src = 'images/pt-br.svg';
+            langFlagImg.alt = 'Português';
+        } else {
+            langToggleBtn.setAttribute('data-lang', 'en');
+            langToggleBtn.title = 'English';
+            langFlagImg.src = 'images/en.svg';
+            langFlagImg.alt = 'English';
+        }
+    }
+
     async function translatePage(lang) {
         try {
             const response = await fetch(`lang/${lang}.json`);
@@ -121,14 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
             applyTranslations(jsonData);
             
             localStorage.setItem('lang', lang);
-            
-            if (lang === 'pt-br') {
-                langPtBtn?.classList.add('active');
-                langEnBtn?.classList.remove('active');
-            } else {
-                langEnBtn?.classList.add('active');
-                langPtBtn?.classList.remove('active');
-            }
+
+            updateLangToggle(lang);
         } catch (error) {
             console.error('Failed to load translation:', error);
             if (lang !== 'en') { 
@@ -137,19 +147,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    if (langEnBtn) {
-        langEnBtn.addEventListener('click', () => {
-            if (document.documentElement.lang !== 'en') {
-                translatePage('en');
-            }
-        });
-    }
-    
-    if (langPtBtn) {
-        langPtBtn.addEventListener('click', () => {
-            if (document.documentElement.lang !== 'pt-br') {
-                translatePage('pt-br');
-            }
+    if (langToggleBtn) {
+        langToggleBtn.addEventListener('click', () => {
+            const currentLang = document.documentElement.lang || 'en';
+            const nextLang = currentLang === 'en' ? 'pt-br' : 'en';
+            translatePage(nextLang);
         });
     }
 
@@ -322,6 +324,24 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const initialLang = localStorage.getItem('lang') || 'en'; 
     translatePage(initialLang);
+
+    // Abstract toggle functionality
+    const abstractButtons = document.querySelectorAll('.btn-abstract');
+    abstractButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const targetId = button.getAttribute('data-target');
+            const abstractDiv = document.getElementById(targetId);
+            
+            if (abstractDiv) {
+                // Toggle expanded class
+                abstractDiv.classList.toggle('expanded');
+                button.classList.toggle('expanded');
+            }
+        });
+    });
 });
 
 
