@@ -63,7 +63,7 @@
   "gallery_works_caption": "Faria Lima",
   "gallery_works_desc": "Região financeira de São Paulo onde concentro boa parte das minhas atividades profissionais.",
 
-  "news_title": "Notícias",
+  "news_title": "Notícias recentes",
   "news_month_jan": "Jan",
   "news_month_feb": "Fev",
   "news_month_mar": "Mar",
@@ -81,14 +81,13 @@
   "news_learn_more": "Saiba mais",
   "news_item0_title": "Destaque no Jornal da USP",
   "news_item0_summary": "Desenvolvimento de app para saúde pública que opera offline em comunidades isoladas.",
-  "news_item4_title": "Participação no Congresso ENANGRAD em Santa Catarina",
-  "news_item4_summary": "Apresentei meu trabalho no ENANGRAD em Santa Catarina.",
+  "news_item2_title": "1o lugar na admissão de Estatística (UFSCar)",
+  "news_item2_summary": "Classificado em 1o lugar na admissão de Estatística na UFSCar.",
   "news_item1_title": "Destaque no ICMC-USP",
   "news_item1_summary": "Destaque de solução tecnológica para comunidades isoladas no Brasil.",
-  "news_item3_title": "SIGALEI São Carlos: Prêmio de análise do PL 5.660/2016",
-  "news_item3_summary": "Premiado como melhor relatório técnico sobre o PL 5.660/2016.",
-  "news_item5_title": "NENAcast #15: Tensões entre China, EUA e Taiwan",
-  "news_item5_summary": "Talk sobre China–Taiwan e a ambiguidade estratégica dos EUA (NENAcast #15).",
+  "news_item6_title": "Bolsa de Pesquisa BNDES",
+  "news_item6_summary": "Bolsa de pesquisa do BNDES.",
+  
 
   "footer_copyright": "&copy; 2026 Alison Sousa",
   "back_to_top_title": "Voltar ao Topo",
@@ -130,15 +129,15 @@
     { "term": "notícias", "page": "Notícias", "url": "news.html" },
     { "term": "novidades", "page": "Notícias", "url": "news.html" },
     { "term": "atualizações", "page": "Notícias", "url": "news.html" },
-    { "term": "enangrad", "page": "Notícias", "url": "news.html" },
-    { "term": "congresso", "page": "Notícias", "url": "news.html" },
-    { "term": "santa catarina", "page": "Notícias", "url": "news.html" },
     { "term": "brasil", "page": "Notícias", "url": "news.html" },
     { "term": "icmc", "page": "Notícias", "url": "news.html" },
     { "term": "amazônia", "page": "Notícias", "url": "news.html" },
     { "term": "tapajós", "page": "Notícias", "url": "news.html" },
-    { "term": "sigalei", "page": "Notícias", "url": "news.html" },
-    { "term": "nenacast", "page": "Notícias", "url": "news.html" },
-    { "term": "taiwan", "page": "Notícias", "url": "news.html" }
+    { "term": "premio", "page": "Notícias", "url": "news.html" },
+    { "term": "bndes", "page": "Notícias", "url": "news.html" },
+    { "term": "bolsa de pesquisa", "page": "Notícias", "url": "news.html" },
+    { "term": "ufscar", "page": "Notícias", "url": "news.html" },
+    { "term": "estatística", "page": "Notícias", "url": "news.html" },
+    { "term": "1o lugar", "page": "Notícias", "url": "news.html" }
   ]
 }

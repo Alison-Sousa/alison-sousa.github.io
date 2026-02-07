@@ -63,7 +63,7 @@
   "gallery_works_caption": "Faria Lima",
   "gallery_works_desc": "Financial district in São Paulo where I spend much of my professional life.",
 
-  "news_title": "News",
+  "news_title": "Recent News",
   "news_month_jan": "Jan",
   "news_month_feb": "Feb",
   "news_month_mar": "Mar",
@@ -81,14 +81,13 @@
   "news_learn_more": "Learn more",
   "news_item0_title": "USP highlight",
   "news_item0_summary": "Development of a public health app that operates offline in isolated communities.",
-  "news_item4_title": "Participation in 33rd ENANGRAD Conference",
-  "news_item4_summary": "Presented my work at ENANGRAD in Santa Catarina.",
+  "news_item2_title": "Ranked 1st in Statistics Admission (UFSCar)",
+  "news_item2_summary": "Ranked 1st in the Statistics admission at UFSCar.",
   "news_item1_title": "ICMC-USP highlight",
   "news_item1_summary": "Highlight of a technological solution for isolated communities in Brazil.",
-  "news_item3_title": "SIGALEI São Carlos: Award for analysis of PL 5.660/2016",
-  "news_item3_summary": "Awarded best technical report on PL 5.660/2016.",
-  "news_item5_title": "NENAcast #15: Tensions between China, the U.S., and Taiwan",
-  "news_item5_summary": "Talk on China–Taiwan tensions and U.S. strategic ambiguity (NENAcast #15).",
+  "news_item6_title": "BNDES Research Grant",
+  "news_item6_summary": "Received a BNDES research grant.",
+  
 
   "footer_copyright": "&copy; 2026 Alison Sousa",
   "back_to_top_title": "Back to Top",
@@ -128,15 +127,15 @@
     { "term": "news", "page": "News", "url": "news.html" },
     { "term": "announcements", "page": "News", "url": "news.html" },
     { "term": "updates", "page": "News", "url": "news.html" },
-    { "term": "enangrad", "page": "News", "url": "news.html" },
-    { "term": "conference", "page": "News", "url": "news.html" },
-    { "term": "santa catarina", "page": "News", "url": "news.html" },
     { "term": "brazil", "page": "News", "url": "news.html" },
     { "term": "icmc", "page": "News", "url": "news.html" },
     { "term": "amazonia", "page": "News", "url": "news.html" },
     { "term": "tapajos", "page": "News", "url": "news.html" },
-    { "term": "sigalei", "page": "News", "url": "news.html" },
-    { "term": "nenacast", "page": "News", "url": "news.html" },
-    { "term": "taiwan", "page": "News", "url": "news.html" }
+    { "term": "award", "page": "News", "url": "news.html" },
+    { "term": "bndes", "page": "News", "url": "news.html" },
+    { "term": "research grant", "page": "News", "url": "news.html" },
+    { "term": "ufscar", "page": "News", "url": "news.html" },
+    { "term": "statistics admission", "page": "News", "url": "news.html" },
+    { "term": "ranked 1st", "page": "News", "url": "news.html" }
   ]
 }
