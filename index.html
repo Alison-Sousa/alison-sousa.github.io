@@ -4,15 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-t="doc_title">Alison Sousa</title>
-
     <script>
       (function() {
-        const theme = localStorage.getItem('theme');
-        if (theme === 'dark') {
-          document.documentElement.classList.add('dark-mode');
-        } else {
-          document.documentElement.classList.remove('dark-mode');
-        }
+        var theme = localStorage.getItem('theme');
+        if (theme === 'dark') document.documentElement.classList.add('dark-mode');
       })();
     </script>
     <link rel="stylesheet" href="style.css">
@@ -21,86 +16,70 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-
     <header>
         <div class="logo">
-            <a href="index.html">
-                Alison Sousa
-            </a>
+            <a href="#home">Alison Sousa</a>
         </div>
-
-        <div class="nav-wrapper">
-            <nav class="main-nav">
-                <ul class="nav-menu">
-                    <li><a href="index.html" data-t="nav_home">Home</a></li>
-                    <li><a href="news.html" data-t="nav_news">News</a></li>
-                    <li><a href="research.html" data-t="nav_research">Publications</a></li>
-                    <li><a href="vitae.html" data-t="nav_vitae">Experience</a></li>
-                    <li><a href="about.html" data-t="nav_about">Gallery</a></li>
-                </ul>
-            </nav>
-
-            
-
-            <div class="header-controls">
-                <div class="search-box">
-                    <input type="text" id="search-input" data-t-placeholder="search_placeholder" placeholder="Search..." autocomplete="off">
-                    <i class="fas fa-search"></i>
-                    <div id="search-results"></div>
-                </div>
-                <div class="language-switcher">
-                    <button id="lang-toggle" data-lang="en" title="English">
-                        <img id="lang-flag" src="images/en.svg" alt="English" class="lang-flag">
-                    </button>
-                </div>
-                <button id="theme-toggle" data-t-title="theme_toggle_title" title="Alternar modo">
-                    <i class="fas fa-moon icon-moon"></i>
-                    <i class="fas fa-sun icon-sun"></i>
-                </button>
-                <button id="mobile-menu-toggle" data-t-aria="menu_toggle_aria" aria-label="Menu">
-                    <i class="fas fa-bars icon-hamburger"></i>
-                    <i class="fas fa-times icon-close"></i>
+        <div class="header-controls">
+            <button id="menu-toggle" data-t-aria="menu_toggle_aria" aria-label="Menu">
+                <i class="fas fa-bars menu-icon-open"></i>
+                <i class="fas fa-times menu-icon-close"></i>
+            </button>
+            <div class="search-box">
+                <input type="text" id="search-input" data-t-placeholder="search_placeholder" placeholder="Search..." autocomplete="off">
+                <i class="fas fa-search"></i>
+                <div id="search-results"></div>
+            </div>
+            <div class="language-switcher">
+                <button id="lang-toggle" data-lang="en" title="English">
+                    <img id="lang-flag" src="images/en.svg" alt="English" class="lang-flag">
                 </button>
             </div>
+            <button id="theme-toggle" data-t-title="theme_toggle_title" title="Alternar modo">
+                <i class="fas fa-moon icon-moon"></i>
+                <i class="fas fa-sun icon-sun"></i>
+            </button>
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1 data-t="hero_title"></h1>
-            <div class="subtitle" data-t="hero_subtitle"></div>
-            <hr class="divider">
-        </section>
-
-        <section class="profile-section" id="about">
-            <div class="profile-container">
-                <div class="profile-column-left">
-                    <div class="profile-image-wrapper">
-                        <img src="images/profile.jpg" alt="Foto do perfil" class="profile-photo">
-                        
-                        <div class="status-bubble"></div>
-                        <div class="collab-bubble" data-t="profile_collab_bubble">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="profile-column-right">
-                    <p data-t="profile_p1"></p>
-                    <p data-t="profile_p2"></p>
-                    <p data-t="profile_p3"></p>
-
-                    <h3 id="contact" data-t="profile_contact_title"></h3>
-                    <p data-t="profile_contact_p"></p>
+    <div id="menu-overlay" class="menu-overlay">
+        <div class="menu-panel">
+            <div class="menu-panel-header">
+                <span class="menu-panel-logo">Alison Sousa</span>
+                <button id="menu-close" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="menu-nav">
+                <ul>
+                    <li><a href="#home" data-t="nav_home">Home</a></li>
+                    <li><a href="#news" data-t="nav_news">News</a></li>
+                    <li><a href="#research" data-t="nav_research">Publications</a></li>
+                    <li><a href="#vitae" data-t="nav_vitae">Experience</a></li>
+                </ul>
+            </nav>
+            <div class="menu-panel-footer">
+                <div class="menu-panel-social">
+                    <a href="mailto:alison.sousa@usp.br" aria-label="Email"><i class="fa-solid fa-square-envelope"></i></a>
+                    <a href="https://github.com/Alison-Sousa" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-github"></i></a>
+                    <a href="https://www.linkedin.com/in/alisoncs/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+
+    <main>
+        <section id="home" class="section"></section>
+        <section id="news" class="section"></section>
+        <section id="research" class="section"></section>
+        <section id="vitae" class="section"></section>
     </main>
 
     <footer>
         <div class="social-links">
             <a href="mailto:alison.sousa@usp.br" aria-label="Email"><i class="fa-solid fa-square-envelope"></i></a>
-            <a href="https://github.com/Alison-Sousa" aria-label="GitHub"><i class="fa-brands fa-square-github"></i></a>
-            <a href="https://www.linkedin.com/in/alisoncs/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/Alison-Sousa" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-github"></i></a>
+            <a href="https://www.linkedin.com/in/alisoncs/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
         </div>
         <p data-t="footer_copyright"></p>
     </footer>
