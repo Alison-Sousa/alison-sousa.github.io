@@ -1,107 +1,194 @@
-<h2 class="section-title" data-t="research_title">Research</h2>
-<h3 class="section-subtitle" data-t="research_subtitle1">Working Papers</h3>
-<div class="paper" id="paper-gen-ai">
-    <div class="paper-content">
-        <div class="paper-icon">
-            <i class="fa-regular fa-file-lines"></i>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-t="doc_title"></title>
+    <script>
+      (function() {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'dark') document.documentElement.classList.add('dark-mode');
+      })();
+    </script>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/light-teal.ico" type="image/x-icon">
+</head>
+<body data-page="research">
+    <header>
+        <div class="logo">
+            <a href="index.html" data-t="logo_name"></a>
         </div>
-        <div class="paper-details">
-            <div class="paper-citation" data-t="research_paper1_citation"></div>
-            <div class="paper-actions">
-                <button class="btn-abstract" data-target="abstract-paper1">
-                    <i class="fas fa-chevron-down"></i>
-                    <span data-t="btn_abstract">Abstract</span>
-                </button>
-                <a href="" class="btn-doi" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-external-link-alt"></i>
-                    DOI
-                </a>
-                <a href="https://github.com/Alison-Sousa/paper-erp-ofdi-model" class="btn-code" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-code"></i>
-                    <span data-t="btn_code">Code</span>
-                </a>
+        <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="primary-nav" class="top-nav" aria-label="Primary">
+            <a href="research.html" data-t="nav_research" class="active" aria-current="page"></a>
+            <a href="teaching.html" data-t="nav_vitae"></a>
+        </nav>
+        <div class="header-controls">
+            <div class="search-box">
+                <input type="text" id="search-input" data-t-placeholder="search_placeholder" placeholder="" autocomplete="off">
+                <i class="fas fa-search"></i>
+                <div id="search-results"></div>
             </div>
-            <div class="paper-abstract" id="abstract-paper1">
-                <p data-t="research_paper1_abstract"></p>
+            <button id="theme-toggle" data-t-title="theme_toggle_title" title="">
+                <i class="fas fa-moon icon-moon"></i>
+                <i class="fas fa-sun icon-sun"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="research" class="section">
+            <h1 class="section-title" data-t="research_title"></h1>
+
+            <h2 class="section-subtitle" data-t="research_subtitle1"></h2>
+
+            <article id="paper-gen-ai" class="paper">
+                <div class="paper-content">
+                    <div class="paper-icon" aria-hidden="true"><i class="fas fa-file-lines"></i></div>
+                    <div class="paper-details">
+                        <p class="paper-citation" data-t="research_paper1_citation"></p>
+                        <div class="paper-actions">
+                            <button class="btn-abstract" data-target="abstract-paper-1" type="button">
+                                <i class="fas fa-chevron-down"></i><span data-t="btn_abstract"></span>
+                            </button>
+                            <a class="btn-doi" href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-up-right-from-square"></i><span data-t="btn_doi"></span></a>
+                            <a class="btn-code" href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-code"></i><span data-t="btn_code"></span></a>
+                        </div>
+                        <div id="abstract-paper-1" class="paper-abstract">
+                            <p data-t="research_paper1_abstract"></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="paper-marketplace" class="paper">
+                <div class="paper-content">
+                    <div class="paper-icon" aria-hidden="true"><i class="fas fa-file-lines"></i></div>
+                    <div class="paper-details">
+                        <p class="paper-citation" data-t="research_paper4_citation"></p>
+                        <div class="paper-actions">
+                            <button class="btn-abstract" data-target="abstract-paper-4" type="button">
+                                <i class="fas fa-chevron-down"></i><span data-t="btn_abstract"></span>
+                            </button>
+                            <a class="btn-doi" href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-up-right-from-square"></i><span data-t="btn_doi"></span></a>
+                            <a class="btn-code" href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-code"></i><span data-t="btn_code"></span></a>
+                        </div>
+                        <div id="abstract-paper-4" class="paper-abstract">
+                            <p data-t="research_paper4_abstract"></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="paper-oli" class="paper">
+                <div class="paper-content">
+                    <div class="paper-icon" aria-hidden="true"><i class="fas fa-file-lines"></i></div>
+                    <div class="paper-details">
+                        <p class="paper-citation" data-t="research_paper5_citation"></p>
+                        <div class="paper-actions">
+                            <button class="btn-abstract" data-target="abstract-paper-5" type="button">
+                                <i class="fas fa-chevron-down"></i><span data-t="btn_abstract"></span>
+                            </button>
+                            <a class="btn-doi" href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-up-right-from-square"></i><span data-t="btn_doi"></span></a>
+                            <a class="btn-code" href="https://github.com/Alison-Sousa/paper-erp-ofdi-model" target="_blank" rel="noopener noreferrer"><i class="fas fa-code"></i><span data-t="btn_code"></span></a>
+                        </div>
+                        <div id="abstract-paper-5" class="paper-abstract">
+                            <p data-t="research_paper5_abstract"></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="paper-new-wp" class="paper">
+                <div class="paper-content">
+                    <div class="paper-icon" aria-hidden="true"><i class="fas fa-file-lines"></i></div>
+                    <div class="paper-details">
+                        <p class="paper-citation" data-t="research_paper2_citation"></p>
+                        <div class="paper-actions">
+                            <button class="btn-abstract" data-target="abstract-paper-2" type="button">
+                                <i class="fas fa-chevron-down"></i><span data-t="btn_abstract"></span>
+                            </button>
+                            <a class="btn-doi" href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-up-right-from-square"></i><span data-t="btn_doi"></span></a>
+                            <a class="btn-code" href="https://github.com/Alison-Sousa/paper-epidemiological-predictions" target="_blank" rel="noopener noreferrer"><i class="fas fa-code"></i><span data-t="btn_code"></span></a>
+                        </div>
+                        <div id="abstract-paper-2" class="paper-abstract">
+                            <p data-t="research_paper2_abstract"></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="paper-slr" class="paper">
+                <div class="paper-content">
+                    <div class="paper-icon" aria-hidden="true"><i class="fas fa-file-lines"></i></div>
+                    <div class="paper-details">
+                        <p class="paper-citation" data-t="research_paper6_citation"></p>
+                        <div class="paper-actions">
+                            <button class="btn-abstract" data-target="abstract-paper-6" type="button">
+                                <i class="fas fa-chevron-down"></i><span data-t="btn_abstract"></span>
+                            </button>
+                            <a class="btn-doi" href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-up-right-from-square"></i><span data-t="btn_doi"></span></a>
+                            <a class="btn-code" href="https://github.com/Alison-Sousa/paper-slr-epidemiological-predictions" target="_blank" rel="noopener noreferrer"><i class="fas fa-code"></i><span data-t="btn_code"></span></a>
+                        </div>
+                        <div id="abstract-paper-6" class="paper-abstract">
+                            <p data-t="research_paper6_abstract"></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <h2 class="section-subtitle" data-t="research_subtitle2"></h2>
+
+            <article id="paper-dengue" class="paper">
+                <div class="paper-content">
+                    <div class="paper-icon" aria-hidden="true"><i class="fas fa-file-lines"></i></div>
+                    <div class="paper-details">
+                        <p class="paper-citation" data-t="research_paper3_citation"></p>
+                        <div class="paper-actions">
+                            <button class="btn-abstract" data-target="abstract-paper-3" type="button">
+                                <i class="fas fa-chevron-down"></i><span data-t="btn_abstract"></span>
+                            </button>
+                            <a class="btn-doi" href="https://doity.com.br/anais/33enangrad/trabalho/249019" target="_blank" rel="noopener noreferrer"><i class="fas fa-up-right-from-square"></i><span data-t="btn_link"></span></a>
+                        </div>
+                        <div id="abstract-paper-3" class="paper-abstract">
+                            <p data-t="research_paper3_abstract"></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <p class="footer-name" data-t="footer_name"></p>
+                <div class="footer-social">
+                    <a href="mailto:alison.sousa@usp.br" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/alisoncs/" data-t-aria="social_linkedin_aria" aria-label="" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://x.com/alisoncsousa" data-t-aria="social_x_aria" aria-label="" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://github.com/Alison-Sousa" data-t-aria="social_github_aria" aria-label="" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p data-t="footer_org_line1"></p>
+                <p data-t="footer_org_line2"></p>
+                <p data-t="footer_org_line3"></p>
+                <p data-t="footer_org_line4"></p>
             </div>
         </div>
-    </div>
-</div>
-<div class="paper" id="paper-new-wp">
-    <div class="paper-content">
-        <div class="paper-icon">
-            <i class="fa-regular fa-file-lines"></i>
-        </div>
-        <div class="paper-details">
-            <div class="paper-citation" data-t="research_paper4_citation"></div>
-            <div class="paper-actions">
-                <button class="btn-abstract" data-target="abstract-paper4">
-                    <i class="fas fa-chevron-down"></i>
-                    <span data-t="btn_abstract">Abstract</span>
-                </button>
-                <a href="" class="btn-doi" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-external-link-alt"></i>
-                    DOI
-                </a>
-                <a href="https://github.com/Alison-Sousa/paper-epidemiological-predictions" class="btn-code" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-code"></i>
-                    <span data-t="btn_code">Code</span>
-                </a>
-            </div>
-            <div class="paper-abstract" id="abstract-paper4">
-                <p data-t="research_paper4_abstract"></p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="paper" id="paper-marketplace">
-    <div class="paper-content">
-        <div class="paper-icon">
-            <i class="fa-regular fa-file-lines"></i>
-        </div>
-        <div class="paper-details">
-            <div class="paper-citation" data-t="research_paper2_citation"></div>
-            <div class="paper-actions">
-                <button class="btn-abstract" data-target="abstract-paper2">
-                    <i class="fas fa-chevron-down"></i>
-                    <span data-t="btn_abstract">Abstract</span>
-                </button>
-                <a href="" class="btn-doi" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-external-link-alt"></i>
-                    DOI
-                </a>
-                <a href="https://github.com/Alison-Sousa/paper-slr-epidemiological-predictions" class="btn-code" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-code"></i>
-                    <span data-t="btn_code">Code</span>
-                </a>
-            </div>
-            <div class="paper-abstract" id="abstract-paper2">
-                <p data-t="research_paper2_abstract"></p>
-            </div>
-        </div>
-    </div>
-</div>
-<h3 class="section-subtitle" data-t="research_subtitle2">Publications</h3>
-<div class="paper" id="paper-dengue">
-    <div class="paper-content">
-        <div class="paper-icon">
-            <i class="fa-regular fa-file-lines"></i>
-        </div>
-        <div class="paper-details">
-            <div class="paper-citation" data-t="research_paper3_citation"></div>
-            <div class="paper-actions">
-                <button class="btn-abstract" data-target="abstract-paper3">
-                    <i class="fas fa-chevron-down"></i>
-                    <span data-t="btn_abstract">Abstract</span>
-                </button>
-                <a href="https://doity.com.br/anais/33enangrad/trabalho/249019" class="btn-doi" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-external-link-alt"></i>
-                    Link
-                </a>
-            </div>
-            <div class="paper-abstract" id="abstract-paper3">
-                <p data-t="research_paper3_abstract"></p>
-            </div>
-        </div>
-    </div>
-</div>
+    </footer>
+
+    <button id="back-to-top" data-t-title="back_to_top_title" title="">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../style/script.js"></script>
+</body>
+</html>

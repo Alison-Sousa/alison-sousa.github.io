@@ -1,0 +1,35 @@
+## search_database
+- about me | Home | #about
+- contact | Home | #contact
+- email | Home | #contact
+- alison.sousa@usp.br | Home | #contact
+- master's degree | Home | #about
+- usp | Home | #about
+- fea usp | Home | #about
+- fea-usp | Home | #about
+- msc | Home | #about
+- strategy | Home | #about
+- economics | Home | #about
+- strategy and economics | Home | #about
+- economic development | Home | #about
+- econometrics | Home | #about
+- machine learning | Home | #about
+- bndes | Home | #about
+- nordaris | Home | #about
+- smtech | Home | #about
+- research | Research | #research
+- china | Research | #paper-gen-ai
+- oli | Research | #paper-gen-ai
+- lll | Research | #paper-gen-ai
+- erp | Research | #paper-gen-ai
+- ai | Research | #paper-marketplace
+- epidemiological | Research | #paper-marketplace
+- etf | Research | #paper-dengue
+- sharpe | Research | #paper-dengue
+- teaching experience | Teaching | #teaching
+- board participation | Teaching | #teaching
+- examination board | Teaching | #teaching
+- icmc usp | Teaching | #teaching
+- espm | Teaching | #teaching
+- economic development | Teaching | #teaching
+- marcus nakagawa | Teaching | #teaching

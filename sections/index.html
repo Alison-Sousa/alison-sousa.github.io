@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-t="doc_title"></title>
+    <script>
+      (function() {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'dark') document.documentElement.classList.add('dark-mode');
+      })();
+    </script>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/light-teal.ico" type="image/x-icon">
+</head>
+<body data-page="home">
+    <header>
+        <div class="logo">
+            <a href="index.html" data-t="logo_name"></a>
+        </div>
+        <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="primary-nav" class="top-nav" aria-label="Primary">
+            <a href="research.html" data-t="nav_research"></a>
+            <a href="teaching.html" data-t="nav_vitae"></a>
+        </nav>
+        <div class="header-controls">
+            <div class="search-box">
+                <input type="text" id="search-input" data-t-placeholder="search_placeholder" placeholder="" autocomplete="off">
+                <i class="fas fa-search"></i>
+                <div id="search-results"></div>
+            </div>
+            <button id="theme-toggle" data-t-title="theme_toggle_title" title="">
+                <i class="fas fa-moon icon-moon"></i>
+                <i class="fas fa-sun icon-sun"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="section">
+            <div class="hero">
+                <h1 data-t="hero_title"></h1>
+                <div class="subtitle" data-t="hero_subtitle"></div>
+                <hr class="divider">
+            </div>
+            <div class="profile-section" id="about">
+                <div class="profile-container">
+                    <div class="profile-column-left">
+                        <div class="profile-image-wrapper">
+                            <img src="../images/profile.png" data-t-alt="profile_photo_alt" alt="" class="profile-photo" draggable="false" oncontextmenu="return false;">
+                            <div class="status-bubble"></div>
+                            <div class="collab-bubble" data-t="profile_collab_bubble"></div>
+                        </div>
+                    </div>
+                    <div class="profile-column-right">
+                        <p data-t="profile_p1"></p>
+                        <p data-t="profile_p2"></p>
+                        <p data-t="profile_p3"></p>
+                        <h3 id="contact" data-t="profile_contact_title"></h3>
+                        <p data-t="profile_contact_p"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <p class="footer-name" data-t="footer_name"></p>
+                <div class="footer-social">
+                    <a href="mailto:alison.sousa@usp.br" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/alisoncs/" data-t-aria="social_linkedin_aria" aria-label="" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://x.com/alisoncsousa" data-t-aria="social_x_aria" aria-label="" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://github.com/Alison-Sousa" data-t-aria="social_github_aria" aria-label="" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p data-t="footer_org_line1"></p>
+                <p data-t="footer_org_line2"></p>
+                <p data-t="footer_org_line3"></p>
+                <p data-t="footer_org_line4"></p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" data-t-title="back_to_top_title" title="">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../style/script.js"></script>
+</body>
+</html>
