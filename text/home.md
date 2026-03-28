@@ -11,4 +11,4 @@ Do you want to collaborate?<br>Send me an email!
 Profile photo
 
 ## profile_p1
-I am a Master's student in Strategy and Economics at the <strong>FEA-USP</strong>, funded by Capes. My research focuses on economics, econometrics, and machine learning. <strong><a href='../files/Short_CV_Alison_Sousa.pdf' target='_blank'>[Curriculum Vitae]</a></strong>
+I am a Master's student in Strategy and Economics at the <strong>FEA-USP</strong>, funded by Capes. My research focuses on economics, econometrics, and machine learning. <strong><a href='../files/Short_CV_Alison_Sousa (Feb 2026).pdf' target='_blank'>[Curriculum Vitae]</a></strong>

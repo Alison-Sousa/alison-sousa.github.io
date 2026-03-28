@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var rootPrefix = currentPath.includes('/sections/') ? '../' : '';
     var currentTranslations = {};
     var currentSearchDatabase = [];
+    var htmlDecoder = document.createElement('textarea');
 
     var themeToggle = document.getElementById('theme-toggle');
     var menuToggle = document.getElementById('menu-toggle');
@@ -97,6 +98,32 @@ document.addEventListener('DOMContentLoaded', function () {
         return data;
     }
 
+    function normalizeSearchText(value) {
+        return (value || '')
+            .toString()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .toLowerCase()
+            .trim();
+    }
+
+    function stripHtmlTags(value) {
+        return (value || '').replace(/<[^>]*>/g, ' ');
+    }
+
+    function decodeHtmlEntities(value) {
+        htmlDecoder.innerHTML = value || '';
+        return htmlDecoder.value;
+    }
+
+    function tokenizeSearchTerms(value) {
+        return normalizeSearchText(decodeHtmlEntities(stripHtmlTags(value)))
+            .split(/[^a-z0-9@.+-]+/)
+            .filter(function (token) {
+                return token.length >= 2 && !/^\d+$/.test(token);
+            });
+    }
+
     function parseSearchDatabase(raw) {
         return (raw || '')
             .split('\n')
@@ -117,12 +144,107 @@ document.addEventListener('DOMContentLoaded', function () {
                 return {
                     term: parts[0],
                     page: parts[1],
-                    hash: parts[2]
+                    hash: parts[2],
+                    normalizedTerm: normalizeSearchText(parts[0])
                 };
             })
             .filter(function (item) {
-                return item && item.term && item.page;
+                return item && item.term && item.page && item.normalizedTerm;
             });
+    }
+
+    function inferSearchLocation(key) {
+        var lowerKey = (key || '').toLowerCase();
+        var paperHashMap = {
+            paper1: '#paper-gen-ai',
+            paper2: '#paper-new-wp',
+            paper3: '#paper-dengue',
+            paper4: '#paper-marketplace',
+            paper5: '#paper-oli',
+            paper6: '#paper-slr'
+        };
+
+        if (lowerKey.startsWith('research_') || lowerKey.startsWith('btn_')) {
+            var matchedPaper = Object.keys(paperHashMap).find(function (paperKey) {
+                return lowerKey.includes(paperKey);
+            });
+            return {
+                page: 'Research',
+                hash: matchedPaper ? paperHashMap[matchedPaper] : '#research'
+            };
+        }
+
+        if (lowerKey.startsWith('teaching_') || lowerKey.startsWith('vitae_')) {
+            return { page: 'Teaching', hash: '#teaching' };
+        }
+
+        if (lowerKey.startsWith('profile_') || lowerKey.startsWith('hero_')) {
+            return {
+                page: 'Home',
+                hash: lowerKey.includes('contact') ? '#contact' : '#about'
+            };
+        }
+
+        if (lowerKey === 'nav_research') {
+            return { page: 'Research', hash: '#research' };
+        }
+
+        if (lowerKey === 'nav_vitae') {
+            return { page: 'Teaching', hash: '#teaching' };
+        }
+
+        if (lowerKey.includes('contact') || lowerKey.includes('email')) {
+            return { page: 'Home', hash: '#contact' };
+        }
+
+        return null;
+    }
+
+    function buildSearchDatabase(translations) {
+        var database = [];
+        var uniqueEntries = new Set();
+        var manualEntries = Array.isArray(translations.search_database)
+            ? translations.search_database
+            : [];
+
+        function addEntry(term, page, hash) {
+            var safeTerm = (term || '').trim();
+            var safePage = (page || '').trim();
+            var safeHash = (hash || '').trim();
+            var normalizedTerm = normalizeSearchText(safeTerm);
+
+            if (!safeTerm || !safePage || !normalizedTerm) return;
+
+            var dedupeKey = normalizedTerm + '|' + safePage.toLowerCase() + '|' + safeHash.toLowerCase();
+            if (uniqueEntries.has(dedupeKey)) return;
+
+            uniqueEntries.add(dedupeKey);
+            database.push({
+                term: safeTerm,
+                page: safePage,
+                hash: safeHash,
+                normalizedTerm: normalizedTerm
+            });
+        }
+
+        manualEntries.forEach(function (item) {
+            addEntry(item.term, item.page, item.hash);
+        });
+
+        Object.keys(translations).forEach(function (key) {
+            if (key === 'search_database' || key === 'html_lang') return;
+
+            var value = translations[key];
+            if (typeof value !== 'string' || !value.trim()) return;
+
+            var location = inferSearchLocation(key) || { page: 'Home', hash: '#about' };
+
+            tokenizeSearchTerms(value).forEach(function (term) {
+                addEntry(term, location.page, location.hash);
+            });
+        });
+
+        return database;
     }
 
     function resolveAssetPath(pathValue) {
@@ -133,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function applyTranslations(jsonData) {
         currentTranslations = jsonData;
-        currentSearchDatabase = jsonData.search_database || [];
+        currentSearchDatabase = buildSearchDatabase(jsonData);
 
         document.querySelectorAll('[data-t]').forEach(function (el) {
             var key = el.getAttribute('data-t');
@@ -263,27 +385,52 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    function dedupeSearchResults(results) {
+        var seen = new Set();
+        return results.filter(function (item) {
+            var key = item.normalizedTerm + '|' + (item.page || '').toLowerCase();
+            if (seen.has(key)) return false;
+            seen.add(key);
+            return true;
+        });
+    }
+
     if (searchInput && searchResults) {
         searchInput.addEventListener('input', function (e) {
-            var query = e.target.value.toLowerCase();
+            var query = normalizeSearchText(e.target.value);
             if (query.length < 2) {
                 searchResults.style.display = 'none';
                 return;
             }
 
             var results = currentSearchDatabase.filter(function (item) {
-                return item.term.toLowerCase().includes(query);
+                return item.normalizedTerm.includes(query);
             });
+
+            results.sort(function (a, b) {
+                var aStartsWith = a.normalizedTerm.startsWith(query) ? 0 : 1;
+                var bStartsWith = b.normalizedTerm.startsWith(query) ? 0 : 1;
+                if (aStartsWith !== bStartsWith) return aStartsWith - bStartsWith;
+                return a.term.localeCompare(b.term);
+            });
+
+            results = dedupeSearchResults(results);
 
             searchResults.innerHTML = '';
 
             if (results.length > 0) {
-                results.forEach(function (item) {
+                results.slice(0, 18).forEach(function (item) {
                     var li = document.createElement('a');
                     var targetPage = getPageForHash(item.hash);
+                    var strong = document.createElement('strong');
+
                     li.className = 'search-result-item';
                     li.href = targetPage + (item.hash || '');
-                    li.innerHTML = '<strong>' + item.term + '</strong> (' + item.page + ')';
+
+                    strong.textContent = item.term;
+                    li.appendChild(strong);
+                    li.appendChild(document.createTextNode(' (' + item.page + ')'));
+
                     li.addEventListener('mousedown', function (ev) {
                         ev.preventDefault();
                         navigateToHash(item.hash);

@@ -8,6 +8,7 @@
     --accent-color: #0f6b64;
     --accent-soft: #d7ece8;
     --header-bg: rgba(247, 243, 235, 0.92);
+    --header-line-color: var(--accent-color);
     --footer-bg: #ece7dd;
     --bubble-bg: #1e2a35;
     --bubble-text: #ffffff;
@@ -31,6 +32,7 @@ html.dark-mode {
     --accent-color: #4dc0b5;
     --accent-soft: #153a42;
     --header-bg: rgba(16, 25, 33, 0.92);
+    --header-line-color: var(--accent-color);
     --footer-bg: #101922;
     --bubble-bg: #4dc0b5;
     --bubble-text: #102028;
@@ -114,12 +116,23 @@ header {
     align-items: center;
     padding: 14px max(20px, calc((100vw - 1100px) / 2));
     background-color: var(--header-bg);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: none;
     position: sticky;
     top: 0;
     z-index: 1000;
     backdrop-filter: blur(10px);
     transition: background-color 0.3s, border-color 0.3s;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: var(--header-line-color);
+    pointer-events: none;
 }
 
 .logo a {
@@ -192,26 +205,29 @@ body.nav-open .menu-toggle span:nth-child(3) {
 
 .top-nav a {
     font-family: 'Source Sans 3', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 700;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.09em;
+    line-height: 1.1;
     text-transform: uppercase;
     color: var(--text-color-light);
     padding: 6px 0;
+    display: inline-flex;
+    align-items: center;
     border-bottom: 2px solid transparent;
     transition: color 0.25s, border-color 0.25s;
 }
 
 .top-nav a:hover {
     color: var(--text-color);
-    border-bottom-color: var(--accent-color);
+    border-bottom-color: transparent;
     text-decoration: none;
 }
 
 .top-nav a.active,
 .top-nav a[aria-current='page'] {
-    color: var(--text-color);
-    border-bottom-color: var(--accent-color);
+    color: var(--accent-color);
+    border-bottom-color: transparent;
 }
 
 .header-controls {
@@ -794,7 +810,7 @@ footer {
     }
 
     .top-nav a {
-        font-size: 0.74rem;
+        font-size: 0.9rem;
     }
 
     .profile-container {
@@ -857,7 +873,7 @@ footer {
     }
 
     .top-nav a {
-        font-size: 0.74rem;
+        font-size: 0.88rem;
         letter-spacing: 0.08em;
         padding: 4px 0;
         width: fit-content;
