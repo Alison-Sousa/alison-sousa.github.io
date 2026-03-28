@@ -1,22 +1,25 @@
 :root {
+    --site-blue: rgb(0, 86, 150);
+    --site-yellow: rgb(255, 193, 7);
+    --dark-text: rgb(40, 40, 40);
     --bg-color: #f2f0ea;
     --surface-color: #fdfcf9;
     --surface-elevated: #f8f5ee;
-    --text-color: #1b2938;
-    --text-color-light: #4b5e73;
-    --border-color: #d5cebd;
-    --accent-color: #0f6b64;
-    --accent-soft: #d7ece8;
+    --text-color: var(--dark-text);
+    --text-color-light: #4f4f4f;
+    --border-color: #c8d4df;
+    --accent-color: var(--site-blue);
+    --accent-soft: color-mix(in srgb, var(--site-yellow) 28%, #ffffff);
     --header-bg: rgba(247, 243, 235, 0.92);
     --header-line-color: var(--accent-color);
     --footer-bg: #ece7dd;
-    --bubble-bg: #1e2a35;
+    --bubble-bg: var(--site-blue);
     --bubble-text: #ffffff;
-    --link-color: #0f6b64;
+    --link-color: var(--site-blue);
     --search-bg: #ffffff;
-    --search-text: #1e2a35;
+    --search-text: var(--dark-text);
     --text-on-accent: #ffffff;
-    --back-to-top-bg: #0f766e;
+    --back-to-top-bg: var(--site-blue);
     --back-to-top-text: #ffffff;
     --shadow-soft: 0 12px 28px rgba(24, 37, 52, 0.09);
     --shadow-card: 0 18px 40px rgba(24, 37, 52, 0.14);
@@ -29,19 +32,19 @@ html.dark-mode {
     --text-color: #eaf0f5;
     --text-color-light: #b8c4cf;
     --border-color: #334454;
-    --accent-color: #4dc0b5;
-    --accent-soft: #153a42;
+    --accent-color: var(--site-blue);
+    --accent-soft: color-mix(in srgb, var(--site-yellow) 24%, transparent);
     --header-bg: rgba(16, 25, 33, 0.92);
     --header-line-color: var(--accent-color);
     --footer-bg: #101922;
-    --bubble-bg: #4dc0b5;
-    --bubble-text: #102028;
-    --link-color: #6ad7ce;
+    --bubble-bg: var(--site-yellow);
+    --bubble-text: var(--dark-text);
+    --link-color: color-mix(in srgb, var(--site-yellow) 72%, #ffffff);
     --search-bg: #20303c;
     --search-text: #eaf0f5;
-    --text-on-accent: #102028;
-    --back-to-top-bg: #4dc0b5;
-    --back-to-top-text: #102028;
+    --text-on-accent: #ffffff;
+    --back-to-top-bg: var(--site-blue);
+    --back-to-top-text: #ffffff;
     --shadow-soft: 0 16px 36px rgba(0, 0, 0, 0.35);
     --shadow-card: 0 18px 40px rgba(0, 0, 0, 0.4);
 }
@@ -60,7 +63,7 @@ html {
 body {
     font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
     background:
-        radial-gradient(circle at 14% 8%, rgba(15, 107, 100, 0.12), transparent 33%),
+        radial-gradient(circle at 14% 8%, rgba(0, 86, 150, 0.13), transparent 33%),
         radial-gradient(circle at 88% 10%, rgba(27, 41, 56, 0.08), transparent 31%),
         linear-gradient(180deg, #f9f6f0 0%, var(--bg-color) 28%, var(--bg-color) 100%);
     color: var(--text-color);
@@ -70,8 +73,8 @@ body {
 
 html.dark-mode body {
     background:
-        radial-gradient(circle at 8% 8%, rgba(77, 192, 181, 0.14), transparent 32%),
-        radial-gradient(circle at 90% 12%, rgba(106, 215, 206, 0.08), transparent 30%),
+    radial-gradient(circle at 8% 8%, rgba(0, 86, 150, 0.26), transparent 32%),
+    radial-gradient(circle at 90% 12%, rgba(255, 193, 7, 0.16), transparent 30%),
         linear-gradient(180deg, #0f1720 0%, var(--bg-color) 34%, var(--bg-color) 100%);
 }
 
