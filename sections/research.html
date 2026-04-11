@@ -4,16 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-t="doc_title"></title>
-    <script>
-      (function() {
-        var theme = localStorage.getItem('theme');
-        if (theme === 'dark') document.documentElement.classList.add('dark-mode');
-      })();
-    </script>
+
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="../images/ico-blue.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/ico.png" type="image/png">
 </head>
 <body data-page="research">
     <header>
@@ -35,10 +30,7 @@
                 <i class="fas fa-search"></i>
                 <div id="search-results"></div>
             </div>
-            <button id="theme-toggle" data-t-title="theme_toggle_title" title="">
-                <i class="fas fa-moon icon-moon"></i>
-                <i class="fas fa-sun icon-sun"></i>
-            </button>
+
         </div>
     </header>
 
@@ -169,8 +161,8 @@
         <div class="footer-content">
             <div class="footer-left">
                 <p class="footer-name" data-t="footer_name"></p>
+                <p class="footer-email"><a href="mailto:alison.sousa@usp.br">alison.sousa@usp.br</a></p>
                 <div class="footer-social">
-                    <a href="mailto:alison.sousa@usp.br" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
                     <a href="https://www.linkedin.com/in/alisoncs/" data-t-aria="social_linkedin_aria" aria-label="" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://x.com/alisoncsousa" data-t-aria="social_x_aria" aria-label="" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
                     <a href="https://github.com/Alison-Sousa" data-t-aria="social_github_aria" aria-label="" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-github"></i></a>
