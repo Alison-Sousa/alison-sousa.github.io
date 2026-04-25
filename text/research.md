@@ -1,56 +1,41 @@
+## research_kicker
+Academic research
+
 ## research_title
 Research
 
+## research_intro
+My research agenda combines econometrics and applied quantitative methods, with current work on finance, value chains, and business strategy.
+
 ## research_subtitle1
-Working Papers
+Working papers
 
 ## research_paper1_citation
-<strong>Alison Sousa</strong>, Gilmar Masiero, Marcio P. Laurini (2026). The Thematic Premium: Technological Accumulation, Geopolitical Risk Drive and Capital Allocation in Semiconductor ETFs. <em>(Working paper)</em>
+<strong>The Thematic Premium: Technological Accumulation, Geopolitical Risk Drive and Capital Allocation in Semiconductor ETFs</strong><br>with <a href='https://sites.google.com/view/rafaelpalazzi/home' target='_blank' rel='noopener noreferrer'>Rafael Palazzi</a>.
+
+## research_paper1_note
+Working paper, 2026.
 
 ## research_paper4_citation
-<strong>Alison Sousa</strong>, Gilmar Masiero, Mario Ogasavara (2026). Beyond the Static Factory: AI-Driven Technological Accumulation and Strategic Coordination in the Global Semiconductor Value Chain. <em>(Working paper)</em>
+<strong>Beyond the Static Factory: AI-Driven Technological Accumulation and Strategic Coordination in the Global Semiconductor Value Chain</strong><br>with Gilmar Masiero and Mario Ogasavara.
 
-## research_paper2_citation
-<strong>Alison Sousa</strong>, Joao Neto (2025). Spatio-Temporal LSTM-based model for Epidemiological Risk Prediction in Brazil. <em>(Journal of Information and Data Management. Under review.)</em>
+## research_paper4_note
+Working paper, 2026.
 
 ## research_paper5_citation
-Valmor Comim, Gilmar Masiero, Mario Ogasavara, <strong>Alison Sousa</strong> (2025). Expanding the OLI Approach: The ERP Chinese Model. <em>(Management &amp; Organization Review. Under review.)</em>
+<strong>Expanding the OLI Approach: The ERP Chinese Model</strong><br>with Valmor Comim, Gilmar Masiero, and Mario Ogasavara.
 
-## research_paper6_citation
-<strong>Alison Sousa</strong>, Joao Neto (2025). AI for Epidemiological Risk Prediction in Brazil: A SLR. <em>(SBC Computing Reviews. Under review.)</em>
+## research_paper5_note
+Management &amp; Organization Review, under review.
 
-## research_subtitle2
-Publications
+## research_paper2_citation
+<strong>Spatio-Temporal LSTM-based model for Epidemiological Risk Prediction in Brazil</strong><br>with João Neto.
+
+## research_paper2_note
+Journal of Information and Data Management, under review.
 
 ## research_paper3_citation
-<strong>Alison Sousa</strong>, Igor Gondim (2022). International diversification via ETFs from the Sharpe ratio perspective. 33rd National Meeting of Administration Graduation Courses.
+<strong><a href='https://doity.com.br/anais/33enangrad/trabalho/249019' target='_blank' rel='noopener noreferrer'>International diversification via ETFs from the Sharpe ratio perspective</a></strong><br>with Igor Gondim.
 
-## btn_abstract
-Abstract
-
-## btn_code
-Code
-
-## btn_doi
-DOI
-
-## btn_link
-Link
-
-## research_paper1_abstract
-This working paper investigates how thematic semiconductor ETFs price technological accumulation and geopolitical risk dynamics, linking innovation trajectories to portfolio allocation outcomes.
-
-## research_paper2_abstract
-This study proposes a spatio-temporal LSTM-based framework for epidemiological risk prediction in Brazil, combining temporal dependence and spatial heterogeneity to improve forecasting performance.
-
-## research_paper3_abstract
-This paper explores international diversification strategies using Exchange-Traded Funds (ETFs), with a particular focus on the Sharpe ratio as a performance metric. The study was presented at the 33rd National Meeting of Administration Graduation Courses.
-
-## research_paper4_abstract
-This working paper analyzes AI-driven technological accumulation and strategic coordination across the global semiconductor value chain, emphasizing firm capabilities, interdependence, and competitive positioning.
-
-## research_paper5_abstract
-This paper revisits and extends the OLI paradigm through the ERP Chinese model, examining how Chinese firms combine ownership advantages, location choices, and strategic coordination in global expansion.
-
-## research_paper6_abstract
-A systematic literature review examining the application of Artificial Intelligence for epidemiological risk prediction in Brazil, identifying key methodologies, datasets, and research gaps.
+## research_paper3_note
+Presented at the 33rd National Meeting of Administration Graduation Courses, 2022.

@@ -1,10 +1,14 @@
 ## search_database
 - about me | Home | #about
-- contact | Home | #contact
-- email | Home | #contact
-- alison.sousa@usp.br | Home | #contact
+- contact | Contact | contact.html
+- email | Contact | contact.html
+- csousa.alison@gmail.com | Contact | contact.html
+- curriculum vitae | Curriculum Vitae | cv.html
+- cv | Curriculum Vitae | cv.html
+- pdf | Curriculum Vitae | cv.html
 - master's degree | Home | #about
 - usp | Home | #about
+- são paulo | Home | #about
 - fea usp | Home | #about
 - fea-usp | Home | #about
 - msc | Home | #about
@@ -26,10 +30,7 @@
 - epidemiological | Research | #paper-marketplace
 - etf | Research | #paper-dengue
 - sharpe | Research | #paper-dengue
+- igor gondim | Research | #paper-dengue
 - teaching experience | Teaching | #teaching
-- board participation | Teaching | #teaching
-- examination board | Teaching | #teaching
-- icmc usp | Teaching | #teaching
 - espm | Teaching | #teaching
 - economic development | Teaching | #teaching
-- marcus nakagawa | Teaching | #teaching
