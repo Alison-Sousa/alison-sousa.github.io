@@ -275,7 +275,7 @@ body.js-loaded .section {
 }
 
 .page-lead {
-    max-width: 780px;
+    max-width: 640px;
 }
 
 .page-intro {
@@ -283,7 +283,7 @@ body.js-loaded .section {
     font-size: 1.06rem;
     line-height: 1.8;
     margin-top: 18px;
-    max-width: 67ch;
+    max-width: 100%;
 }
 
 .home-grid {
@@ -485,7 +485,7 @@ body.js-loaded .section {
     font-size: 1.06rem;
     font-weight: 400;
     line-height: 1.8;
-    max-width: 74ch;
+    max-width: 67ch;
 }
 
 .paper-citation strong {
@@ -513,7 +513,7 @@ body.js-loaded .section {
     font-weight: 400;
     line-height: 1.8;
     margin-top: 0;
-    max-width: 74ch;
+    max-width: 67ch;
 }
 
 .academic-block {
@@ -525,7 +525,7 @@ body.js-loaded .section {
 
 .teaching-copy {
     margin-top: 28px;
-    max-width: 860px;
+    max-width: 640px;
 }
 
 .teaching-copy p {
@@ -534,7 +534,7 @@ body.js-loaded .section {
     font-weight: 400;
     line-height: 1.8;
     margin-bottom: 16px;
-    max-width: 67ch;
+    max-width: 100%;
 }
 
 .teaching-list {

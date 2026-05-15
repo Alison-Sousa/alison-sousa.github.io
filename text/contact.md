@@ -2,7 +2,7 @@
 Contact
 
 ## contact_page_intro
-For research collaborations, academic opportunities, or professional inquiries, please write to <a href='mailto:csousa.alison@gmail.com'>csousa.alison@gmail.com</a>.
+For research collaborations, academic opportunities, or professional inquiries, please write to alison.sousa [at] usp [dot] br.
 
 ## contact_address_title
 Professional Address
